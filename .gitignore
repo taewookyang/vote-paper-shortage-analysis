@@ -23,6 +23,9 @@ dashboard/dist/
 .env
 *.env.local
 
+# OMC
+.omc/
+
 # OS
 .DS_Store
 Thumbs.db
