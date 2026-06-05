@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.env
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Data (raw 제외, processed는 포함)
+data/raw/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+dashboard/dist/
+
+# 환경
+.env
+*.env.local
+
+# OS
+.DS_Store
+Thumbs.db
