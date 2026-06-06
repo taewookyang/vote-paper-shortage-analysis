@@ -14,15 +14,26 @@ let chromium;
 try { ({ chromium } = require("playwright")); }
 catch { ({ chromium } = require(path.join(ROOT, "dashboard", "node_modules", "playwright"))); }
 
-const OUT        = path.join(ROOT, "data", "raw", "nec_vote_progress_2026.csv");
+const CODES_FILE = path.join(ROOT, "data", "raw", "national_codes.json");
+const NATIONAL = process.env.NATIONAL === "1";
+const SHARD_COUNT = Math.max(1, Number(process.env.SHARD_COUNT || 1));
+const SHARD_INDEX = Math.max(0, Number(process.env.SHARD_INDEX || 0));
+const SUFFIX = NATIONAL ? `_worker_${SHARD_INDEX}_of_${SHARD_COUNT}` : "";
+const OUT        = path.join(ROOT, "data", "raw", `nec_vote_progress_2026${SUFFIX}.csv`);
+const CHECKPOINT = path.join(ROOT, "data", "raw", `nec_vote_progress_checkpoint${SUFFIX}.json`);
 const FORM_URL   = "https://info.nec.go.kr/main/showDocument.xhtml?electionId=0020260603&topMenuId=VC&secondMenuId=VCVP01";
 const REPORT_URL = "https://info.nec.go.kr/electioninfo/electionInfo_report.xhtml";
 
 // 조회 대상: 전국(0) + 서울(1100)
-const CITY_TARGETS = [
+const DEFAULT_CITY_TARGETS = [
   { code: "0",    name: "전국" },
   { code: "1100", name: "서울특별시" },
 ];
+const CITY_TARGETS = NATIONAL
+  ? JSON.parse(fs.readFileSync(CODES_FILE, "utf8"))
+      .map(city => ({ code: city.code, name: city.name }))
+      .filter((_, index) => index % SHARD_COUNT === SHARD_INDEX)
+  : DEFAULT_CITY_TARGETS;
 // 시간대: 7~18시 + 전체(30)
 const TIME_CODES = ["7","8","9","10","11","12","13","14","15","16","17","18","30"];
 const TIME_LABEL = Object.fromEntries([
@@ -74,10 +85,16 @@ async function main() {
   const page    = await browser.newPage();
   page.setDefaultTimeout(30000);
 
-  const rows = [];
+  const checkpoint = fs.existsSync(CHECKPOINT)
+    ? JSON.parse(fs.readFileSync(CHECKPOINT, "utf8"))
+    : { rows: [], completed: [], failures: [] };
+  const rows = checkpoint.rows;
+  const completed = new Set(checkpoint.completed);
 
   for (const { code: cityCode, name: cityName } of CITY_TARGETS) {
     for (const timeCode of TIME_CODES) {
+      const key = `${cityCode}|${timeCode}`;
+      if (completed.has(key)) continue;
       process.stdout.write(`  ${cityName} ${TIME_LABEL[timeCode]} ... `);
       try {
         const data = await fetchOneSlot(page, cityCode, timeCode);
@@ -100,8 +117,14 @@ async function main() {
             출처URL: REPORT_URL,
           });
         });
+        completed.add(key);
+        checkpoint.rows = rows;
+        checkpoint.completed = [...completed];
+        fs.writeFileSync(CHECKPOINT, JSON.stringify(checkpoint, null, 2), "utf8");
         console.log(`${data.length}행`);
       } catch (e) {
+        checkpoint.failures.push({ key, error: e.message, at: new Date().toISOString() });
+        fs.writeFileSync(CHECKPOINT, JSON.stringify(checkpoint, null, 2), "utf8");
         console.log(`실패: ${e.message.slice(0, 80)}`);
       }
       await sleep(1200);
@@ -119,6 +142,7 @@ async function main() {
                 "선거일_투표자수","사전투표_접수수","합계_투표자수","투표율","집계상황","출처URL"];
   const csv  = [cols.join(","), ...rows.map(r => cols.map(c => csvEscape(r[c])).join(","))].join("\r\n");
   fs.writeFileSync(OUT, "﻿" + csv, "utf8");
+  if (fs.existsSync(CHECKPOINT)) fs.unlinkSync(CHECKPOINT);
   console.log(`\n✅ 저장: ${OUT} (${rows.length}행)`);
 }
 

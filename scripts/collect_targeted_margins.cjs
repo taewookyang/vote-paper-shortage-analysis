@@ -17,13 +17,19 @@ catch { ({ chromium } = require(path.join(ROOT, "dashboard", "node_modules", "pl
 
 const SHORTAGE_CSV = path.join(ROOT, "data", "raw", "shortage_2026.csv");
 const CODES_JSON = path.join(ROOT, "data", "raw", "national_codes.json");
-const RAW_OUT = path.join(ROOT, "data", "raw", "targeted_election_candidates_2026.csv");
-const SCREEN_OUT = path.join(ROOT, "data", "processed", "targeted_margin_screening_2026.csv");
-const CHECKPOINT = path.join(ROOT, "data", "raw", "targeted_margin_checkpoint.json");
+const SCOPE = process.env.SCOPE === "national" ? "national" : "targeted";
+const SHARD_COUNT = Math.max(1, Number(process.env.SHARD_COUNT || 1));
+const SHARD_INDEX = Math.max(0, Number(process.env.SHARD_INDEX || 0));
+const WORKER_SUFFIX = SCOPE === "national" ? `_worker_${SHARD_INDEX}_of_${SHARD_COUNT}` : "";
+const RAW_OUT = path.join(ROOT, "data", "raw", `${SCOPE}_election_candidates_2026${WORKER_SUFFIX}.csv`);
+const SCREEN_OUT = path.join(ROOT, "data", "processed", `${SCOPE}_margin_screening_2026${WORKER_SUFFIX}.csv`);
+const CHECKPOINT = path.join(ROOT, "data", "raw", `${SCOPE}_margin_checkpoint${WORKER_SUFFIX}.json`);
 const JSON_OUTS = [
-  path.join(ROOT, "data", "processed", "dashboard", "targeted_margin_screening_2026.json"),
-  path.join(ROOT, "dashboard", "public", "data", "targeted_margin_screening_2026.json"),
+  path.join(ROOT, "data", "processed", "dashboard", `${SCOPE}_margin_screening_2026${WORKER_SUFFIX}.json`),
 ];
+if (SCOPE === "targeted") {
+  JSON_OUTS.push(path.join(ROOT, "dashboard", "public", "data", "targeted_margin_screening_2026.json"));
+}
 const RESULT_URL = "https://info.nec.go.kr/main/showDocument.xhtml?electionId=0020260603&topMenuId=VC&secondMenuId=VCCP08";
 const WINNER_URL = "https://info.nec.go.kr/main/showDocument.xhtml?electionId=0020260603&topMenuId=EP&secondMenuId=EPEI01";
 const COUNCIL_ELECTIONS = [
@@ -121,8 +127,23 @@ async function selectReady(page, selector, value) {
 }
 
 function buildTargets() {
-  const shortage = parseCsv(fs.readFileSync(SHORTAGE_CSV, "utf8"));
   const codes = JSON.parse(fs.readFileSync(CODES_JSON, "utf8"));
+  if (SCOPE === "national") {
+    return codes
+      .flatMap(city => city.towns.map(town => ({
+        shortCity: city.name,
+        cityName: city.name,
+        cityCode: city.code,
+        townName: town.name,
+        townCode: town.code,
+        additionalSent: 0,
+        named: 0,
+        suspendedKnown: 0,
+      })))
+      .filter((_, index) => index % SHARD_COUNT === SHARD_INDEX);
+  }
+
+  const shortage = parseCsv(fs.readFileSync(SHORTAGE_CSV, "utf8"));
   const targetCounts = new Map();
   for (const row of shortage) {
     const key = `${row.시도}|${row.구시군}`;
@@ -368,7 +389,9 @@ async function main() {
   writeCsv(SCREEN_OUT, screened, screenColumns);
   const payload = {
     generatedAt: new Date().toISOString(),
-    scope: "추가송부 67곳이 속한 구시군의 기초단체장·광역의원·기초의원 당선권 경계 표차 1차 스크리닝",
+    scope: SCOPE === "national"
+      ? `전국 광역·기초의원 당선권 경계 표차 수집 워커 ${SHARD_INDEX + 1}/${SHARD_COUNT}`
+      : "추가송부 67곳이 속한 구시군의 광역·기초의원 당선권 경계 표차 1차 스크리닝",
     disclaimer: "표차가 작다는 사실만으로 투표용지 부족이 결과에 영향을 미쳤다고 판단할 수 없다. 부족 투표소의 정확한 선거구 매핑과 실제 투표 포기 인원 확인이 필요하다.",
     items: screened,
   };
