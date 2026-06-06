@@ -633,7 +633,7 @@
     {
       "gu": "연수구",
       "official_shutdown_count": 3,
-      "max_dong_risk_ratio": 0.0,
+      "max_dong_risk_ratio": 0.9598,
       "evidence_level": "gu_only",
       "reason": "구별 중단 수만 확인되며, 공개된 동 평균만으로 실제 중단 위치를 식별할 수 없음"
     }

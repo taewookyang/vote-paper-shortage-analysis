@@ -23,6 +23,9 @@ dashboard/dashboard-local-smoke.png
 # Sharded collector intermediates (merge into canonical outputs)
 data/processed/*_worker_*_of_*.csv
 data/processed/dashboard/*_worker_*_of_*.json
+data/raw/*_worker_*_of_*.csv
+data/raw/*_checkpoint_worker_*_of_*.json
+data/raw/*_worker_*.log
 
 # 환경
 .env

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-07T01:14:41",
+  "generatedAt": "2026-06-07T01:31:21",
   "summary": {
-    "checks": 36,
-    "passed": 34,
-    "failed": 2,
+    "checks": 42,
+    "passed": 41,
+    "failed": 1,
     "errors": 0,
-    "warnings": 2,
+    "warnings": 1,
     "skipped": 0
   },
   "checks": [
@@ -145,9 +145,9 @@
     {
       "dataset": "national_dong_turnout",
       "check": "national_town_coverage",
-      "status": "fail",
+      "status": "pass",
       "severity": "warning",
-      "detail": "collected=25, expected=256"
+      "detail": "collected=256, expected=256"
     },
     {
       "dataset": "nec_vote_progress_2026",
@@ -260,6 +260,48 @@
       "status": "pass",
       "severity": "error",
       "detail": "candidates=18"
+    },
+    {
+      "dataset": "known_location_margin_mapping_2026",
+      "check": "required_columns",
+      "status": "pass",
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "dataset": "known_location_margin_mapping_2026",
+      "check": "all_named_locations_covered",
+      "status": "pass",
+      "severity": "error",
+      "detail": "named=16/16"
+    },
+    {
+      "dataset": "known_location_margin_mapping_2026",
+      "check": "all_rows_mapped_to_district",
+      "status": "pass",
+      "severity": "error",
+      "detail": "mapped=31/31"
+    },
+    {
+      "dataset": "known_location_margin_mapping_2026",
+      "check": "all_rows_have_margin",
+      "status": "pass",
+      "severity": "error",
+      "detail": "margin=31/31"
+    },
+    {
+      "dataset": "known_location_margin_mapping_2026",
+      "check": "source_urls_present",
+      "status": "pass",
+      "severity": "error",
+      "detail": "location and result sources"
+    },
+    {
+      "dataset": "known_location_margin_mapping_2026",
+      "check": "no_duplicate_location_district",
+      "status": "pass",
+      "severity": "error",
+      "detail": "duplicates=0"
     }
   ],
   "historicalContext": {

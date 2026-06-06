@@ -16,6 +16,7 @@ const DATA_FILES = {
   songpaMap:      '/data/songpa_boundaries_2026.json',
   targetedMargins:'/data/targeted_margin_screening_2026.json',
   shutdownStressTest: '/data/shutdown_stress_test_2026.json',
+  knownLocationMargins: '/data/known_location_margin_mapping_2026.json',
 }
 
 export default function Dashboard() {
@@ -54,6 +55,9 @@ export default function Dashboard() {
   const targetedMargins = data.targetedMargins?.items || []
   const priorityMargins = targetedMargins.filter(item => item['검토등급'] === '우선검토')
   const shutdownStress = data.shutdownStressTest || null
+  const knownLocationMargins = data.knownLocationMargins?.items || []
+  const knownLocationPriority = knownLocationMargins.filter(item => item['검토등급'] !== '참고')
+  const namedPollingPlaces = data.knownLocationMargins?.meta?.namedPollingPlaces || 0
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -258,6 +262,38 @@ export default function Dashboard() {
             <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
               투표소와 선거구의 직접 연결은 별도 검증 필요. 데이터: 중앙선관위 VCCP08, 2026-06-06 수집.
             </p>
+          </Section>
+        )}
+
+        {knownLocationPriority.length > 0 && (
+          <Section label="직접 매핑" title={`이름 공개 투표소 ${namedPollingPlaces}곳 — 상위 조사 후보 ${knownLocationPriority.length}건`}>
+            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
+              공개된 투표소명을 선관위 결과표의 읍면동 구성과 연결해 실제 광역·기초의원 선거구를 확인했습니다.
+            </p>
+            <CalloutBox color="#fff7ed" border="#fdba74">
+              표차가 작다는 사실만으로 결과 영향을 단정할 수 없습니다.
+              아래 목록은 중단·부족 기록과 정확한 운영 자료를 먼저 확인할 조사 순서입니다.
+            </CalloutBox>
+            <div style={{ display: 'grid', gap: 8, marginTop: 12 }}>
+              {knownLocationPriority.map(item => (
+                <div key={`${item['투표소명']}-${item['선거종류']}-${item['선거구코드']}`} style={{ background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: 8, padding: '11px 12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8, alignItems: 'flex-start' }}>
+                    <div>
+                      <div style={{ fontSize: 13, fontWeight: 700 }}>{item['구시군']} {item['투표소명']}</div>
+                      <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>
+                        {item['증거수준']} · {item['선거종류']} {item['선거구명']}
+                      </div>
+                    </div>
+                    <div style={{ textAlign: 'right', whiteSpace: 'nowrap' }}>
+                      <div style={{ fontSize: 14, fontWeight: 800, color: item['검토등급'] === '최우선확인' ? '#be123c' : '#b45309' }}>
+                        {Number(item['표차']).toLocaleString()}표
+                      </div>
+                      <div style={{ fontSize: 10, color: '#9ca3af' }}>{item['검토등급']}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </Section>
         )}
 

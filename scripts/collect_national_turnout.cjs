@@ -17,7 +17,11 @@ try { ({ chromium } = require("playwright")); }
 catch { ({ chromium } = require(path.join(ROOT, "dashboard", "node_modules", "playwright"))); }
 
 const CODES_FILE = path.join(ROOT, "data", "raw", "national_codes.json");
-const OUT        = path.join(ROOT, "data", "raw", "national_dong_turnout.csv");
+const SHARD_COUNT = Math.max(1, Number(process.env.SHARD_COUNT || 1));
+const SHARD_INDEX = Math.max(0, Number(process.env.SHARD_INDEX || 0));
+const SHARD_SUFFIX = SHARD_COUNT > 1 ? `_worker_${SHARD_INDEX}_of_${SHARD_COUNT}` : "";
+const OUT        = path.join(ROOT, "data", "raw", `national_dong_turnout${SHARD_SUFFIX}.csv`);
+const CHECKPOINT = path.join(ROOT, "data", "raw", `national_dong_turnout_checkpoint${SHARD_SUFFIX}.json`);
 const FORM_URL   = "https://info.nec.go.kr/main/showDocument.xhtml?electionId=0020260603&topMenuId=VC&secondMenuId=VCCP08";
 
 const [,, filterCity, filterTown] = process.argv;
@@ -28,20 +32,24 @@ function num(v)    { const n = parseInt(clean(v).replace(/,/g,"")); return isFin
 function csvEsc(v) { const s = String(v ?? ""); return /[",\r\n]/.test(s) ? `"${s.replace(/"/g,'""')}"` : s; }
 
 async function fetchDongData(page, cityCode, townCode) {
-  await page.goto(FORM_URL, { waitUntil: "networkidle", timeout: 40000 });
-  await sleep(800);
+  await page.goto(FORM_URL, { waitUntil: "domcontentloaded", timeout: 60000 });
+  await page.locator("#cityCode").waitFor({ state: "attached", timeout: 45000 });
   await page.evaluate(() => setElectionCode(3));
-  await sleep(600);
-  await page.selectOption("#cityCode", cityCode);
-  await sleep(800);
-  await page.selectOption("#townCode", townCode);
-  await sleep(600);
+  await page.waitForFunction(
+    value => Array.from(document.querySelector("#cityCode")?.options || []).some(option => option.value === value),
+    cityCode, { timeout: 45000 }
+  );
+  await page.selectOption("#cityCode", cityCode, { force: true });
+  await page.waitForFunction(
+    value => Array.from(document.querySelector("#townCode")?.options || []).some(option => option.value === value),
+    townCode, { timeout: 45000 }
+  );
+  await page.selectOption("#townCode", townCode, { force: true });
 
-  await Promise.all([
-    page.waitForURL("**/electionInfo_report.xhtml", { timeout: 20000 }),
-    page.locator("#spanSubmit input[type=image]").click(),
-  ]);
-  await sleep(800);
+  const navigation = page.waitForNavigation({ waitUntil: "domcontentloaded", timeout: 60000 }).catch(() => null);
+  await page.locator("#spanSubmit input[type=image]").click({ force: true, timeout: 45000 });
+  await navigation;
+  await page.locator(".searchResult table").waitFor({ state: "attached", timeout: 45000 });
 
   return await page.evaluate(() => {
     const tbl = document.querySelector(".searchResult table");
@@ -91,55 +99,69 @@ async function main() {
   }
 
   const codes  = JSON.parse(fs.readFileSync(CODES_FILE, "utf8"));
+  const allTargets = codes.flatMap(city => city.towns.map(town => ({ city, town })));
+  const targets = allTargets
+    .filter(({ city, town }) => (!filterCity || city.code === filterCity) && (!filterTown || town.code === filterTown))
+    .filter((_, index) => index % SHARD_COUNT === SHARD_INDEX);
   const browser = await chromium.launch({ headless: true });
   const page    = await browser.newPage();
-  page.setDefaultTimeout(30000);
+  page.setDefaultTimeout(45000);
 
   const cols = ["시도","구시군","동","선거인수","투표수","당일투표율","50%초과","부족추정","cityCode","townCode"];
-  const csvLines = [cols.join(",")];
-  let done = 0, skipped = 0;
+  const checkpoint = fs.existsSync(CHECKPOINT)
+    ? JSON.parse(fs.readFileSync(CHECKPOINT, "utf8"))
+    : { rows: [], completed: [], failures: [] };
+  const outputRows = checkpoint.rows;
+  const completed = new Set(checkpoint.completed);
+  let done = completed.size, skipped = 0;
 
-  for (const city of codes) {
-    if (filterCity && city.code !== filterCity) continue;
-
-    for (const town of city.towns) {
-      if (filterTown && town.code !== filterTown) continue;
-
+  for (const { city, town } of targets) {
+    const key = `${city.code}|${town.code}`;
+    if (completed.has(key)) continue;
+    let collected = null;
+    let lastError;
+    for (let attempt = 1; attempt <= 3 && collected === null; attempt++) {
       try {
-        const raw  = await fetchDongData(page, city.code, town.code);
-        const rows = parseRows(raw, city.name, town.name);
-
-        for (const r of rows) {
-          const over     = r.rate !== null && r.rate > 0.5;
-          // Calculate from integer source counts to avoid floating-point drift
-          // from multiplying the derived turnout rate back by electors.
-          const shortage = over && r.electors ? Math.round(r.voters - r.electors * 0.5) : 0;
-          csvLines.push([
-            r.cityName, r.townName, r.dong,
-            r.electors, r.voters,
-            r.rate !== null ? (r.rate * 100).toFixed(2) : "",
-            over ? "Y" : "N",
-            shortage,
-            city.code, town.code,
-          ].map(csvEsc).join(","));
-        }
-
-        done++;
-        process.stdout.write(`\r진행: ${done}/${codes.reduce((s,c)=>s+c.towns.length,0)} - ${city.name} ${town.name} (${rows.length}동)    `);
-      } catch (e) {
-        skipped++;
-        console.error(`\n⚠️  ${city.name} ${town.name}: ${e.message}`);
+        const raw = await fetchDongData(page, city.code, town.code);
+        collected = parseRows(raw, city.name, town.name);
+      } catch (error) {
+        lastError = error;
+        console.error(`\n재시도 ${attempt}/3 ${city.name} ${town.name}: ${error.message}`);
+        await sleep(attempt * 1500);
       }
-
-      await sleep(400);
     }
+    if (collected === null) {
+      skipped++;
+      checkpoint.failures.push({ key, error: lastError?.message || "unknown", at: new Date().toISOString() });
+    } else {
+      for (const row of collected) {
+        const over = row.rate !== null && row.rate > 0.5;
+        outputRows.push({
+          시도: row.cityName, 구시군: row.townName, 동: row.dong,
+          선거인수: row.electors, 투표수: row.voters,
+          당일투표율: row.rate !== null ? (row.rate * 100).toFixed(2) : "",
+          "50%초과": over ? "Y" : "N",
+          부족추정: over && row.electors ? Math.round(row.voters - row.electors * 0.5) : 0,
+          cityCode: city.code, townCode: town.code,
+        });
+      }
+      completed.add(key);
+      done++;
+      process.stdout.write(`\r워커 ${SHARD_INDEX + 1}/${SHARD_COUNT}: ${done}/${targets.length} - ${city.name} ${town.name} (${collected.length}동)    `);
+    }
+    checkpoint.rows = outputRows;
+    checkpoint.completed = [...completed];
+    fs.writeFileSync(CHECKPOINT, JSON.stringify(checkpoint, null, 2), "utf8");
+    await sleep(600);
   }
 
   await browser.close();
+  const csvLines = [cols.join(","), ...outputRows.map(row => cols.map(column => csvEsc(row[column])).join(","))];
   fs.writeFileSync(OUT, "﻿" + csvLines.join("\r\n"), "utf8");
+  if (fs.existsSync(CHECKPOINT) && skipped === 0) fs.unlinkSync(CHECKPOINT);
   console.log(`\n\n✅ 저장: ${OUT}`);
   console.log(`수집: ${done}개 구시군 / 스킵: ${skipped}개`);
-  console.log(`총 ${csvLines.length - 1}행`);
+  console.log(`총 ${outputRows.length}행`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

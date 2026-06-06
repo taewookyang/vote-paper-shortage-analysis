@@ -24,6 +24,7 @@ async function inspect(page, viewportName) {
   assert(state.redBars >= 27, `${viewportName}: expected fallback dong chart bars`)
   assert(state.mapSvg === 0, `${viewportName}: unlicensed boundary map should not render`)
   assert(state.text.includes('추가 송부 27개 구시군'), `${viewportName}: missing targeted screening section`)
+  assert(state.text.includes('이름 공개 투표소 16곳'), `${viewportName}: missing known-location mapping section`)
   assert(state.text.includes('남해군가선거구'), `${viewportName}: missing smallest-margin district`)
   assert(state.priorityRows === 8, `${viewportName}: expected eight initial priority rows`)
   assert(!state.horizontalOverflow, `${viewportName}: horizontal overflow detected`)

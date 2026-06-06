@@ -264,6 +264,29 @@ def audit_shutdown_stress_test(path: Path) -> list[Check]:
     return checks
 
 
+def audit_known_location_mapping(path: Path) -> list[Check]:
+    dataset = "known_location_margin_mapping_2026"
+    if not path.exists():
+        return [_skip(dataset, "file_exists", f"missing: {path}")]
+    frame = pd.read_csv(path)
+    required = [
+        "구시군", "읍면동", "투표소명", "증거수준", "선거종류", "선거구코드",
+        "선거구명", "표차", "검토등급", "위치출처URL", "결과출처URL", "해석제한",
+    ]
+    checks = [_required_columns(dataset, frame, required)]
+    if checks[0].status == "fail":
+        return checks
+    named = frame["투표소명"].nunique()
+    checks.extend([
+        _check(dataset, "all_named_locations_covered", named == 16, f"named={named}/16"),
+        _check(dataset, "all_rows_mapped_to_district", frame["선거구코드"].notna().all(), f"mapped={frame['선거구코드'].notna().sum()}/{len(frame)}"),
+        _check(dataset, "all_rows_have_margin", frame["표차"].notna().all(), f"margin={frame['표차'].notna().sum()}/{len(frame)}"),
+        _check(dataset, "source_urls_present", frame[["위치출처URL", "결과출처URL"]].notna().all().all(), "location and result sources"),
+        _check(dataset, "no_duplicate_location_district", not frame.duplicated(["투표소명", "선거종류", "선거구코드"]).any(), f"duplicates={frame.duplicated(['투표소명', '선거종류', '선거구코드']).sum()}"),
+    ])
+    return checks
+
+
 def historical_context() -> dict:
     try:
         from src.analysis.historical_baseline import build_songpa_historical_baseline
@@ -317,6 +340,7 @@ def run_audit(fail_on_error: bool = False) -> dict:
     checks.extend(audit_vote_progress(RAW_DIR / "nec_vote_progress_2026.csv"))
     checks.extend(audit_shortages(RAW_DIR / "shortage_2026.csv"))
     checks.extend(audit_shutdown_stress_test(PROCESSED_DIR / "dashboard" / "shutdown_stress_test_2026.json"))
+    checks.extend(audit_known_location_mapping(PROCESSED_DIR / "known_location_margin_mapping_2026.csv"))
 
     failures = [check for check in checks if check.status == "fail"]
     errors = [check for check in failures if check.severity == "error"]

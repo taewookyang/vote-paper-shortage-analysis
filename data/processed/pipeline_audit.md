@@ -1,10 +1,10 @@
 # 데이터 파이프라인 검증 보고서
 
-- 생성: 2026-06-07T01:14:41
-- 검사: 36개
-- 통과: 34개
+- 생성: 2026-06-07T01:31:21
+- 검사: 42개
+- 통과: 41개
 - 오류: 0개
-- 경고: 2개
+- 경고: 1개
 
 ## 검사 결과
 
@@ -29,7 +29,7 @@
 | national_dong_turnout | turnout_rate_formula | pass | error | mismatches=0 |
 | national_dong_turnout | over_50_flag_formula | pass | error | mismatches=0 |
 | national_dong_turnout | shortage_proxy_formula | pass | error | mismatches=0 |
-| national_dong_turnout | national_town_coverage | fail | warning | collected=25, expected=256 |
+| national_dong_turnout | national_town_coverage | pass | warning | collected=256, expected=256 |
 | nec_vote_progress_2026 | required_columns | pass | error | missing=[] |
 | nec_vote_progress_2026 | unique_scope_time_rows | pass | error | duplicate_rows=0 |
 | nec_vote_progress_2026 | voter_roll_identity | pass | error | mismatches=0 |
@@ -46,6 +46,12 @@
 | shutdown_stress_test_2026 | candidate_evidence_level_present | pass | error | candidates=18 |
 | shutdown_stress_test_2026 | known_location_source_present | pass | error | known=16 |
 | shutdown_stress_test_2026 | candidate_polling_place_count_matches | pass | error | candidates=18 |
+| known_location_margin_mapping_2026 | required_columns | pass | error | missing=[] |
+| known_location_margin_mapping_2026 | all_named_locations_covered | pass | error | named=16/16 |
+| known_location_margin_mapping_2026 | all_rows_mapped_to_district | pass | error | mapped=31/31 |
+| known_location_margin_mapping_2026 | all_rows_have_margin | pass | error | margin=31/31 |
+| known_location_margin_mapping_2026 | source_urls_present | pass | error | location and result sources |
+| known_location_margin_mapping_2026 | no_duplicate_location_district | pass | error | duplicates=0 |
 
 ## 과거 선거 비교 해석
 

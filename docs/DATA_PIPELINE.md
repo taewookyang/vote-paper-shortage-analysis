@@ -57,6 +57,17 @@
 `confirmed_shutdown`, `confirmed_shortage`, `model_candidate` 중 하나의 증거수준을
 가진다.
 
+## 이름 공개 투표소의 선거구 직접 매핑
+
+```bash
+node scripts/collect_district_dong_mapping.cjs
+python scripts/build_known_location_margin_mapping.py
+```
+
+첫 명령은 선관위 VCCP08 결과표에 실제 등장하는 읍면동을 광역·기초의원 선거구에
+연결한다. 두 번째 명령은 이름이 공개된 부족·중단 투표소와 당선권 경계 표차를
+결합한다. 상세 위치가 공개되지 않은 투표소는 임의로 선거구에 배정하지 않는다.
+
 실행:
 
 ```bash
