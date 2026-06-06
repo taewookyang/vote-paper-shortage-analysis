@@ -1,0 +1,84 @@
+{
+  "items": [
+    {
+      "psName": "가락2동제3투",
+      "emdName": "가락2동",
+      "placeName": "쌍용아파트관리사무소(1층, 북카페·경로당)",
+      "addr": "서울특별시 송파구 동남로 193 (가락동)",
+      "투표소명": "가락2동 제3투표소",
+      "risk_ratio": 0.8349,
+      "risk_grade": "RED",
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3"
+    },
+    {
+      "psName": "가락2동제7투",
+      "emdName": "가락2동",
+      "placeName": "삼환가락아파트(1층, 경로당)",
+      "addr": "서울특별시 송파구 오금로 432 (가락동)",
+      "투표소명": "가락2동 제7투표소",
+      "risk_ratio": 0.8349,
+      "risk_grade": "RED",
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3"
+    },
+    {
+      "psName": "문정1동제4투",
+      "emdName": "문정1동",
+      "placeName": "문정래미안아파트 관리동(1층, 주민편의시설)",
+      "addr": "서울특별시 송파구 문정로 83 (문정동)",
+      "투표소명": "문정1동 제4투표소",
+      "risk_ratio": 0.7356,
+      "risk_grade": "RED",
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3"
+    },
+    {
+      "psName": "문정2동제2투",
+      "emdName": "문정2동",
+      "placeName": "올림픽훼밀리타운 관리사무소(1층, 입주자대표회의실)",
+      "addr": "서울특별시 송파구 중대로 24 (문정동)",
+      "투표소명": "문정2동 제2투표소",
+      "risk_ratio": 0.8002,
+      "risk_grade": "RED",
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3"
+    },
+    {
+      "psName": "잠실2동제6투",
+      "emdName": "잠실2동",
+      "placeName": "잠일초등학교(1층, 현관로비B)",
+      "addr": "서울특별시 송파구 올림픽로 95 (잠실동)",
+      "투표소명": "잠실2동 제6투표소",
+      "risk_ratio": 0.866,
+      "risk_grade": "RED",
+      "출처URL": "https://www.fnnews.com/news/202606040629007170"
+    },
+    {
+      "psName": "잠실4동제5투",
+      "emdName": "잠실4동",
+      "placeName": "잠실래미안아이파크 아파트 103동(2층, 공공개방시설 나눔센터)",
+      "addr": "서울특별시 송파구 올림픽로 393 (신천동)",
+      "투표소명": "잠실4동 제5투표소",
+      "risk_ratio": 0.8504,
+      "risk_grade": "RED",
+      "출처URL": "https://www.donga.com/news/Politics/article/all/20260603/134042934/1?gid=134043412&regdate=&srev=1"
+    },
+    {
+      "psName": "잠실7동제2투",
+      "emdName": "잠실7동",
+      "placeName": "우성아파트 경로당(1층, 할아버지방)",
+      "addr": "서울특별시 송파구 올림픽로4길 42 (잠실동)",
+      "투표소명": "잠실7동 제2투표소",
+      "risk_ratio": 0.8935,
+      "risk_grade": "RED",
+      "출처URL": "https://www.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500194?wlog_tag1=aiMbti_request_pc"
+    },
+    {
+      "psName": "위례동제5투",
+      "emdName": "위례동",
+      "placeName": "위례포레샤인23단지아파트(2313동 1층, 다목적실)",
+      "addr": "서울특별시 송파구 위례순환로 477 (장지동, 위례포레샤인23단지)",
+      "투표소명": "위례동 제5투표소",
+      "risk_ratio": 0.7904,
+      "risk_grade": "RED",
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3"
+    }
+  ]
+}

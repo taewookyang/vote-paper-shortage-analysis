@@ -1,0 +1,407 @@
+{
+  "title": "송파구 동별 당일투표율 vs 50% 인쇄 한도 (구청장 선거 기준)",
+  "electionDate": "2026-06-03",
+  "dataSource": "중앙선관위 개표단위별 개표결과 (VCCP08) — 구시군장선거",
+  "dataCoverage": "전 27개 동 완전 수집",
+  "printRateBasis": 0.5,
+  "dongAnalysis": [
+    {
+      "dong": "잠실3동",
+      "totalElectors": 25010,
+      "electionDayVotes": 14182,
+      "prevoteVotes": 2834,
+      "electionDayRate": 0.5671,
+      "prevoteRate": 0.1133,
+      "printLimit50pct": 12500,
+      "exceedsPrintLimit": true,
+      "shortage": 1682,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "잠실4동",
+      "totalElectors": 23735,
+      "electionDayVotes": 12652,
+      "prevoteVotes": 4127,
+      "electionDayRate": 0.5331,
+      "prevoteRate": 0.1739,
+      "printLimit50pct": 11800,
+      "exceedsPrintLimit": true,
+      "shortage": 852,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "문정2동",
+      "totalElectors": 23559,
+      "electionDayVotes": 12269,
+      "prevoteVotes": 2263,
+      "electionDayRate": 0.5208,
+      "prevoteRate": 0.0961,
+      "printLimit50pct": 11700,
+      "exceedsPrintLimit": true,
+      "shortage": 569,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "잠실7동",
+      "totalElectors": 8019,
+      "electionDayVotes": 4164,
+      "prevoteVotes": 1600,
+      "electionDayRate": 0.5193,
+      "prevoteRate": 0.1995,
+      "printLimit50pct": 4000,
+      "exceedsPrintLimit": true,
+      "shortage": 164,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "잠실2동",
+      "totalElectors": 25382,
+      "electionDayVotes": 12813,
+      "prevoteVotes": 4346,
+      "electionDayRate": 0.5048,
+      "prevoteRate": 0.1712,
+      "printLimit50pct": 12600,
+      "exceedsPrintLimit": true,
+      "shortage": 213,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "위례동",
+      "totalElectors": 30760,
+      "electionDayVotes": 15419,
+      "prevoteVotes": 4810,
+      "electionDayRate": 0.5013,
+      "prevoteRate": 0.1564,
+      "printLimit50pct": 15300,
+      "exceedsPrintLimit": true,
+      "shortage": 119,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "가락1동",
+      "totalElectors": 20534,
+      "electionDayVotes": 10130,
+      "prevoteVotes": 4035,
+      "electionDayRate": 0.4933,
+      "prevoteRate": 0.1965,
+      "printLimit50pct": 10200,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "가락2동",
+      "totalElectors": 21995,
+      "electionDayVotes": 10818,
+      "prevoteVotes": 3109,
+      "electionDayRate": 0.4918,
+      "prevoteRate": 0.1414,
+      "printLimit50pct": 10900,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "오륜동",
+      "totalElectors": 13639,
+      "electionDayVotes": 6645,
+      "prevoteVotes": 2848,
+      "electionDayRate": 0.4872,
+      "prevoteRate": 0.2088,
+      "printLimit50pct": 6800,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "오금동",
+      "totalElectors": 29887,
+      "electionDayVotes": 14335,
+      "prevoteVotes": 4350,
+      "electionDayRate": 0.4796,
+      "prevoteRate": 0.1455,
+      "printLimit50pct": 14900,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "거여2동",
+      "totalElectors": 18471,
+      "electionDayVotes": 8739,
+      "prevoteVotes": 3422,
+      "electionDayRate": 0.4731,
+      "prevoteRate": 0.1853,
+      "printLimit50pct": 9200,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "송파2동",
+      "totalElectors": 14944,
+      "electionDayVotes": 7060,
+      "prevoteVotes": 3074,
+      "electionDayRate": 0.4724,
+      "prevoteRate": 0.2057,
+      "printLimit50pct": 7400,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "장지동",
+      "totalElectors": 24762,
+      "electionDayVotes": 11558,
+      "prevoteVotes": 4503,
+      "electionDayRate": 0.4668,
+      "prevoteRate": 0.1819,
+      "printLimit50pct": 12300,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "잠실6동",
+      "totalElectors": 13031,
+      "electionDayVotes": 5995,
+      "prevoteVotes": 2952,
+      "electionDayRate": 0.4601,
+      "prevoteRate": 0.2265,
+      "printLimit50pct": 6500,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "방이1동",
+      "totalElectors": 12181,
+      "electionDayVotes": 5424,
+      "prevoteVotes": 2530,
+      "electionDayRate": 0.4453,
+      "prevoteRate": 0.2077,
+      "printLimit50pct": 6000,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "문정1동",
+      "totalElectors": 16280,
+      "electionDayVotes": 7223,
+      "prevoteVotes": 2835,
+      "electionDayRate": 0.4437,
+      "prevoteRate": 0.1741,
+      "printLimit50pct": 8100,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "가락본동",
+      "totalElectors": 19683,
+      "electionDayVotes": 8577,
+      "prevoteVotes": 3240,
+      "electionDayRate": 0.4358,
+      "prevoteRate": 0.1646,
+      "printLimit50pct": 9800,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "마천1동",
+      "totalElectors": 12784,
+      "electionDayVotes": 5523,
+      "prevoteVotes": 2203,
+      "electionDayRate": 0.432,
+      "prevoteRate": 0.1723,
+      "printLimit50pct": 6300,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "거여1동",
+      "totalElectors": 9896,
+      "electionDayVotes": 4159,
+      "prevoteVotes": 1907,
+      "electionDayRate": 0.4203,
+      "prevoteRate": 0.1927,
+      "printLimit50pct": 4900,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "방이2동",
+      "totalElectors": 22466,
+      "electionDayVotes": 9370,
+      "prevoteVotes": 2959,
+      "electionDayRate": 0.4171,
+      "prevoteRate": 0.1317,
+      "printLimit50pct": 11200,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "풍납2동",
+      "totalElectors": 18706,
+      "electionDayVotes": 7652,
+      "prevoteVotes": 4313,
+      "electionDayRate": 0.4091,
+      "prevoteRate": 0.2306,
+      "printLimit50pct": 9300,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "송파1동",
+      "totalElectors": 19810,
+      "electionDayVotes": 7871,
+      "prevoteVotes": 3872,
+      "electionDayRate": 0.3973,
+      "prevoteRate": 0.1955,
+      "printLimit50pct": 9900,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "마천2동",
+      "totalElectors": 15273,
+      "electionDayVotes": 6025,
+      "prevoteVotes": 3196,
+      "electionDayRate": 0.3945,
+      "prevoteRate": 0.2093,
+      "printLimit50pct": 7600,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "석촌동",
+      "totalElectors": 25661,
+      "electionDayVotes": 9845,
+      "prevoteVotes": 4343,
+      "electionDayRate": 0.3837,
+      "prevoteRate": 0.1692,
+      "printLimit50pct": 12800,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "삼전동",
+      "totalElectors": 24468,
+      "electionDayVotes": 9357,
+      "prevoteVotes": 4354,
+      "electionDayRate": 0.3824,
+      "prevoteRate": 0.1779,
+      "printLimit50pct": 12200,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "잠실본동",
+      "totalElectors": 23310,
+      "electionDayVotes": 8686,
+      "prevoteVotes": 4126,
+      "electionDayRate": 0.3726,
+      "prevoteRate": 0.177,
+      "printLimit50pct": 11600,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    },
+    {
+      "dong": "풍납1동",
+      "totalElectors": 9510,
+      "electionDayVotes": 3514,
+      "prevoteVotes": 2442,
+      "electionDayRate": 0.3695,
+      "prevoteRate": 0.2568,
+      "printLimit50pct": 4700,
+      "exceedsPrintLimit": false,
+      "shortage": 0,
+      "dataSource": "nec_mayor_2026_crawled"
+    }
+  ],
+  "correlationPrevoteVsElectionDay": -0.46,
+  "correlationNote": "사전투표율이 낮을수록 당일투표율이 높아지는 반비례 관계 (기사 -0.46과 일치)",
+  "exceedingDongs": [
+    {
+      "dong": "잠실3동",
+      "rate": 0.5671,
+      "shortage": 1682
+    },
+    {
+      "dong": "잠실4동",
+      "rate": 0.5331,
+      "shortage": 852
+    },
+    {
+      "dong": "문정2동",
+      "rate": 0.5208,
+      "shortage": 569
+    },
+    {
+      "dong": "잠실7동",
+      "rate": 0.5193,
+      "shortage": 164
+    },
+    {
+      "dong": "잠실2동",
+      "rate": 0.5048,
+      "shortage": 213
+    },
+    {
+      "dong": "위례동",
+      "rate": 0.5013,
+      "shortage": 119
+    }
+  ],
+  "newOrRedrawnPollingPlaces": [
+    {
+      "dong": "잠실4동",
+      "precinct": "제5투표소",
+      "electors2026": 3071,
+      "printed2026": 1536,
+      "electors2022": 0,
+      "note": "신설 — 과거 패턴 없음"
+    },
+    {
+      "dong": "잠실4동",
+      "precinct": "제6투표소",
+      "electors2026": 2608,
+      "printed2026": 1304,
+      "electors2022": 0,
+      "note": "신설 — 과거 패턴 없음"
+    },
+    {
+      "dong": "잠실4동",
+      "precinct": "제7투표소",
+      "electors2026": 3204,
+      "printed2026": 1602,
+      "electors2022": 0,
+      "note": "신설 — 과거 패턴 없음"
+    },
+    {
+      "dong": "가락2동",
+      "precinct": "제5투표소",
+      "electors2026": 2041,
+      "printed2026": 1020,
+      "electors2022": 3886,
+      "note": "재획정 -1,845명 (경계 변경)"
+    }
+  ],
+  "newOrRedrawnNote": "신설·재획정 투표구는 BIPB02 데이터로 추가 검증 예정",
+  "songpaTotal": {
+    "totalElectors": 523756,
+    "electionDayVoters": 240005,
+    "prevoteVoters": 90593
+  }
+}

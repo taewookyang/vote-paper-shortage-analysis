@@ -1,0 +1,36 @@
+{
+  "election": "제9회 전국동시지방선거",
+  "electionDate": "2026-06-03",
+  "district": "서울특별시 송파구",
+  "totalElectors": 565368,
+  "prevoteElectors": 132225,
+  "electionDayElectors": 433143,
+  "totalVoters": 372231,
+  "prevoteVoters": 132207,
+  "electionDayVoters": 240053,
+  "totalTurnout": 0.6582,
+  "prevoteTurnout": 0.2338,
+  "electionDayTurnout": 0.4243,
+  "printedBallots": 282684,
+  "printRateBasis": 0.5,
+  "surplusTotal": 42774,
+  "surplusRate": 0.178,
+  "shortagePollingPlaces": 14,
+  "paradox": "구 전체 잉여(+42,774장) 속에서 특정 투표소 부족 발생",
+  "mechanism": "균일 50% 배분 + 투표구별 사전투표율 차이 = 설계된 부족",
+  "correlationPrevoteVsElectionDay": -0.46,
+  "criticalMoment": {
+    "time": "13:00",
+    "event": "사전투표 132,194명 집계 합산",
+    "electionDayVotersBefore": 110863,
+    "totalVotersAfter": 266436,
+    "turnoutJump": "19.6% → 47.1%",
+    "note": "이 시점에서 고투표율 투표소 용지 소진 시작"
+  },
+  "sources": [
+    "https://info.nec.go.kr/electioninfo/electionInfo_report.xhtml",
+    "중앙선관위 선거통계시스템 VCVP01",
+    "중앙선관위 개표단위별 개표결과"
+  ],
+  "dataCollectionDate": "2026-06-05"
+}

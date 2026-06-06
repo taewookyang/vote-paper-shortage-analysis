@@ -1,0 +1,11 @@
+{
+  "label": "2025 대선 오후 유입 참고선",
+  "fourPmTurnout": 0.715,
+  "finalTurnout": 0.794,
+  "lateInflowAfterFourPm": 0.079,
+  "use": "지방선거 예측값이 아니라 오후 피크 유입 스트레스 테스트용 참고선",
+  "sources": [
+    "https://imnews.imbc.com/news/2025/politics/article/6722020_36711.html",
+    "https://www.chosun.com/politics/election2025/2025/06/04/RQQFQANTABATTKIQIGHGNILFRU/"
+  ]
+}

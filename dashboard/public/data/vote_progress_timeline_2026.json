@@ -1,0 +1,211 @@
+{
+  "district": "서울특별시 송파구",
+  "printedBallots": 282684,
+  "printLimit50pct_electionDay": 216500,
+  "songpaTimeline": [
+    {
+      "time": "7시",
+      "electionDayVoters": 9284,
+      "prevoteIncluded": 0,
+      "totalVoters": 9284,
+      "turnoutPct": 1.6,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "8시",
+      "electionDayVoters": 24196,
+      "prevoteIncluded": 0,
+      "totalVoters": 24196,
+      "turnoutPct": 4.3,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "9시",
+      "electionDayVoters": 39606,
+      "prevoteIncluded": 0,
+      "totalVoters": 39606,
+      "turnoutPct": 7,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "10시",
+      "electionDayVoters": 60370,
+      "prevoteIncluded": 0,
+      "totalVoters": 60370,
+      "turnoutPct": 10.7,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "11시",
+      "electionDayVoters": 85300,
+      "prevoteIncluded": 0,
+      "totalVoters": 85300,
+      "turnoutPct": 15.1,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "12시",
+      "electionDayVoters": 110863,
+      "prevoteIncluded": 0,
+      "totalVoters": 110863,
+      "turnoutPct": 19.6,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "13시",
+      "electionDayVoters": 134242,
+      "prevoteIncluded": 132194,
+      "totalVoters": 266436,
+      "turnoutPct": 47.1,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "14시",
+      "electionDayVoters": 153886,
+      "prevoteIncluded": 132194,
+      "totalVoters": 286080,
+      "turnoutPct": 50.6,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "15시",
+      "electionDayVoters": 174036,
+      "prevoteIncluded": 132194,
+      "totalVoters": 306230,
+      "turnoutPct": 54.2,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "16시",
+      "electionDayVoters": 193759,
+      "prevoteIncluded": 132194,
+      "totalVoters": 325953,
+      "turnoutPct": 57.7,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "17시",
+      "electionDayVoters": 213246,
+      "prevoteIncluded": 132194,
+      "totalVoters": 345440,
+      "turnoutPct": 61.1,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "18시",
+      "electionDayVoters": 240053,
+      "prevoteIncluded": 132178,
+      "totalVoters": 372231,
+      "turnoutPct": 65.8,
+      "completionStatus": "1/1"
+    },
+    {
+      "time": "전체",
+      "electionDayVoters": 240053,
+      "prevoteIncluded": 132178,
+      "totalVoters": 372231,
+      "turnoutPct": 65.8,
+      "completionStatus": ""
+    }
+  ],
+  "seoulSummaryTimeline": [
+    {
+      "time": "7시",
+      "electionDayVoters": 142603,
+      "totalVoters": 142603,
+      "turnoutPct": 1.7
+    },
+    {
+      "time": "8시",
+      "electionDayVoters": 339586,
+      "totalVoters": 339586,
+      "turnoutPct": 4.1
+    },
+    {
+      "time": "9시",
+      "electionDayVoters": 570644,
+      "totalVoters": 570644,
+      "turnoutPct": 6.9
+    },
+    {
+      "time": "10시",
+      "electionDayVoters": 852135,
+      "totalVoters": 852135,
+      "turnoutPct": 10.2
+    },
+    {
+      "time": "11시",
+      "electionDayVoters": 1190615,
+      "totalVoters": 1190615,
+      "turnoutPct": 14.3
+    },
+    {
+      "time": "12시",
+      "electionDayVoters": 1546608,
+      "totalVoters": 1546608,
+      "turnoutPct": 18.6
+    },
+    {
+      "time": "13시",
+      "electionDayVoters": 1841531,
+      "totalVoters": 3832850,
+      "turnoutPct": 46.1
+    },
+    {
+      "time": "14시",
+      "electionDayVoters": 2117264,
+      "totalVoters": 4108583,
+      "turnoutPct": 49.4
+    },
+    {
+      "time": "15시",
+      "electionDayVoters": 2396376,
+      "totalVoters": 4387708,
+      "turnoutPct": 52.7
+    },
+    {
+      "time": "16시",
+      "electionDayVoters": 2669222,
+      "totalVoters": 4660565,
+      "turnoutPct": 56
+    },
+    {
+      "time": "17시",
+      "electionDayVoters": 2927879,
+      "totalVoters": 4919251,
+      "turnoutPct": 59.1
+    },
+    {
+      "time": "18시",
+      "electionDayVoters": 3298732,
+      "totalVoters": 5289383,
+      "turnoutPct": 63.6
+    },
+    {
+      "time": "전체",
+      "electionDayVoters": 3298732,
+      "totalVoters": 5289383,
+      "turnoutPct": 63.6
+    }
+  ],
+  "annotation": {
+    "criticalHour": "13시",
+    "reason": "사전투표 집계 합산 시점 — 투표자수 급증",
+    "songpa12h": {
+      "time": "12시",
+      "electionDayVoters": 110863,
+      "prevoteIncluded": 0,
+      "totalVoters": 110863,
+      "turnoutPct": 19.6,
+      "completionStatus": "1/1"
+    },
+    "songpa13h": {
+      "time": "13시",
+      "electionDayVoters": 134242,
+      "prevoteIncluded": 132194,
+      "totalVoters": 266436,
+      "turnoutPct": 47.1,
+      "completionStatus": "1/1"
+    }
+  }
+}

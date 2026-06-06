@@ -1,57 +1,93 @@
-# 투표용지 부족 사태 데이터 분석 대시보드
+# 투표용지 부족 사태 민감도 대시보드
 
-> 6·3 지방선거 투표용지 수급 관리 제도의 적정성을 공개 데이터로 분석·시각화하는 시민 연구 프로젝트
+2026년 제9회 전국동시지방선거 투표용지 부족 사태를 공개자료 기반으로 정리하고,
+송파구 파일럿 대시보드로 민감도 시나리오를 보여주는 시민 연구 프로젝트입니다.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+이 프로젝트의 목적은 선거 결과를 단정하는 것이 아니라, 현재 공개자료로 확인되는
+사실과 아직 공개되지 않은 핵심 자료를 분리해 보여주는 것입니다.
 
-## ⚠️ 면책 고지
+## 현재 화면을 읽는 법
 
-본 프로젝트는 **투표용지 수급이라는 행정·제도 측면만을 검토**합니다.
-- 선거 결과(당락)의 정당성을 다루지 않습니다
-- 특정 정당·후보의 유불리를 분석하지 않습니다
-- 모든 배부량 추정값은 선관위 내부 지침(50% 하한) 기준 추정치입니다
+대시보드는 세 층으로 읽습니다.
 
-자세한 내용: [DISCLAIMER.md](DISCLAIMER.md)
+1. 확인된 사실
+   언론 보도와 공개자료로 확인된 부족 투표소 라벨입니다. 모델 추정이 아닙니다.
 
-## 프로젝트 목적
+2. proxy 계산
+   투표소별 실제 최초 배부량이 공개되지 않았기 때문에, 2022년 송파구 동별
+   선거일투표자 수와 선택한 배부 기준으로 다시 계산한 추정값입니다.
 
-1. **공론화**: 역대 데이터로 "예견 가능한 위험이었음"을 시각화
-2. **법적 보조**: 국가배상 과실 입증 + 헌법 평등원칙 논거 데이터 제공
-3. **제도 개선**: 공직선거법 개정 논의를 위한 객관적 근거 제공
+3. 자료 공백
+   확인된 부족 투표소인데 proxy 압박도가 100% 미만이면, "부족이 없었다"가 아니라
+   현재 공개자료와 가정으로는 실제 부족을 설명하지 못한다는 뜻입니다.
 
-## 빠른 시작
+## 주요 용어
+
+- 수급 압박도: 예상 본투표자 수 / 추정 준비 투표용지 수
+- 예상 여유 투표용지: 추정 준비 투표용지 수 - 예상 본투표자 수
+- 추가 조사 우선순위: 부족분과 작은 선거구 표차 가정을 비교한 참고 지표
+- 이탈률: 이미 부족하다고 보는 부족분 중 실제 투표를 못 했을 수 있다고 가정하는 비율
+
+이 지표들은 당락 변경을 뜻하지 않습니다. 추가 사실조사가 필요한 지점을 찾기 위한
+민감도 도구입니다.
+
+## 로컬 실행
 
 ```bash
-# 환경 설정
-pip install -r requirements.txt
-cp .env.example .env  # NEC_API_KEY 입력
-
-# 데이터 수집 (송파구 샘플)
-python -m src.collectors.nec_api
-
-# 모델 실행
-jupyter lab notebooks/
+python run_pipeline.py
+cd dashboard
+npm install
+npm run dev -- --port 5184
 ```
 
-## 데이터 소스
+브라우저에서 `http://127.0.0.1:5184`를 엽니다.
 
-공공데이터포털(data.go.kr) API + 행정안전부 공개 데이터.
-전체 목록: [data/sources.md](data/sources.md)
+## 정적 빌드
 
-## 방법론
-
-[METHODOLOGY.md](METHODOLOGY.md) 참조.
-모든 추정값에 신뢰구간 포함, 낮은 정확도도 그대로 공개.
-
-## 디렉터리 구조
-
+```bash
+python run_pipeline.py
+cd dashboard
+npm run build
 ```
-vote-paper-shortage-analysis/
-├── data/           데이터 (raw/processed)
-├── notebooks/      분석 노트북
-├── src/            파이썬 모듈
-│   ├── collectors/ API 수집
-│   ├── models/     M1~M3 모델
-│   └── validators/ Backtesting
-└── dashboard/      React 대시보드
+
+빌드 결과는 `dashboard/dist`에 생성됩니다. 대시보드는 정적 JSON을 읽는 구조라
+별도 API 서버나 데이터베이스가 필요하지 않습니다.
+
+## Vercel 배포
+
+Vercel에서 프로젝트 루트를 `dashboard`로 잡으면 됩니다.
+
+- Framework Preset: Vite
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
+`dashboard/vercel.json`에도 같은 설정이 들어 있습니다.
+
+## GitHub Pages 배포
+
+저장소 하위 경로에 배포할 경우 base path를 지정해서 빌드합니다.
+
+```bash
+cd dashboard
+$env:VITE_BASE_PATH="/vote-paper-shortage-analysis/"
+npm run build
 ```
+
+생성된 `dashboard/dist`를 GitHub Pages 배포 대상으로 사용합니다.
+
+## 공개되어야 검증이 강해지는 자료
+
+- 투표소별 최초 배부량
+- 투표소별 선거인수
+- 부족 발생 시각과 재개 시각
+- 대기 규모와 실제 이탈자 기록
+- 선거구별 최종 표차
+
+위 자료가 공개되면 현재 proxy 기반 민감도 분석을 확정 자료 기반 검증으로 바꿀 수 있습니다.
+
+## 면책
+
+본 프로젝트는 투표용지 수급이라는 행정·제도 측면만 검토합니다.
+선거 결과의 정당성, 특정 정당·후보의 유불리, 고의성 여부를 단정하지 않습니다.
+
+자세한 내용은 `DISCLAIMER.md`를 참조하세요.

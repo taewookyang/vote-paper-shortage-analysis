@@ -1,0 +1,5332 @@
+{
+  "scenarios": [
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +0%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 10.88,
+        "median": 442.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9928,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 3.18,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0636
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 3.18,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0318
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 3.18,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0106
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 3.18,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0064
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.36,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.1272
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.36,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0636
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.36,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0212
+    },
+    {
+      "label": "배부 50%, 수요 +5%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 15,
+        "green": 123,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -63.58,
+        "median": 367.55
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.36,
+      "maxSupplyPressure": 1.0424,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0127
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.9,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.138
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.9,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.069
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.9,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.023
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 6.9,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0138
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 13.8,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 8,
+        "low": 138,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.276
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 13.8,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.138
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 13.8,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.046
+    },
+    {
+      "label": "배부 50%, 수요 +10%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 30,
+        "green": 108,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -138.04,
+        "median": 292.19
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 13.8,
+      "maxSupplyPressure": 1.092,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0276
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 10.62,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.2124
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 10.62,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.1062
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 10.62,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0354
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 10.62,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0212
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 21.25,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 8,
+        "low": 138,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.425
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 21.25,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.2125
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 21.25,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0708
+    },
+    {
+      "label": "배부 50%, 수요 +15%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.5,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 8,
+        "yellow": 51,
+        "green": 79,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -212.49,
+        "median": 216.84
+      },
+      "possibleShortagePlaces": 10,
+      "maxPotentialAffected": 21.25,
+      "maxSupplyPressure": 1.1417,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0425
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +0%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 210.88,
+        "median": 642.9
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.876,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +5%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 136.42,
+        "median": 567.54
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9198,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +10%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 61.96,
+        "median": 492.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9636,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.62,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0124
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.62,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0062
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.62,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0021
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 0.62,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0012
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 1.25,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.025
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 1.25,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0125
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 1.25,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0042
+    },
+    {
+      "label": "배부 55%, 수요 +15%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.55,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 9,
+        "green": 129,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": -12.49,
+        "median": 416.83
+      },
+      "possibleShortagePlaces": 8,
+      "maxPotentialAffected": 1.25,
+      "maxSupplyPressure": 1.0073,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0025
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +0%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.0,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 410.88,
+        "median": 827.94
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.7837,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +5%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.05,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 336.42,
+        "median": 753.45
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8229,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +10%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.1,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 0,
+        "green": 138,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 261.96,
+        "median": 675.23
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.8621,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 0%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 0%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 0%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 0%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.0,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 5%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 5%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 5%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 5%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.05,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 10%, 표차 50표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 50,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 10%, 표차 100표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 100,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 10%, 표차 300표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 300,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    },
+    {
+      "label": "배부 60%, 수요 +15%, 이탈 10%, 표차 500표",
+      "supplyRatio": 0.6,
+      "demandGrowth": 0.15,
+      "attritionRate": 0.1,
+      "marginThreshold": 500,
+      "riskCounts": {
+        "red": 8,
+        "orange": 0,
+        "yellow": 8,
+        "green": 130,
+        "unknown": 0
+      },
+      "plainLanguage": {
+        "supplyPressure": "예상 본투표자 수가 준비된 투표용지에 얼마나 가까운지",
+        "spareBallots": "시나리오상 남거나 모자랄 수 있는 투표용지 장수",
+        "possibleShortagePlaces": "예상 여유 투표용지가 0장 미만인 투표소 수",
+        "priority": "잠재 영향 인원이 작은 표차와 비교해 추가 조사가 필요한지",
+        "demandGrowthBase": "2022년 송파구 읍면동별 선거일투표자 수를 같은 동 투표소 수로 나눈 proxy",
+        "attritionEffect": "예상 여유 투표용지가 0장 미만인 시나리오에서만 추가 조사 우선순위에 영향을 줌"
+      },
+      "spareBallots": {
+        "min": 187.51,
+        "median": 608.19
+      },
+      "possibleShortagePlaces": 0,
+      "maxPotentialAffected": 0.0,
+      "maxSupplyPressure": 0.9013,
+      "priorityCounts": {
+        "high": 0,
+        "review": 0,
+        "low": 146,
+        "unknown": 0
+      },
+      "confirmedShortageCoverage": 1.0,
+      "maxPriorityScore": 0.0
+    }
+  ]
+}

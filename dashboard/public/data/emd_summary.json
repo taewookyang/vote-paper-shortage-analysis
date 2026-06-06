@@ -1,0 +1,274 @@
+{
+  "items": [
+    {
+      "emdName": "풍납1동",
+      "pollingPlaces": 3,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.5946,
+      "yellowOrHigher": 0,
+      "mapRow": 1,
+      "mapCol": 1,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "풍납2동",
+      "pollingPlaces": 6,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6602,
+      "yellowOrHigher": 0,
+      "mapRow": 1,
+      "mapCol": 2,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "잠실4동",
+      "pollingPlaces": 7,
+      "confirmedShortages": 1,
+      "maxRiskRatio": 0.8504,
+      "yellowOrHigher": 1,
+      "mapRow": 1,
+      "mapCol": 4,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "잠실6동",
+      "pollingPlaces": 3,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.7453,
+      "yellowOrHigher": 0,
+      "mapRow": 1,
+      "mapCol": 5,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "방이1동",
+      "pollingPlaces": 3,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.7119,
+      "yellowOrHigher": 0,
+      "mapRow": 2,
+      "mapCol": 1,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "방이2동",
+      "pollingPlaces": 6,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6369,
+      "yellowOrHigher": 0,
+      "mapRow": 2,
+      "mapCol": 2,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "잠실2동",
+      "pollingPlaces": 7,
+      "confirmedShortages": 1,
+      "maxRiskRatio": 0.866,
+      "yellowOrHigher": 1,
+      "mapRow": 2,
+      "mapCol": 3,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "잠실3동",
+      "pollingPlaces": 8,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.9928,
+      "yellowOrHigher": 8,
+      "mapRow": 2,
+      "mapCol": 4,
+      "mapGrade": "watch"
+    },
+    {
+      "emdName": "잠실7동",
+      "pollingPlaces": 2,
+      "confirmedShortages": 1,
+      "maxRiskRatio": 0.8935,
+      "yellowOrHigher": 1,
+      "mapRow": 2,
+      "mapCol": 5,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "오륜동",
+      "pollingPlaces": 4,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.8512,
+      "yellowOrHigher": 0,
+      "mapRow": 3,
+      "mapCol": 1,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "송파1동",
+      "pollingPlaces": 5,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6197,
+      "yellowOrHigher": 0,
+      "mapRow": 3,
+      "mapCol": 2,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "송파2동",
+      "pollingPlaces": 4,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.7888,
+      "yellowOrHigher": 0,
+      "mapRow": 3,
+      "mapCol": 3,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "석촌동",
+      "pollingPlaces": 7,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.568,
+      "yellowOrHigher": 0,
+      "mapRow": 3,
+      "mapCol": 4,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "삼전동",
+      "pollingPlaces": 7,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6056,
+      "yellowOrHigher": 0,
+      "mapRow": 3,
+      "mapCol": 5,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "잠실본동",
+      "pollingPlaces": 6,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.5639,
+      "yellowOrHigher": 0,
+      "mapRow": 3,
+      "mapCol": 6,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "오금동",
+      "pollingPlaces": 8,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.8001,
+      "yellowOrHigher": 0,
+      "mapRow": 4,
+      "mapCol": 1,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "가락본동",
+      "pollingPlaces": 6,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6937,
+      "yellowOrHigher": 0,
+      "mapRow": 4,
+      "mapCol": 2,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "가락1동",
+      "pollingPlaces": 5,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.7861,
+      "yellowOrHigher": 0,
+      "mapRow": 4,
+      "mapCol": 3,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "가락2동",
+      "pollingPlaces": 7,
+      "confirmedShortages": 2,
+      "maxRiskRatio": 0.8349,
+      "yellowOrHigher": 2,
+      "mapRow": 4,
+      "mapCol": 4,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "문정1동",
+      "pollingPlaces": 4,
+      "confirmedShortages": 1,
+      "maxRiskRatio": 0.7356,
+      "yellowOrHigher": 1,
+      "mapRow": 5,
+      "mapCol": 2,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "문정2동",
+      "pollingPlaces": 6,
+      "confirmedShortages": 1,
+      "maxRiskRatio": 0.8002,
+      "yellowOrHigher": 1,
+      "mapRow": 5,
+      "mapCol": 3,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "장지동",
+      "pollingPlaces": 7,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.7709,
+      "yellowOrHigher": 0,
+      "mapRow": 5,
+      "mapCol": 4,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "거여1동",
+      "pollingPlaces": 3,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6592,
+      "yellowOrHigher": 0,
+      "mapRow": 5,
+      "mapCol": 5,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "거여2동",
+      "pollingPlaces": 5,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.7574,
+      "yellowOrHigher": 0,
+      "mapRow": 5,
+      "mapCol": 6,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "위례동",
+      "pollingPlaces": 8,
+      "confirmedShortages": 1,
+      "maxRiskRatio": 0.7904,
+      "yellowOrHigher": 1,
+      "mapRow": 6,
+      "mapCol": 4,
+      "mapGrade": "confirmed"
+    },
+    {
+      "emdName": "마천1동",
+      "pollingPlaces": 5,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6871,
+      "yellowOrHigher": 0,
+      "mapRow": 6,
+      "mapCol": 5,
+      "mapGrade": "low"
+    },
+    {
+      "emdName": "마천2동",
+      "pollingPlaces": 4,
+      "confirmedShortages": 0,
+      "maxRiskRatio": 0.6306,
+      "yellowOrHigher": 0,
+      "mapRow": 6,
+      "mapCol": 6,
+      "mapGrade": "low"
+    }
+  ]
+}
