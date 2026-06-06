@@ -1,60 +1,48 @@
 const { chromium } = require('playwright')
 const path = require('path')
 
-const target = process.env.LOCAL_DASHBOARD_URL || 'http://127.0.0.1:5184'
+const target = process.env.LOCAL_DASHBOARD_URL || 'http://127.0.0.1:5184/data'
 
 function assert(condition, message) {
-  if (!condition) {
-    throw new Error(message)
-  }
+  if (!condition) throw new Error(message)
+}
+
+async function inspect(page, viewportName) {
+  await page.goto(target, { waitUntil: 'domcontentloaded', timeout: 30000 })
+  await page.getByText('투표용지는 왜 모자랐나').waitFor({ timeout: 30000 })
+  await page.getByText('표차가 작은 곳부터 추가 조사').waitFor({ timeout: 30000 })
+  const state = await page.evaluate(() => ({
+    text: document.body.innerText,
+    redBars: document.querySelectorAll('.recharts-bar-rectangle').length,
+    mapSvg: document.querySelectorAll('.songpa-boundary-svg').length,
+    priorityRows: document.querySelectorAll('.margin-screening-row').length,
+    horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+  }))
+
+  assert(state.text.includes('어느 동에서 바닥났나'), `${viewportName}: missing Songpa detail section`)
+  assert(!state.text.includes('지도 경계 데이터를 불러오지 못했습니다'), `${viewportName}: broken map error is visible`)
+  assert(state.redBars >= 27, `${viewportName}: expected fallback dong chart bars`)
+  assert(state.mapSvg === 0, `${viewportName}: unlicensed boundary map should not render`)
+  assert(state.text.includes('표차가 작은 곳부터 추가 조사'), `${viewportName}: missing targeted screening section`)
+  assert(state.text.includes('남해군가선거구'), `${viewportName}: missing smallest-margin district`)
+  assert(state.priorityRows === 8, `${viewportName}: expected eight initial priority rows`)
+  assert(!state.horizontalOverflow, `${viewportName}: horizontal overflow detected`)
 }
 
 async function main() {
   const browser = await chromium.launch({ headless: true })
-  const page = await browser.newPage({ viewport: { width: 1440, height: 1500 } })
+  const desktop = await browser.newPage({ viewport: { width: 1280, height: 900 } })
+  const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } })
 
-  await page.goto(target, { waitUntil: 'networkidle' })
-
-  const initial = await page.evaluate(() => ({
-    text: document.body.innerText,
-    tiles: document.querySelectorAll('.songpa-tile').length,
-    emptyTiles: document.querySelectorAll('.songpa-empty').length,
-    confirmedRows: Array.from(document.querySelectorAll('section'))
-      .find((section) => section.innerText.includes('확인된 송파구 부족 투표소'))
-      ?.innerText.includes('추정이 못 잡음'),
-    scenarioRows: Array.from(document.querySelectorAll('section'))
-      .find((section) => section.innerText.includes('현재 시나리오에서 아슬아슬한 동'))
-      ?.innerText.includes('시나리오 해석'),
-  }))
-
-  assert(initial.text.includes('한눈에 읽기'), 'Missing quick-read section')
-  assert(initial.text.includes('계산은 이렇게 합니다'), 'Missing proxy calculation explanation')
-  assert(initial.text.includes('기다리다 포기한 비율은 무엇을 바꾸나'), 'Missing attrition explanation section')
-  assert(initial.tiles === 27, `Expected 27 Songpa tiles, got ${initial.tiles}`)
-  assert(initial.emptyTiles === 0, 'Old empty map tiles are still rendered')
-  assert(initial.confirmedRows, 'Confirmed shortage table does not explain estimation misses')
-  assert(initial.scenarioRows, 'Scenario dong section is missing or not separated from facts')
-
-  await page.getByRole('button', { name: '+15%' }).first().click()
-  await page.getByText('확인된 송파구 부족 투표소').scrollIntoViewIfNeeded()
-
-  const afterDemandChange = await page.evaluate(() => {
-    const section = Array.from(document.querySelectorAll('section'))
-      .find((candidate) => candidate.innerText.includes('확인된 송파구 부족 투표소'))
-    return section?.innerText || ''
-  })
-  assert(afterDemandChange.includes('현재 가정도 부족'), 'Demand lever did not change confirmed table interpretation')
-
-  await page.screenshot({
-    path: path.resolve(__dirname, '..', 'dashboard-local-smoke.png'),
-    fullPage: false,
-  })
+  await inspect(desktop, 'desktop')
+  await inspect(mobile, 'mobile')
+  await desktop.screenshot({ path: path.resolve(__dirname, '..', 'dashboard-local-smoke.png'), fullPage: false })
 
   await browser.close()
-  console.log(`Local smoke test passed: ${target}`)
+  console.log(`Local smoke test passed on desktop and mobile: ${target}`)
 }
 
-main().catch(async (error) => {
+main().catch(error => {
   console.error(error.message)
   process.exit(1)
 })

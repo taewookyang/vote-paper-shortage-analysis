@@ -14,12 +14,14 @@ const DATA_FILES = {
   seoul:          '/data/seoul_analysis_2026.json',
   yearlyCompare:  '/data/yearly_comparison.json',
   songpaMap:      '/data/songpa_boundaries_2026.json',
+  targetedMargins:'/data/targeted_margin_screening_2026.json',
 }
 
 export default function Dashboard() {
   const navigate = useNavigate()
   const [data, setData] = useState(null)
   const [showDetail, setShowDetail] = useState(false)
+  const [showAllMargins, setShowAllMargins] = useState(false)
 
   useEffect(() => {
     Promise.all(
@@ -48,6 +50,8 @@ export default function Dashboard() {
   const seoul    = data.seoul || null
   const yearlyCompare = data.yearlyCompare?.years || []
   const songpaMap = data.songpaMap || null
+  const targetedMargins = data.targetedMargins?.items || []
+  const priorityMargins = targetedMargins.filter(item => item['검토등급'] === '우선검토')
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -159,7 +163,7 @@ export default function Dashboard() {
           </p>
           {songpaMap
             ? <SongpaBoundaryMap boundaries={songpaMap} dongs={dongs} shortages={shortages} />
-            : <p style={{ color: '#9ca3af', fontSize: 13 }}>지도 경계 데이터를 불러오지 못했습니다.</p>
+            : <DongRateChart dongChart={dongChart} exceedingCount={exceeding.length} />
           }
         </Section>
 
@@ -413,6 +417,33 @@ export default function Dashboard() {
           </Section>
         )}
 
+        {priorityMargins.length > 0 && (
+          <Section label="전국" title="표차가 작은 곳부터 추가 조사">
+            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 12, lineHeight: 1.7 }}>
+              추가 송부가 발생한 27개 구시군의 광역·기초의원 <strong>212개 선거구</strong>를 확인했습니다.
+              마지막 당선자와 첫 낙선자의 표차가 <strong style={{ color: '#be123c' }}>500표 이하인 곳은 {priorityMargins.length}개</strong>입니다.
+            </p>
+            <CalloutBox color="#fff7ed" border="#fdba74">
+              표차가 작다는 사실만으로 투표용지 부족이 결과에 영향을 미쳤다고 판단할 수 없습니다.
+              아래 목록은 <strong>부족 투표소의 정확한 위치와 중단 기록을 먼저 확인할 조사 후보</strong>입니다.
+            </CalloutBox>
+            <div className="margin-screening-list">
+              {(showAllMargins ? priorityMargins : priorityMargins.slice(0, 8)).map(item => (
+                <MarginScreeningRow key={`${item['선거종류']}-${item['선거구코드']}`} item={item} />
+              ))}
+            </div>
+            {priorityMargins.length > 8 && (
+              <button className="margin-screening-toggle" onClick={() => setShowAllMargins(value => !value)}>
+                {showAllMargins ? '접기' : `500표 이하 ${priorityMargins.length}개 전체 보기`}
+              </button>
+            )}
+            <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
+              투표소명이 공개된 구시군도 해당 투표소와 선거구의 직접 연결은 별도 검증이 필요합니다.
+              데이터: 중앙선관위 VCCP08, 2026-06-06 수집.
+            </p>
+          </Section>
+        )}
+
         {/* ── 상세 보기 ── */}
         <button
           onClick={() => setShowDetail(v => !v)}
@@ -480,6 +511,55 @@ function Section({ label, title, children }) {
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: 0 }}>{title}</h2>
       </div>
       {children}
+    </div>
+  )
+}
+
+function DongRateChart({ dongChart, exceedingCount }) {
+  return (
+    <>
+      <div style={{ height: 520, marginTop: 12 }}>
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart data={dongChart} layout="vertical" margin={{ left: 8, right: 44, top: 4, bottom: 4 }}>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={false} />
+            <XAxis type="number" domain={[0, 65]} tickFormatter={value => `${value}%`} tick={{ fontSize: 11 }} />
+            <YAxis dataKey="name" type="category" width={60} tick={{ fontSize: 11 }} />
+            <ReferenceLine x={50} stroke="#be123c" strokeDasharray="4 3" strokeWidth={2} />
+            <Tooltip formatter={value => [`${value}%`, '당일투표율']} />
+            <Bar dataKey="rate" radius={[0, 3, 3, 0]} label={{ position: 'right', fontSize: 11, formatter: value => `${value}%` }}>
+              {dongChart.map(dong => <Cell key={dong.name} fill={dong.over ? '#be123c' : '#0f766e'} />)}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, fontSize: 12, color: '#6b7280', marginTop: 6 }}>
+        <MapLegend color="#be123c" label={`50% 초과 (${exceedingCount}개 동)`} />
+        <MapLegend color="#0f766e" label={`50% 이하 (${dongChart.length - exceedingCount}개 동)`} />
+      </div>
+      <p style={{ fontSize: 11, color: '#9ca3af', lineHeight: 1.6 }}>
+        실제 경계 지도는 경계 데이터 재배포 조건 확인 후 활성화할 예정입니다.
+      </p>
+    </>
+  )
+}
+
+function MarginScreeningRow({ item }) {
+  const hasNamedPollingPlaces = item['공개투표소명수'] > 0
+  return (
+    <div className="margin-screening-row">
+      <div>
+        <div className="margin-screening-title">
+          {item['시도']} {item['구시군']} · {item['선거구명']}
+        </div>
+        <div className="margin-screening-meta">
+          {item['선거종류']} · 추가 송부 {item['추가송부투표소수']}곳 ·
+          {hasNamedPollingPlaces ? ` 투표소명 ${item['공개투표소명수']}곳 공개` : ' 상세 투표소명 미공개'}
+        </div>
+      </div>
+      <div className="margin-screening-value">
+        <strong>{item['당선권경계표차'].toLocaleString()}표</strong>
+        <span>당선권 경계</span>
+      </div>
     </div>
   )
 }

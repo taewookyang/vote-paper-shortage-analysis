@@ -315,6 +315,66 @@ button {
   width: fit-content;
 }
 
+.margin-screening-list {
+  display: grid;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.margin-screening-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  padding: 11px 12px;
+  border: 1px solid #d9dee7;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.margin-screening-title {
+  color: #1c2430;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.margin-screening-meta {
+  margin-top: 3px;
+  color: #8a94a3;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.margin-screening-value {
+  display: grid;
+  flex: 0 0 72px;
+  gap: 2px;
+  text-align: right;
+}
+
+.margin-screening-value strong {
+  color: #be123c;
+  font-size: 16px;
+}
+
+.margin-screening-value span {
+  color: #8a94a3;
+  font-size: 10px;
+}
+
+.margin-screening-toggle {
+  width: 100%;
+  margin-top: 9px;
+  padding: 9px 12px;
+  border: 1px solid #d9dee7;
+  border-radius: 6px;
+  background: #fff;
+  color: #475467;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 @media (max-width: 520px) {
   .songpa-boundary-label {
     font-size: 7.5px;
@@ -322,5 +382,9 @@ button {
 
   .songpa-map-selection {
     grid-template-columns: 1fr;
+  }
+
+  .margin-screening-row {
+    align-items: flex-start;
   }
 }
