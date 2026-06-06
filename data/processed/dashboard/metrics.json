@@ -1,5 +1,5 @@
 {
-  "scope": "송파구 2022 읍면동 집계 기반 투표소 균등배분 프로토타입",
+  "scope": "송파구 2026 실제 개표단위 수요 기반 투표소 균등배분 프로토타입 (공급 측 M1 추정)",
   "songpa_actual_shortage_total_official": 14,
   "named_shortage_rows_in_csv": 8,
   "matched_named_shortage_rows": 8,
