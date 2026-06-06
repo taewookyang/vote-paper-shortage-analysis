@@ -117,16 +117,81 @@ export default function Dashboard() {
             </div>
           </div>
           <div style={{ marginTop: 16, background: '#111', borderRadius: 8, padding: '12px 14px', color: 'white', fontSize: 14, lineHeight: 1.6, textAlign: 'center' }}>
-            구 전체 합계에는 여유가 있었습니다. <strong>투표소별 배분 과정은 추가 확인이 필요합니다.</strong>
+            총량은 충분했습니다. <strong>배분이 틀렸습니다.</strong>
           </div>
+          <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, textAlign: 'center' }}>
+            송파구 기준 · 전국 27개 구시군으로 확대 집계 중
+          </p>
         </div>
+
+        {/* ── 전국 현황 ── */}
+        <Section label="전국" title="14,288개 투표소 중 67개">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 16 }}>
+            {[
+              { num: '67곳', label: '추가 송부', sub: '선관위 공식' },
+              { num: '22곳', label: '투표 중단', sub: '선관위 공식' },
+              { num: '?명', label: '투표 못한 유권자', sub: '"파악 불가"' },
+            ].map(s => (
+              <div key={s.num} style={{ background: s.num === '?명' ? '#f1f5f9' : '#fef2f2', border: `1px solid ${s.num === '?명' ? '#cbd5e1' : '#fca5a5'}`, borderRadius: 10, padding: '14px 10px', textAlign: 'center' }}>
+                <div style={{ fontSize: 22, fontWeight: 900, color: s.num === '?명' ? '#374151' : '#be123c', lineHeight: 1 }}>{s.num}</div>
+                <div style={{ fontSize: 12, color: '#374151', marginTop: 5, fontWeight: 600 }}>{s.label}</div>
+                <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 3 }}>{s.sub}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 6, marginBottom: 14 }}>
+            {[
+              { region: '서울', count: 35 },
+              { region: '부산', count: 8 },
+              { region: '경남', count: 8 },
+              { region: '대구', count: 7 },
+              { region: '인천', count: 6 },
+              { region: '울산', count: 3 },
+            ].map(r => (
+              <div key={r.region} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '7px 10px', background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: 6 }}>
+                <span style={{ fontSize: 13, fontWeight: 600 }}>{r.region}</span>
+                <span style={{ fontSize: 13, color: '#be123c', fontWeight: 700 }}>{r.count}곳</span>
+              </div>
+            ))}
+          </div>
+          <CalloutBox color="#fef2f2" border="#fca5a5">
+            선관위는 투표 포기 후 돌아간 유권자 수에 대해 <strong>"정확히 파악하기 어렵다"</strong>고 답했습니다.<br />
+            <span style={{ fontSize: 12, color: '#9ca3af' }}>기록 자체가 없습니다. · 출처: 파이낸셜뉴스 2026.06.05</span>
+          </CalloutBox>
+        </Section>
+
+        {/* ── 전국 표차 ── */}
+        {priorityMargins.length > 0 && (
+          <Section label="표차" title={`부족 지역 212개 선거구 — 500표 이하 ${priorityMargins.length}개`}>
+            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
+              추가 송부 발생 27개 구시군의 광역·기초의원 선거구를 전수 확인했습니다.
+            </p>
+            <CalloutBox color="#fff7ed" border="#fdba74">
+              표차가 작다는 사실만으로 결과 영향을 단정할 수 없습니다.
+              <strong> 부족 투표소의 정확한 위치 확인이 우선</strong>입니다.
+            </CalloutBox>
+            <div className="margin-screening-list" style={{ marginTop: 12 }}>
+              {(showAllMargins ? priorityMargins : priorityMargins.slice(0, 8)).map(item => (
+                <MarginScreeningRow key={`${item['선거종류']}-${item['선거구코드']}`} item={item} />
+              ))}
+            </div>
+            {priorityMargins.length > 8 && (
+              <button className="margin-screening-toggle" onClick={() => setShowAllMargins(v => !v)}>
+                {showAllMargins ? '접기' : `전체 ${priorityMargins.length}개 보기`}
+              </button>
+            )}
+            <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
+              투표소와 선거구의 직접 연결은 별도 검증 필요. 데이터: 중앙선관위 VCCP08, 2026-06-06 수집.
+            </p>
+          </Section>
+        )}
 
         {/* ── 서울 현황 ── */}
         {seoul && (
-          <Section label="서울" title="서울 25개 구 현황">
+          <Section label="서울" title="서울 25개 구 — 전국 확대">
             <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 12, lineHeight: 1.6 }}>
-              서울 전체 427개 동 중 <strong style={{ color: '#be123c' }}>{seoul.totalOverDongs}개 동</strong>이
-              선거일 당일투표율 50%를 초과했습니다. 송파구만의 문제가 아닙니다.
+              427개 동 중 <strong style={{ color: '#be123c' }}>{seoul.totalOverDongs}개 동</strong> 50% 초과.
+              송파구만의 문제가 아닙니다.
             </p>
             <div style={{ display: 'grid', gap: 8 }}>
               {seoul.districts.filter(d => d.overDongs > 0).map(d => {
@@ -156,10 +221,9 @@ export default function Dashboard() {
         )}
 
         {/* ── STORY 1: 어느 동에서 바닥났나 ── */}
-        <Section label="01" title="어느 동에서 바닥났나 — 송파구 상세">
+        <Section label="01" title="어느 동 — 송파구 27개 동 전체">
           <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 4, lineHeight: 1.6 }}>
-            당일투표율이 <strong>50%를 넘은 동</strong>은 하한 수준으로 배부됐을 경우 부족 가능성이 있습니다.
-            2026 구청장 선거 개표결과 기준 (27개 동 전체 크롤링).
+            <strong>50% 초과 = 바닥.</strong> 구청장 선거 개표결과 기준.
           </p>
           {songpaMap
             ? <SongpaBoundaryMap boundaries={songpaMap} dongs={dongs} shortages={shortages} />
@@ -168,7 +232,7 @@ export default function Dashboard() {
         </Section>
 
         {/* ── STORY 2: 왜 이렇게 됐나 ── */}
-        <Section label="02" title="왜 이렇게 됐나">
+        <Section label="02" title="왜 — 50%만 인쇄했다">
           <div style={{ display: 'grid', gap: 10, marginBottom: 14 }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
               <RuleCard
@@ -417,32 +481,6 @@ export default function Dashboard() {
           </Section>
         )}
 
-        {priorityMargins.length > 0 && (
-          <Section label="전국" title="표차가 작은 곳부터 추가 조사">
-            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 12, lineHeight: 1.7 }}>
-              추가 송부가 발생한 27개 구시군의 광역·기초의원 <strong>212개 선거구</strong>를 확인했습니다.
-              마지막 당선자와 첫 낙선자의 표차가 <strong style={{ color: '#be123c' }}>500표 이하인 곳은 {priorityMargins.length}개</strong>입니다.
-            </p>
-            <CalloutBox color="#fff7ed" border="#fdba74">
-              표차가 작다는 사실만으로 투표용지 부족이 결과에 영향을 미쳤다고 판단할 수 없습니다.
-              아래 목록은 <strong>부족 투표소의 정확한 위치와 중단 기록을 먼저 확인할 조사 후보</strong>입니다.
-            </CalloutBox>
-            <div className="margin-screening-list">
-              {(showAllMargins ? priorityMargins : priorityMargins.slice(0, 8)).map(item => (
-                <MarginScreeningRow key={`${item['선거종류']}-${item['선거구코드']}`} item={item} />
-              ))}
-            </div>
-            {priorityMargins.length > 8 && (
-              <button className="margin-screening-toggle" onClick={() => setShowAllMargins(value => !value)}>
-                {showAllMargins ? '접기' : `500표 이하 ${priorityMargins.length}개 전체 보기`}
-              </button>
-            )}
-            <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
-              투표소명이 공개된 구시군도 해당 투표소와 선거구의 직접 연결은 별도 검증이 필요합니다.
-              데이터: 중앙선관위 VCCP08, 2026-06-06 수집.
-            </p>
-          </Section>
-        )}
 
         {/* ── 상세 보기 ── */}
         <button
