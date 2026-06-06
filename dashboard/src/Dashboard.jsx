@@ -10,7 +10,6 @@ const DATA_FILES = {
   dongAnalysis:   '/data/dong_analysis_2026.json',
   voteTimeline:   '/data/vote_progress_timeline_2026.json',
   shortages:      '/data/confirmed_shortages.json',
-  retally:        '/data/retally_analysis.json',
   seoul:          '/data/seoul_analysis_2026.json',
   yearlyCompare:  '/data/yearly_comparison.json',
   songpaMap:      '/data/songpa_boundaries_2026.json',
@@ -48,7 +47,6 @@ export default function Dashboard() {
   const timeline = data.voteTimeline?.songpaTimeline || []
   const exceeding = data.dongAnalysis?.exceedingDongs || []
   const shortages = data.shortages?.items || []
-  const retally  = data.retally || null
   const seoul    = data.seoul || null
   const yearlyCompare = data.yearlyCompare?.years || []
   const songpaMap = data.songpaMap || null
@@ -95,11 +93,11 @@ export default function Dashboard() {
             2026.6.3 제9회 지방선거 · 서울 25개 구 + 송파구 상세 · 데이터 검증
           </p>
           <h1 style={{ fontSize: 24, fontWeight: 800, lineHeight: 1.25, margin: 0 }}>
-            투표용지는 왜 모자랐나
+            송파구 50% 가정에는 여유가 남는데, 왜 일부 투표소에서는 부족했나
           </h1>
           <p style={{ fontSize: 14, color: '#bbb', marginTop: 10, lineHeight: 1.7 }}>
-            선관위 공개 데이터를 직접 크롤링해 검증했습니다.<br />
-            특정 후보 유불리나 선거 결과를 단정하지 않습니다.
+            공개 데이터로 확인되는 범위와 아직 확인할 수 없는 범위를 나눠 봅니다.<br />
+            특정 후보 유불리나 선거 결과 영향은 단정하지 않습니다.
           </p>
         </div>
       </header>
@@ -108,7 +106,7 @@ export default function Dashboard() {
 
         {/* ── 역설 카드 ── */}
         <div style={{ marginTop: 24, background: 'white', border: '2px solid #111', borderRadius: 12, padding: '20px 18px' }}>
-          <p style={{ fontSize: 13, fontWeight: 700, color: '#6b7280', letterSpacing: 1, marginBottom: 14 }}>핵심 역설</p>
+          <p style={{ fontSize: 13, fontWeight: 700, color: '#6b7280', letterSpacing: 1, marginBottom: 14 }}>현재 데이터가 보여주는 핵심 질문</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 12, alignItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: 30, fontWeight: 800, color: '#be123c', lineHeight: 1 }}>15곳</div>
@@ -118,16 +116,30 @@ export default function Dashboard() {
             <div style={{ fontSize: 28, color: '#d1d5db', fontWeight: 300 }}>↔</div>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: 30, fontWeight: 800, color: '#0f766e', lineHeight: 1 }}>+4.3만장</div>
-              <div style={{ fontSize: 13, color: '#374151', marginTop: 6, fontWeight: 600 }}>구 전체 잉여</div>
-              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3 }}>자체 크롤링 · 송파구</div>
+              <div style={{ fontSize: 13, color: '#374151', marginTop: 6, fontWeight: 600 }}>50% 가정상 구 전체 여유</div>
+              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3 }}>개표결과 기반 계산 · 실제 배부량 아님</div>
             </div>
           </div>
           <div style={{ marginTop: 16, background: '#111', borderRadius: 8, padding: '12px 14px', color: 'white', fontSize: 14, lineHeight: 1.6, textAlign: 'center' }}>
-            구 전체 총량에는 여유가 있었습니다. <strong>투표소별 배분·이송 과정은 추가 확인이 필요합니다.</strong>
+            구 전체에 50%를 일률 적용한 계산에서는 여유가 남습니다.
+            <strong> 실제 부족 원인을 판단하려면 투표소별 배부량·이송 기록이 필요합니다.</strong>
           </div>
           <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, textAlign: 'center' }}>
-            송파구 기준 · 전국 27개 구시군으로 확대 집계 중
+            송파구 사례 기준 · 전국 동별 선거일 수요 256개 구시군 수집 완료
           </p>
+        </div>
+
+        <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }}>
+          {[
+            { label: '확인된 사실', body: '67곳 추가 송부 · 22곳 중단', color: '#be123c', bg: '#fef2f2' },
+            { label: '계산으로 보는 것', body: '50% 일률 가정의 여유 수준', color: '#b45309', bg: '#fff7ed' },
+            { label: '아직 모르는 것', body: '실제 배부량 · 이탈 인원', color: '#475569', bg: '#f1f5f9' },
+          ].map(item => (
+            <div key={item.label} style={{ background: item.bg, borderRadius: 8, padding: '11px 9px', textAlign: 'center' }}>
+              <div style={{ fontSize: 11, fontWeight: 800, color: item.color }}>{item.label}</div>
+              <div style={{ fontSize: 11, color: '#475569', lineHeight: 1.45, marginTop: 5 }}>{item.body}</div>
+            </div>
+          ))}
         </div>
 
         {/* ── 전국 현황 ── */}
@@ -162,7 +174,7 @@ export default function Dashboard() {
           </div>
           <CalloutBox color="#fef2f2" border="#fca5a5">
             선관위는 투표 포기 후 돌아간 유권자 수에 대해 <strong>"정확히 파악하기 어렵다"</strong>고 답했습니다.<br />
-            <span style={{ fontSize: 12, color: '#9ca3af' }}>기록 자체가 없습니다. · 출처: 파이낸셜뉴스 2026.06.05</span>
+            <span style={{ fontSize: 12, color: '#9ca3af' }}>공개된 집계가 없어 현재 데이터만으로 규모를 산정할 수 없습니다. · 출처: 파이낸셜뉴스 2026.06.05</span>
           </CalloutBox>
         </Section>
 
@@ -209,9 +221,9 @@ export default function Dashboard() {
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: 14, fontWeight: 800, color: '#be123c' }}>
-                      {typeof d.risk_ratio === 'number' ? d.risk_ratio.toFixed(3) : d.risk_ratio}
+                      {typeof d.risk_ratio === 'number' ? `${(d.risk_ratio * 100).toFixed(1)}%` : d.risk_ratio}
                     </div>
-                    <div style={{ fontSize: 10, color: '#9ca3af' }}>동 평균 수요 ÷ 50%</div>
+                    <div style={{ fontSize: 10, color: '#9ca3af' }}>50% 가정 대비 수요 수준</div>
                   </div>
                 </div>
               ))}
@@ -226,7 +238,7 @@ export default function Dashboard() {
                 <ul style={{ fontSize: 12, color: '#6b7280', margin: 0, paddingLeft: 16, lineHeight: 1.7 }}>
                   {shutdownStress.gu_only_unresolved.map(item => (
                     <li key={item.gu}>
-                      {item.gu}: 중단 {item.official_shutdown_count}곳, 동 평균 최고 비율 {item.max_dong_risk_ratio.toFixed(3)}
+                      {item.gu}: 중단 {item.official_shutdown_count}곳, 50% 가정 대비 동 평균 최고 {(item.max_dong_risk_ratio * 100).toFixed(1)}%
                     </li>
                   ))}
                 </ul>
@@ -238,41 +250,14 @@ export default function Dashboard() {
           </Section>
         )}
 
-        {/* ── 전국 표차 ── */}
-        {priorityMargins.length > 0 && (
-          <Section label="표차" title={`추가 송부 27개 구시군 · 212개 선거구 — 500표 이하 ${priorityMargins.length}개`}>
-            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
-              67개 투표소가 속한 <strong>27개 구시군</strong> 안의 광역·기초의원 선거구를 전수 확인했습니다.
-              부족 투표소가 정확히 어느 선거구에 속하는지는 투표소명 공개 후 별도 확인이 필요합니다.
-            </p>
-            <CalloutBox color="#fff7ed" border="#fdba74">
-              표차가 작다는 사실만으로 결과 영향을 단정할 수 없습니다.
-              <strong> 부족 투표소의 정확한 위치 확인이 우선</strong>입니다.
-            </CalloutBox>
-            <div className="margin-screening-list" style={{ marginTop: 12 }}>
-              {(showAllMargins ? priorityMargins : priorityMargins.slice(0, 8)).map(item => (
-                <MarginScreeningRow key={`${item['선거종류']}-${item['선거구코드']}`} item={item} />
-              ))}
-            </div>
-            {priorityMargins.length > 8 && (
-              <button className="margin-screening-toggle" onClick={() => setShowAllMargins(v => !v)}>
-                {showAllMargins ? '접기' : `전체 ${priorityMargins.length}개 보기`}
-              </button>
-            )}
-            <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
-              투표소와 선거구의 직접 연결은 별도 검증 필요. 데이터: 중앙선관위 VCCP08, 2026-06-06 수집.
-            </p>
-          </Section>
-        )}
-
         {knownLocationPriority.length > 0 && (
-          <Section label="직접 매핑" title={`이름 공개 투표소 ${namedPollingPlaces}곳 — 상위 조사 후보 ${knownLocationPriority.length}건`}>
+          <Section label="직접 연결 확인" title={`이름 공개 투표소 ${namedPollingPlaces}곳 — 우선 확인 연결 ${knownLocationPriority.length}건`}>
             <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
               공개된 투표소명을 선관위 결과표의 읍면동 구성과 연결해 실제 광역·기초의원 선거구를 확인했습니다.
             </p>
             <CalloutBox color="#fff7ed" border="#fdba74">
-              표차가 작다는 사실만으로 결과 영향을 단정할 수 없습니다.
-              아래 목록은 중단·부족 기록과 정확한 운영 자료를 먼저 확인할 조사 순서입니다.
+              표차는 영향의 증거가 아닙니다.
+              아래 목록은 실제 중단·부족 위치와 선거구가 연결된 경우 중 운영 기록을 먼저 확인할 순서입니다.
             </CalloutBox>
             <div style={{ display: 'grid', gap: 8, marginTop: 12 }}>
               {knownLocationPriority.map(item => (
@@ -297,12 +282,39 @@ export default function Dashboard() {
           </Section>
         )}
 
+        {/* ── 전국 표차 ── */}
+        {priorityMargins.length > 0 && (
+          <Section label="위치 미확인 참고" title={`추가 송부 27개 구시군 · 212개 선거구 — 500표 이하 ${priorityMargins.length}개`}>
+            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
+              추가 송부가 발생한 <strong>27개 구시군</strong> 안의 광역·기초의원 선거구를 폭넓게 살핀 참고 목록입니다.
+              실제 부족 투표소와 연결되지 않은 선거구도 포함됩니다.
+            </p>
+            <CalloutBox color="#fff7ed" border="#fdba74">
+              500표는 법적 기준이 아니라 위치 확인 순서를 좁히기 위한 편의상 기준입니다.
+              <strong> 실제 투표소 위치와 운영 기록이 연결되기 전에는 결과 영향과 무관한 목록</strong>입니다.
+            </CalloutBox>
+            <div className="margin-screening-list" style={{ marginTop: 12 }}>
+              {(showAllMargins ? priorityMargins : priorityMargins.slice(0, 8)).map(item => (
+                <MarginScreeningRow key={`${item['선거종류']}-${item['선거구코드']}`} item={item} />
+              ))}
+            </div>
+            {priorityMargins.length > 8 && (
+              <button className="margin-screening-toggle" onClick={() => setShowAllMargins(v => !v)}>
+                {showAllMargins ? '접기' : `전체 ${priorityMargins.length}개 보기`}
+              </button>
+            )}
+            <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
+              투표소와 선거구의 직접 연결은 별도 검증 필요. 데이터: 중앙선관위 VCCP08, 2026-06-06 수집.
+            </p>
+          </Section>
+        )}
+
         {/* ── 서울 현황 ── */}
         {seoul && (
-          <Section label="서울" title="서울 25개 구 — 전국 확대">
+          <Section label="서울" title="서울 25개 구 — 50% 일률 가정 비교">
             <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 12, lineHeight: 1.6 }}>
-              427개 동 중 <strong style={{ color: '#be123c' }}>{seoul.totalOverDongs}개 동</strong> 50% 초과.
-              송파구만의 문제가 아닙니다.
+              서울 427개 동 중 <strong style={{ color: '#be123c' }}>{seoul.totalOverDongs}개 동</strong>에서 선거일 수요가 전체 선거인수의 50%를 넘었습니다.
+              50%를 일률 적용할 때 여유가 작아질 수 있는 곳은 송파구 밖에도 있습니다.
             </p>
             <div style={{ display: 'grid', gap: 8 }}>
               {seoul.districts.filter(d => d.overDongs > 0).map(d => {
@@ -332,9 +344,9 @@ export default function Dashboard() {
         )}
 
         {/* ── STORY 1: 어느 동에서 바닥났나 ── */}
-        <Section label="01" title="어느 동 — 송파구 27개 동 전체">
+        <Section label="01" title="50% 일률 가정을 송파구 27개 동에 적용하면">
           <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 4, lineHeight: 1.6 }}>
-            <strong>50% 수준으로 배부했다고 가정하면 여유가 부족할 수 있습니다.</strong> 구청장 선거 개표결과 기준.
+            <strong>동 평균 선거일 수요가 50%보다 높았던 곳을 표시합니다.</strong> 실제 투표소별 배부량이나 부족량을 뜻하지 않습니다.
           </p>
           {songpaMap
             ? <SongpaBoundaryMap boundaries={songpaMap} dongs={dongs} shortages={shortages} />
@@ -342,33 +354,33 @@ export default function Dashboard() {
           }
         </Section>
 
-        {/* ── STORY 2: 왜 이렇게 됐나 ── */}
-        <Section label="02" title="왜 — 50%만 인쇄했다">
+        {/* ── STORY 2: 50% 가정이 취약해질 수 있는 조건 ── */}
+        <Section label="02" title="50% 일률 기준은 어디서 여유가 작아지나">
           <div style={{ display: 'grid', gap: 10, marginBottom: 14 }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
               <RuleCard
-                icon="📏"
+                icon="50%"
                 title="선관위 내부 지침"
                 body="지방선거: 선거인의 50%를 인쇄 하한으로 설정"
                 note="법령이 아닌 내부 지침"
                 noteColor="#b45309"
               />
               <RuleCard
-                icon="⚠️"
-                title="문제"
-                body="일부 지역에서 하한 수준으로 준비"
+                icon="?"
+                title="아직 필요한 자료"
+                body="투표소별 실제 인쇄·배부·추가 이송 수량"
                 note="투표소별 배부량 미공개"
                 noteColor="#be123c"
               />
             </div>
           </div>
           <CalloutBox color="#fef3c7" border="#fbbf24">
-            <strong>사전투표율이 낮을수록 당일에 사람이 몰립니다.</strong><br />
-            잠실3동: 사전투표율 11.3%(구 최저) → 당일투표율 56.7%(한도 초과)<br />
-            두 지표의 상관계수 <strong>−0.46</strong> — 반비례가 명확합니다.
+            송파구 동 단위에서 사전투표율과 선거일 투표율은 <strong>반대 방향의 관계</strong>를 보입니다.<br />
+            잠실3동: 사전투표율 11.3% → 선거일 투표율 56.7%<br />
+            상관계수 <strong>−0.46</strong>은 중간 정도의 음의 상관이며, 원인·결과를 뜻하지 않습니다.
           </CalloutBox>
           <div style={{ marginTop: 12 }}>
-            <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 8, color: '#374151' }}>사전투표율 낮을수록 당일 초과 위험</div>
+            <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 8, color: '#374151' }}>동별 사전투표율과 선거일 투표율 비교</div>
             <div style={{ display: 'grid', gap: 6 }}>
               {[
                 { dong: '잠실3동', pre: '11.3%', day: '56.7%', over: true },
@@ -387,8 +399,8 @@ export default function Dashboard() {
                   <span style={{ fontSize: 13, fontWeight: 600 }}>{row.dong}</span>
                   <span style={{ fontSize: 12, color: '#6b7280' }}>사전 {row.pre} → 당일 {row.day}</span>
                   {row.over
-                    ? <span style={{ fontSize: 11, color: '#be123c', background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: 4, padding: '2px 7px', textAlign: 'center' }}>한도 초과</span>
-                    : <span style={{ fontSize: 11, color: '#0f766e', background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 4, padding: '2px 7px', textAlign: 'center' }}>여유</span>
+                    ? <span style={{ fontSize: 11, color: '#be123c', background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: 4, padding: '2px 7px', textAlign: 'center' }}>50% 가정 초과</span>
+                    : <span style={{ fontSize: 11, color: '#0f766e', background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 4, padding: '2px 7px', textAlign: 'center' }}>50% 가정 이내</span>
                   }
                 </div>
               ))}
@@ -412,16 +424,16 @@ export default function Dashboard() {
                   <div key={y.year} style={{ background: bg, border: `1px solid ${bdr}`, borderRadius: 10, padding: '14px 12px', textAlign: 'center' }}>
                     <div style={{ fontSize: 12, color: '#9ca3af', marginBottom: 4 }}>{y.year}년</div>
                     <div style={{ fontSize: 26, fontWeight: 900, color, lineHeight: 1 }}>{y.overDongs}</div>
-                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>개 동 초과</div>
+                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>개 동 50% 가정 초과</div>
                     <div style={{ fontSize: 12, fontWeight: 600, color, marginTop: 6 }}>최대 {y.maxEdayRate}%</div>
                   </div>
                 )
               })}
             </div>
             <CalloutBox color="#fef3c7" border="#fbbf24">
-              <strong>2018년에도 7개 동이 50%를 넘었습니다.</strong><br />
-              당시 투표소 부족 사태가 없었다면, 2022년 기준(60%)처럼 실제 배부량이
-              더 많았거나 비상 재고가 별도로 있었을 가능성이 있습니다.<br />
+              <strong>2018년에도 7개 동의 선거일 수요가 50%를 넘었습니다.</strong><br />
+              과거 실제 배부량과 비상 재고 기록이 공개되지 않아, 당시 부족이 확인되지 않은 이유는
+              현재 데이터만으로 설명할 수 없습니다.<br />
               <span style={{ fontSize: 11, color: '#92400e', marginTop: 6, display: 'block' }}>
                 2018·2022년 데이터: 중앙선관위 개표결과 (NEC VCCP08) 직접 크롤링.
                 인쇄 기준 60% 출처: 한국행정연구원 (2022), 중앙선거관리위원회 정책연구용역.
@@ -430,17 +442,15 @@ export default function Dashboard() {
           </div>
         )}
 
-        {/* ── STORY 3: 언제 터졌나 ── */}
-        <Section label="03" title="언제 터졌나 — 오후 1시">
+        {/* ── STORY 3: 시간대별 집계의 한계 ── */}
+        <Section label="03" title="오후 1시 급증은 부족 발생 시각이 아니다">
           <p style={{ fontSize: 15, lineHeight: 1.7, marginBottom: 12, color: '#374151' }}>
-            선거 당일 오전까지는 투표율이 낮았습니다.
-            <strong> 낮 12시 기준 19.6%.</strong><br />
-            그런데 오후 1시에 <strong>47.1%</strong>로 뛰었습니다.
+            공개 시간대별 현황은 낮 12시 <strong>19.6%</strong>에서 오후 1시 <strong>47.1%</strong>로 크게 변합니다.
+            이 변화의 대부분은 오후 1시부터 사전투표가 합계에 포함되는 집계 방식 때문입니다.
           </p>
           <CalloutBox color="#eff6ff" border="#93c5fd">
-            오후 1시부터 <strong>사전투표 132,194명</strong>의 집계가 합산됩니다.
-            이 시점에 이미 당일 투표자가 많았던 투표소는
-            남은 용지가 없었습니다.
+            이 그래프로는 투표소별 용지 소진 시각이나 대기·이탈 인원을 알 수 없습니다.
+            이를 확인하려면 투표소별 추가 송부 요청·도착 시각과 중단 기록이 필요합니다.
           </CalloutBox>
           <div style={{ height: 220, marginTop: 16 }}>
             <ResponsiveContainer width="100%" height="100%">
@@ -466,18 +476,18 @@ export default function Dashboard() {
           </p>
         </Section>
 
-        {/* ── STORY 4: 법과 제도의 공백 ── */}
-        <Section label="04" title="법과 제도의 공백">
+        {/* ── STORY 4: 관리 기준에서 확인할 쟁점 ── */}
+        <Section label="04" title="관리 기준에서 확인할 쟁점">
           <div style={{ display: 'grid', gap: 10 }}>
             <FactRow
               label="공직선거법"
-              text="투표용지 수량 기준이 없습니다. 인쇄 주체와 기한만 규정되어 있습니다."
-              tag="규정 없음"
+              text="법률에는 투표용지 인쇄 수량의 명시적 하한이 확인되지 않습니다. 인쇄 주체와 기한은 규정되어 있습니다."
+              tag="명시적 하한 없음"
               tagColor="#be123c"
             />
             <FactRow
-              label="선관위 사무편람 (현행)"
-              text="대통령선거·국회의원선거: 60% 하한. 지방선거: 50% 하한. 법령이 아닌 내부 지침입니다."
+              label="선관위 내부 기준 (공개 보도 기준)"
+              text="대통령선거·국회의원선거는 60%, 지방선거는 50% 하한으로 알려졌습니다. 세부 적용 과정은 추가 공개가 필요합니다."
               tag="내부 지침"
               tagColor="#b45309"
             />
@@ -485,7 +495,7 @@ export default function Dashboard() {
             {/* 결정적 변화 강조 */}
             <div style={{ background: '#fff1f2', border: '2px solid #fca5a5', borderRadius: 10, padding: '14px 14px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 10 }}>
-                <span style={{ fontSize: 13, fontWeight: 800, color: '#be123c' }}>기준 변화 — 결정적 차이</span>
+                <span style={{ fontSize: 13, fontWeight: 800, color: '#be123c' }}>기준 변화 — 확인할 쟁점</span>
                 <span style={{ background: '#be123c20', color: '#be123c', fontSize: 11, padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap', flexShrink: 0 }}>60% → 50%</span>
               </div>
 
@@ -516,8 +526,8 @@ export default function Dashboard() {
               <p style={{ fontSize: 13, color: '#374151', lineHeight: 1.7, margin: 0 }}>
                 선관위는 21대 대선 이후 사무편람을 개정했습니다.
                 대선·총선은 <strong>60% 유지</strong>, 지방선거만 <strong>50%로 하향</strong>.
-                2022년까지 실무에서 60%로 운용하던 지방선거 기준이 낮아진 것이
-                이번 사태의 주요 원인 중 하나로 지목됩니다.
+                공개 보도에 따르면 2022년까지 실무에서 60%로 운용하던 지방선거 기준이 낮아졌습니다.
+                이 변화가 실제 부족에 얼마나 영향을 주었는지는 투표소별 배부 기록으로 확인해야 합니다.
               </p>
               <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, borderTop: '1px solid #fca5a5', paddingTop: 8 }}>
                 출처: 한국행정연구원 (2022). 「선거 절차사무 개선방안」. 중앙선관위 정책연구용역. p.36. /
@@ -526,72 +536,31 @@ export default function Dashboard() {
             </div>
 
             <FactRow
-              label="여유분 축소의 배경"
-              text={`"물품이 너무 많아지게 되면 부정선거 논란이 될 수 있음" — 선관위 내부 우려로 예비분을 최소화하는 경향이 있었습니다.`}
-              tag="구조적 딜레마"
+              label="여유분 결정의 배경"
+              text={`공개 보도에는 잔여 투표용지 관리 부담과 감사 우려가 배부 결정의 배경으로 언급됩니다. 실제 결정 근거는 공식 기록 확인이 필요합니다.`}
+              tag="기록 확인 필요"
               tagColor="#7c3aed"
             />
             <FactRow
-              label="송파구 선택"
-              text="지침 하한인 50%에 맞춰 인쇄했습니다. 초과 잔여 용지에 대한 감사 우려도 이유로 알려져 있습니다."
-              tag="최솟값 적용"
+              label="송파구 적용 과정"
+              text="공개 설명상 50% 수준을 적용한 것으로 알려졌습니다. 투표소별 최종 수량과 조정 근거는 아직 공개되지 않았습니다."
+              tag="세부 자료 미공개"
               tagColor="#6b7280"
             />
             <FactRow
-              label="신설 투표구"
-              text="잠실4동 3개 투표소는 이번에 처음 생겼습니다. 전례 없이 같은 50% 기준이 적용됐습니다."
-              tag="전례 없음"
+              label="신설·재획정 투표구"
+              text="과거 수요 기록이 부족한 투표구에는 별도 안전계수가 적용됐는지 확인할 필요가 있습니다."
+              tag="적용 여부 확인"
               tagColor="#b45309"
             />
           </div>
           <CalloutBox color="#f0fdf4" border="#86efac" style={{ marginTop: 12 }}>
-            <strong>바꾸려면.</strong><br />
-            ① 공직선거법에 인쇄 하한 명문화<br />
-            ② 투표구별 사전투표율을 반영한 차등 배분<br />
-            ③ 신설·재획정 투표구 안전계수 추가 적용
+            <strong>검토할 수 있는 개선안.</strong><br />
+            ① 인쇄·배부 기준과 근거 공개<br />
+            ② 투표구별 과거 수요와 불확실성을 반영한 차등 배분<br />
+            ③ 신설·재획정 투표구 안전계수 및 비상 이송 기록 표준화
           </CalloutBox>
         </Section>
-
-        {/* ── STORY 5: 재투표 가능성 ── */}
-        {retally && (
-          <Section label="05" title="재투표 가능성은?">
-            <div style={{ display: 'grid', gap: 10, marginBottom: 14 }}>
-              <CalloutBox color="#fef3c7" border="#fbbf24">
-                <strong>선거소청 기한: {retally.legalPath.step1.deadline}</strong> — 아직 {retally.legalPath.step1.daysLeft}일 남았습니다.<br />
-                구의원 선거구 표차와 공개된 부족 투표소 위치를 추가 검토합니다.
-              </CalloutBox>
-            </div>
-            <div style={{ display: 'grid', gap: 8, marginBottom: 14 }}>
-              {retally.districtMargins.map(d => {
-                const riskColor = d.riskLevel === 'HIGH' ? '#be123c' : d.riskLevel === 'MEDIUM' ? '#b45309' : '#6b7280'
-                const riskBg    = d.riskLevel === 'HIGH' ? '#fef2f2' : d.riskLevel === 'MEDIUM' ? '#fffbeb' : '#f9fafb'
-                const riskBdr   = d.riskLevel === 'HIGH' ? '#fca5a5' : d.riskLevel === 'MEDIUM' ? '#fbbf24' : '#e5e7eb'
-                return (
-                  <div key={d.district} style={{ background: riskBg, border: `1px solid ${riskBdr}`, borderRadius: 8, padding: '12px 14px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
-                      <div>
-                        <span style={{ fontSize: 14, fontWeight: 700 }}>구의원 {d.district}</span>
-                        <span style={{ fontSize: 12, color: '#6b7280', marginLeft: 8 }}>당선: {d.winner}</span>
-                      </div>
-                      <span style={{ background: riskColor + '20', color: riskColor, fontSize: 11, padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap' }}>
-                        표차 {d.margin.toLocaleString()}
-                      </span>
-                    </div>
-                    <div style={{ fontSize: 12, color: '#6b7280', marginTop: 6 }}>
-                      부족 투표소: {d.shortageDongs.join(', ')} ({d.shortagePollingPlaces}곳)
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-            <CalloutBox color="#f1f5f9" border="#cbd5e1">
-              <strong>법적 현실.</strong> 제198조 '부득이한 사유'는 천재지변이 기준입니다.
-              선관위 배분 실수가 여기 해당하는지 판례가 없어요.
-              현실적 경로는 <strong>선거소청 제기 + 공직선거법 개정 촉구</strong>입니다.
-            </CalloutBox>
-          </Section>
-        )}
-
 
         {/* ── 상세 보기 ── */}
         <button
@@ -627,7 +596,7 @@ export default function Dashboard() {
               </div>
             ))}
             <p style={{ fontSize: 12, color: '#9ca3af', marginTop: 4 }}>
-              * 공개 보도에서 투표소명이 확인된 8곳. 전체 14곳 중 나머지는 이름 미공개.
+              * 공개 보도로 이름과 위치가 확인된 투표소만 표시합니다. 전체 위치는 아직 공개되지 않았습니다.
             </p>
           </div>
         )}
@@ -636,11 +605,11 @@ export default function Dashboard() {
         <footer style={{ marginTop: 36, fontSize: 12, color: '#9ca3af', lineHeight: 1.8, borderTop: '1px solid #e5e7eb', paddingTop: 20 }}>
           <p>
             <strong>데이터 출처:</strong> 중앙선관위 선거통계시스템(VCVP01·VCCP08) 직접 크롤링.
-            수집일 2026-06-05. 구청장 선거 기준 27개 동 전수.
+            송파구 상세 분석은 구청장 선거 기준 27개 동, 전국 동별 수요는 256개 구시군을 수집했습니다.
           </p>
           <p style={{ marginTop: 6 }}>
-            이 대시보드는 선거 결과(당락)를 단정하지 않습니다.
-            투표용지 수급 관리 제도의 문제를 공개 데이터로 검증한 것입니다.
+            이 대시보드는 선거 결과(당락)나 실제 이탈 유권자 수를 단정하지 않습니다.
+            확인된 사실과 공개 데이터로 계산한 스트레스 테스트를 구분해 보여줍니다.
           </p>
         </footer>
       </div>
@@ -682,7 +651,7 @@ function DongRateChart({ dongChart, exceedingCount }) {
         </ResponsiveContainer>
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, fontSize: 12, color: '#6b7280', marginTop: 6 }}>
-        <MapLegend color="#be123c" label={`50% 초과 (${exceedingCount}개 동)`} />
+        <MapLegend color="#be123c" label={`50% 가정 초과 (${exceedingCount}개 동)`} />
         <MapLegend color="#0f766e" label={`50% 이하 (${dongChart.length - exceedingCount}개 동)`} />
       </div>
       <p style={{ fontSize: 11, color: '#9ca3af', lineHeight: 1.6 }}>
@@ -790,7 +759,7 @@ function SongpaBoundaryMap({ boundaries, dongs, shortages }) {
           </div>
           <div>
             <strong>{(selected.electionDayRate * 100).toFixed(1)}%</strong>
-            <span>50% 하한 대비 {selected.shortage > 0 ? `+${selected.shortage.toLocaleString()}표` : '초과 없음'}</span>
+            <span>50% 가정 대비 동 전체 {selected.shortage > 0 ? `+${selected.shortage.toLocaleString()}명` : '초과 없음'}</span>
           </div>
           <div>
             <strong>{selectedConfirmed}곳</strong>
@@ -800,7 +769,7 @@ function SongpaBoundaryMap({ boundaries, dongs, shortages }) {
       )}
 
       <p className="songpa-map-note">
-        동을 선택하면 수치를 확인할 수 있습니다. 50% 하한 대비 표 수는 실제 투표소별 부족량이 아니라
+        동을 선택하면 수치를 확인할 수 있습니다. 50% 가정 대비 인원은 실제 투표소별 부족량이 아니라
         동 전체 당일투표자와 가정상 하한의 차이입니다.
       </p>
       <a

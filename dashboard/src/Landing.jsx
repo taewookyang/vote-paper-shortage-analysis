@@ -6,7 +6,7 @@ const HISTORY = [
     year: '1948',
     date: '5월 10일',
     label: '처음 쥔 한 표',
-    desc: '대한민국 최초 국회의원 선거. 모든 성인 국민이 처음으로 한 표를 행사했습니다.',
+    desc: '제헌 국회의원을 뽑은 첫 총선거. 보통·평등·직접·비밀선거 원칙이 제도화됐습니다.',
     color: '#7fb3d3',
     icon: '✊',
   },
@@ -45,8 +45,8 @@ const HISTORY = [
   {
     year: '2026',
     date: '6월 3일',
-    label: '관리받지 못한 한 표',
-    desc: '제9회 전국동시지방선거. 서울 송파구에서만 15곳에 추가 송부(12곳 중단)가 발생했으며, 전국 67개 투표소 추가 송부·22곳 중단이 선관위 공식 확인됐습니다. 구 전체 합계로는 약 4만 3천 장의 여유가 계산됩니다.',
+    label: '확인이 더 필요한 한 표',
+    desc: '제9회 전국동시지방선거. 전국 67개 투표소 추가 송부·22곳 중단이 선관위 공식 확인됐습니다. 송파구에 50% 기준을 일률 적용한 계산에서는 구 전체 여유가 남지만, 실제 투표소별 배부·이송 기록은 공개되지 않았습니다.',
     color: '#e63946',
     icon: '?',
     isFinal: true,
@@ -142,9 +142,9 @@ export default function Landing() {
             margin: '0 0 24px',
             letterSpacing: -2,
           }}>
-            우리는 얼마나
+            한 표는 어떻게
             <br />
-            <span style={{ color: '#e63946' }}>오래 싸웠나.</span>
+            <span style={{ color: '#e63946' }}>지켜져 왔나.</span>
           </h1>
 
           <p style={{ fontSize: 16, color: '#aaa', lineHeight: 1.8, maxWidth: 420, margin: '0 auto 40px' }}>
@@ -228,8 +228,8 @@ export default function Landing() {
                         }}>
                           {[
                             { num: '15곳', label: '추가 송부(12곳 중단)', sub: '선관위 공식 · 송파구' },
-                            { num: '4.3만장', label: '구 전체 잉여', sub: '자체 크롤링 · 송파구' },
-                            { num: '6개 동', label: '한도 초과', sub: '자체 크롤링 · 송파구' },
+                            { num: '4.3만장', label: '50% 가정상 여유', sub: '실제 배부량 아님 · 송파구' },
+                            { num: '6개 동', label: '50% 가정 초과', sub: '동 평균 수요 · 송파구' },
                           ].map(s => (
                             <div key={s.num} style={{
                               background: '#111', border: '1px solid #333',
@@ -243,8 +243,8 @@ export default function Landing() {
                           ))}
                         </div>
                         <p style={{ fontSize: 11, color: '#555', marginTop: 12, lineHeight: 1.6, textAlign: 'center' }}>
-                          수치는 현재 <strong style={{ color: '#888' }}>서울 송파구 기준</strong>.
-                          전국 256개 구·시·군 집계가 완료되면 업데이트됩니다.
+                          수치는 <strong style={{ color: '#888' }}>서울 송파구 사례</strong>를 설명합니다.
+                          실제 부족 원인을 판단하려면 투표소별 배부·이송 기록이 더 필요합니다.
                         </p>
                       </div>
                     )}
@@ -270,9 +270,9 @@ export default function Landing() {
             maxWidth: 520,
             letterSpacing: -1,
           }}>
-              구 전체 합계에는 여유가 있었습니다.
+              50% 가정을 구 전체에 적용하면 여유가 남습니다.
               <br />
-              <span style={{ color: '#e63946' }}>투표소별 배분은 더 확인해야 합니다.</span>
+              <span style={{ color: '#e63946' }}>그런데 일부 투표소에서는 실제 부족이 확인됐습니다.</span>
           </h2>
           <p style={{ fontSize: 15, color: '#777', lineHeight: 1.8, maxWidth: 400, margin: '0 auto 40px' }}>
             선관위 내부 지침: 지방선거 투표용지 인쇄량은 선거인의 50%를 하한으로 설정.
@@ -292,7 +292,7 @@ export default function Landing() {
           </h3>
           <p style={{ fontSize: 14, color: '#666', lineHeight: 1.7, marginBottom: 36 }}>
             특정 후보 유불리나 선거 결과를 단정하지 않습니다.
-            <br />제도의 구조적 문제를 숫자로 보여줍니다.
+            <br />확인된 사실과 추가 확인이 필요한 지점을 나눠 보여줍니다.
           </p>
 
           <button

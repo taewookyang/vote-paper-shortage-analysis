@@ -9,7 +9,7 @@ function assert(condition, message) {
 
 async function inspect(page, viewportName) {
   await page.goto(target, { waitUntil: 'domcontentloaded', timeout: 30000 })
-  await page.getByText('투표용지는 왜 모자랐나').waitFor({ timeout: 30000 })
+  await page.getByText('송파구 50% 가정에는 여유가 남는데, 왜 일부 투표소에서는 부족했나').waitFor({ timeout: 30000 })
   await page.getByText('22곳 중단 지역 — 50% 배부 가정 스트레스 테스트').waitFor({ timeout: 30000 })
   const state = await page.evaluate(() => ({
     text: document.body.innerText,
@@ -19,15 +19,36 @@ async function inspect(page, viewportName) {
     horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
   }))
 
-  assert(state.text.includes('어느 동 — 송파구 27개 동 전체'), `${viewportName}: missing Songpa detail section`)
+  assert(state.text.includes('50% 일률 가정을 송파구 27개 동에 적용하면'), `${viewportName}: missing Songpa detail section`)
   assert(!state.text.includes('지도 경계 데이터를 불러오지 못했습니다'), `${viewportName}: broken map error is visible`)
   assert(state.redBars >= 27, `${viewportName}: expected fallback dong chart bars`)
   assert(state.mapSvg === 0, `${viewportName}: unlicensed boundary map should not render`)
   assert(state.text.includes('추가 송부 27개 구시군'), `${viewportName}: missing targeted screening section`)
   assert(state.text.includes('이름 공개 투표소 16곳'), `${viewportName}: missing known-location mapping section`)
+  assert(state.text.indexOf('이름 공개 투표소 16곳') < state.text.indexOf('추가 송부 27개 구시군'), `${viewportName}: verified mapping should precede broad screening`)
+  assert(state.text.includes('오후 1시 급증은 부족 발생 시각이 아니다'), `${viewportName}: timeline limitation is missing`)
+  assert(!state.text.includes('언제 터졌나 — 오후 1시'), `${viewportName}: outdated timeline overclaim is visible`)
+  assert(!state.text.includes('재투표 가능성은?'), `${viewportName}: outdated legal assessment is visible`)
+  assert(!state.text.includes('한도 초과'), `${viewportName}: misleading limit wording is visible`)
   assert(state.text.includes('남해군가선거구'), `${viewportName}: missing smallest-margin district`)
   assert(state.priorityRows === 8, `${viewportName}: expected eight initial priority rows`)
   assert(!state.horizontalOverflow, `${viewportName}: horizontal overflow detected`)
+}
+
+async function inspectLanding(page, viewportName) {
+  const landingUrl = new URL('/', target).toString()
+  await page.goto(landingUrl, { waitUntil: 'domcontentloaded', timeout: 30000 })
+  await page.getByText('한 표는 어떻게').waitFor({ timeout: 30000 })
+  const state = await page.evaluate(() => ({
+    text: document.body.innerText,
+    horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
+  }))
+
+  assert(state.text.includes('확인이 더 필요한 한 표'), `${viewportName}: cautious 2026 framing is missing`)
+  assert(state.text.includes('50% 가정상 여유'), `${viewportName}: hypothetical surplus label is missing`)
+  assert(!state.text.includes('관리받지 못한 한 표'), `${viewportName}: outdated overclaim is visible`)
+  assert(!state.text.includes('구 전체 잉여'), `${viewportName}: misleading surplus wording is visible`)
+  assert(!state.horizontalOverflow, `${viewportName}: landing horizontal overflow detected`)
 }
 
 async function main() {
@@ -37,6 +58,8 @@ async function main() {
 
   await inspect(desktop, 'desktop')
   await inspect(mobile, 'mobile')
+  await inspectLanding(desktop, 'desktop')
+  await inspectLanding(mobile, 'mobile')
   await desktop.screenshot({ path: path.resolve(__dirname, '..', 'dashboard-local-smoke.png'), fullPage: false })
 
   await browser.close()
