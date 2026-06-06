@@ -315,8 +315,15 @@ def run_audit(fail_on_error: bool = False) -> dict:
         ),
     }
 
-    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     json_path = PROCESSED_DIR / "pipeline_audit.json"
+    if json_path.exists():
+        existing = json.loads(json_path.read_text(encoding="utf-8"))
+        existing_comparable = {key: value for key, value in existing.items() if key != "generatedAt"}
+        report_comparable = {key: value for key, value in report.items() if key != "generatedAt"}
+        if existing_comparable == report_comparable:
+            report["generatedAt"] = existing.get("generatedAt", report["generatedAt"])
+
+    PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     json_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     markdown_path = PROCESSED_DIR / "pipeline_audit.md"
     markdown_path.write_text(render_markdown(report), encoding="utf-8")
