@@ -162,9 +162,10 @@ export default function Dashboard() {
 
         {/* ── 전국 표차 ── */}
         {priorityMargins.length > 0 && (
-          <Section label="표차" title={`부족 지역 212개 선거구 — 500표 이하 ${priorityMargins.length}개`}>
+          <Section label="표차" title={`추가 송부 27개 구시군 · 212개 선거구 — 500표 이하 ${priorityMargins.length}개`}>
             <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
-              추가 송부 발생 27개 구시군의 광역·기초의원 선거구를 전수 확인했습니다.
+              67개 투표소가 속한 <strong>27개 구시군</strong> 안의 광역·기초의원 선거구를 전수 확인했습니다.
+              부족 투표소가 정확히 어느 선거구에 속하는지는 투표소명 공개 후 별도 확인이 필요합니다.
             </p>
             <CalloutBox color="#fff7ed" border="#fdba74">
               표차가 작다는 사실만으로 결과 영향을 단정할 수 없습니다.
