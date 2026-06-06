@@ -274,9 +274,12 @@ export default function Dashboard() {
             </div>
             <CalloutBox color="#fef3c7" border="#fbbf24">
               <strong>2018년에도 7개 동이 50%를 넘었습니다.</strong><br />
-              당시 투표소 부족 사태가 없었다면, 실제 배부량이 50%보다 많았거나
-              비상 재고가 별도로 있었을 가능성이 있습니다.
-              2018년 실제 배부량은 공개 데이터로 확인되지 않습니다.
+              당시 투표소 부족 사태가 없었다면, 2022년 기준(60%)처럼 실제 배부량이
+              더 많았거나 비상 재고가 별도로 있었을 가능성이 있습니다.<br />
+              <span style={{ fontSize: 11, color: '#92400e', marginTop: 6, display: 'block' }}>
+                2018·2022년 데이터: 중앙선관위 개표결과 (NEC VCCP08) 직접 크롤링.
+                인쇄 기준 60% 출처: 한국행정연구원 (2022), 중앙선거관리위원회 정책연구용역.
+              </span>
             </CalloutBox>
           </div>
         )}
@@ -328,13 +331,50 @@ export default function Dashboard() {
             />
             <FactRow
               label="선관위 내부 지침"
-              text="지방선거 50% 이상, 대선 60% 이상. 이게 유일한 기준입니다."
+              text="법적 구속력 없는 내부 지침만 존재합니다. 대선 60%, 지방선거 하한을 정하고 있습니다."
               tag="법적 구속력 없음"
               tagColor="#b45309"
             />
+
+            {/* 결정적 변화 강조 */}
+            <div style={{ background: '#fff1f2', border: '2px solid #fca5a5', borderRadius: 10, padding: '14px 14px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 8 }}>
+                <span style={{ fontSize: 13, fontWeight: 800, color: '#be123c' }}>기준 변화 — 결정적 차이</span>
+                <span style={{ background: '#be123c20', color: '#be123c', fontSize: 11, padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap', flexShrink: 0 }}>60% → 50%</span>
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 8, alignItems: 'center', margin: '10px 0' }}>
+                <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: '10px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 4 }}>2022년 지방선거</div>
+                  <div style={{ fontSize: 28, fontWeight: 900, color: '#0f766e', lineHeight: 1 }}>60%</div>
+                  <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>인쇄 기준</div>
+                </div>
+                <div style={{ fontSize: 20, color: '#be123c', fontWeight: 700 }}>→</div>
+                <div style={{ background: '#fef2f2', border: '2px solid #fca5a5', borderRadius: 8, padding: '10px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 4 }}>2026년 지방선거</div>
+                  <div style={{ fontSize: 28, fontWeight: 900, color: '#be123c', lineHeight: 1 }}>50%</div>
+                  <div style={{ fontSize: 11, color: '#be123c', marginTop: 4, fontWeight: 600 }}>−10%p 하락</div>
+                </div>
+              </div>
+              <p style={{ fontSize: 13, color: '#374151', lineHeight: 1.6, margin: 0 }}>
+                2022년 연구보고서는 지방선거 인쇄 기준을 <strong>60% 정도</strong>로 기술했습니다.
+                2026년 송파구는 <strong>50%</strong>를 적용했습니다. 10%p의 차이가
+                6개 동에서 용지 부족으로 이어졌습니다.
+              </p>
+              <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, borderTop: '1px solid #fca5a5', paddingTop: 8 }}>
+                출처: 한국행정연구원 (2022). 「선거 절차사무 개선방안 — 구·시·군위원회 절차사무를 중심으로」.
+                중앙선거관리위원회 정책연구용역. p.36.
+              </p>
+            </div>
+
+            <FactRow
+              label="여유분 축소의 배경"
+              text={`"물품이 너무 많아지게 되면 부정선거 논란이 될 수 있음" — 선관위 내부 우려로 예비분을 최소화하는 경향이 있었습니다.`}
+              tag="구조적 딜레마"
+              tagColor="#7c3aed"
+            />
             <FactRow
               label="송파구 선택"
-              text="지침 하한인 50%에 맞춰 인쇄했습니다. 초과 잔여 용지에 대한 감사 우려가 이유입니다."
+              text="지침 하한인 50%에 맞춰 인쇄했습니다. 초과 잔여 용지에 대한 감사 우려도 이유로 알려져 있습니다."
               tag="최솟값 적용"
               tagColor="#6b7280"
             />
