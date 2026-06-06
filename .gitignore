@@ -18,6 +18,11 @@ data/raw/
 # Node
 node_modules/
 dashboard/dist/
+dashboard/dashboard-local-smoke.png
+
+# Sharded collector intermediates (merge into canonical outputs)
+data/processed/*_worker_*_of_*.csv
+data/processed/dashboard/*_worker_*_of_*.json
 
 # 환경
 .env

@@ -1,0 +1,647 @@
+{
+  "meta": {
+    "description": "22곳 중단 지역의 50% 배부 가정 동 단위 스트레스 테스트",
+    "interpretation": "실제 중단 위치 예측이 아니다. 동 전체 선거일 투표율이 선거인수의 50%를 넘었는지 확인하여 추가 조사 후보를 제시한다.",
+    "disclaimer": "투표소별 실제 배부량과 전체 중단 위치가 미공개이므로 결과 영향이나 실제 중단 투표소를 단정할 수 없다.",
+    "officialSourceUrls": [
+      "https://news.sbs.co.kr/news/endPage.do?news_id=N1008597087",
+      "https://www.fnnews.com/ampNews/202606052311127041"
+    ],
+    "calculationSources": [
+      "data/raw/national_dong_turnout.csv",
+      "data/raw/shortage_2026.csv",
+      "data/processed/shortage_gu_polling_places.csv"
+    ],
+    "generated": "2026-06-07"
+  },
+  "official_shutdown": {
+    "송파구": 12,
+    "강남구": 4,
+    "광진구": 2,
+    "서초구": 1,
+    "연수구": 3,
+    "합계": 22
+  },
+  "model_candidates": [
+    {
+      "gu": "송파구",
+      "dong": "잠실3동",
+      "risk_ratio": 1.1342,
+      "day_turnout_pct": 56.71,
+      "polling_place_count": 8,
+      "polling_places": [
+        "잠실3동제1투",
+        "잠실3동제2투",
+        "잠실3동제3투",
+        "잠실3동제4투",
+        "잠실3동제5투",
+        "잠실3동제6투",
+        "잠실3동제7투",
+        "잠실3동제8투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "강남구",
+      "dong": "도곡2동",
+      "risk_ratio": 1.093,
+      "day_turnout_pct": 54.65,
+      "polling_place_count": 7,
+      "polling_places": [
+        "도곡2동제1투",
+        "도곡2동제2투",
+        "도곡2동제3투",
+        "도곡2동제4투",
+        "도곡2동제5투",
+        "도곡2동제6투",
+        "도곡2동제7투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "강남구",
+      "dong": "개포2동",
+      "risk_ratio": 1.0916,
+      "day_turnout_pct": 54.58,
+      "polling_place_count": 7,
+      "polling_places": [
+        "개포2동제1투",
+        "개포2동제2투",
+        "개포2동제3투",
+        "개포2동제4투",
+        "개포2동제5투",
+        "개포2동제6투",
+        "개포2동제7투"
+      ],
+      "evidence_level": "confirmed_shortage",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "강남구",
+          "읍면동": "개포2동",
+          "투표소명": "개포2동 제2투표소",
+          "실제부족여부": true,
+          "투표중단여부": null,
+          "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+          "실제부족확인": true,
+          "투표중단확인": null
+        }
+      ]
+    },
+    {
+      "gu": "서초구",
+      "dong": "서초4동",
+      "risk_ratio": 1.0776,
+      "day_turnout_pct": 53.88,
+      "polling_place_count": 6,
+      "polling_places": [
+        "서초4동제1투",
+        "서초4동제2투",
+        "서초4동제3투",
+        "서초4동제4투",
+        "서초4동제5투",
+        "서초4동제6투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "서초구",
+      "dong": "반포2동",
+      "risk_ratio": 1.0768,
+      "day_turnout_pct": 53.84,
+      "polling_place_count": 5,
+      "polling_places": [
+        "반포2동제1투",
+        "반포2동제2투",
+        "반포2동제3투",
+        "반포2동제4투",
+        "반포2동제5투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "송파구",
+      "dong": "잠실4동",
+      "risk_ratio": 1.0662,
+      "day_turnout_pct": 53.31,
+      "polling_place_count": 7,
+      "polling_places": [
+        "잠실4동제1투",
+        "잠실4동제2투",
+        "잠실4동제3투",
+        "잠실4동제4투",
+        "잠실4동제5투",
+        "잠실4동제6투",
+        "잠실4동제7투"
+      ],
+      "evidence_level": "confirmed_shutdown",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "송파구",
+          "읍면동": "잠실4동",
+          "투표소명": "잠실4동 제5투표소",
+          "실제부족여부": true,
+          "투표중단여부": true,
+          "출처URL": "https://www.donga.com/news/Politics/article/all/20260603/134042934/1?gid=134043412&regdate=&srev=1",
+          "실제부족확인": true,
+          "투표중단확인": true
+        }
+      ]
+    },
+    {
+      "gu": "강남구",
+      "dong": "대치1동",
+      "risk_ratio": 1.0652,
+      "day_turnout_pct": 53.26,
+      "polling_place_count": 5,
+      "polling_places": [
+        "대치1동제1투",
+        "대치1동제2투",
+        "대치1동제3투",
+        "대치1동제4투",
+        "대치1동제5투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "강남구",
+      "dong": "대치2동",
+      "risk_ratio": 1.0594,
+      "day_turnout_pct": 52.97,
+      "polling_place_count": 8,
+      "polling_places": [
+        "대치2동제1투",
+        "대치2동제2투",
+        "대치2동제3투",
+        "대치2동제4투",
+        "대치2동제5투",
+        "대치2동제6투",
+        "대치2동제7투",
+        "대치2동제8투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "강남구",
+      "dong": "압구정동",
+      "risk_ratio": 1.0584,
+      "day_turnout_pct": 52.92,
+      "polling_place_count": 7,
+      "polling_places": [
+        "압구정동제1투",
+        "압구정동제2투",
+        "압구정동제3투",
+        "압구정동제4투",
+        "압구정동제5투",
+        "압구정동제6투",
+        "압구정동제7투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "서초구",
+      "dong": "양재1동",
+      "risk_ratio": 1.0446,
+      "day_turnout_pct": 52.23,
+      "polling_place_count": 10,
+      "polling_places": [
+        "양재1동제1투",
+        "양재1동제2투",
+        "양재1동제3투",
+        "양재1동제4투",
+        "양재1동제5투",
+        "양재1동제6투",
+        "양재1동제7투",
+        "양재1동제8투",
+        "양재1동제9투",
+        "양재1동제10투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "송파구",
+      "dong": "문정2동",
+      "risk_ratio": 1.0416,
+      "day_turnout_pct": 52.08,
+      "polling_place_count": 6,
+      "polling_places": [
+        "문정2동제1투",
+        "문정2동제2투",
+        "문정2동제3투",
+        "문정2동제4투",
+        "문정2동제5투",
+        "문정2동제6투"
+      ],
+      "evidence_level": "confirmed_shortage",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "송파구",
+          "읍면동": "문정2동",
+          "투표소명": "문정2동 제2투표소",
+          "실제부족여부": true,
+          "투표중단여부": null,
+          "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+          "실제부족확인": true,
+          "투표중단확인": null
+        }
+      ]
+    },
+    {
+      "gu": "서초구",
+      "dong": "잠원동",
+      "risk_ratio": 1.0392,
+      "day_turnout_pct": 51.96,
+      "polling_place_count": 8,
+      "polling_places": [
+        "잠원동제1투",
+        "잠원동제2투",
+        "잠원동제3투",
+        "잠원동제4투",
+        "잠원동제5투",
+        "잠원동제6투",
+        "잠원동제7투",
+        "잠원동제8투"
+      ],
+      "evidence_level": "confirmed_shortage",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "서초구",
+          "읍면동": "잠원동",
+          "투표소명": "잠원동 제7투표소",
+          "실제부족여부": true,
+          "투표중단여부": null,
+          "출처URL": "https://www.newdaily.co.kr/site/data/html/2026/06/03/2026060300128.html",
+          "실제부족확인": true,
+          "투표중단확인": null
+        }
+      ]
+    },
+    {
+      "gu": "송파구",
+      "dong": "잠실7동",
+      "risk_ratio": 1.0386,
+      "day_turnout_pct": 51.93,
+      "polling_place_count": 2,
+      "polling_places": [
+        "잠실7동제1투",
+        "잠실7동제2투"
+      ],
+      "evidence_level": "confirmed_shortage",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "송파구",
+          "읍면동": "잠실7동",
+          "투표소명": "잠실7동 제2투표소",
+          "실제부족여부": true,
+          "투표중단여부": null,
+          "출처URL": "https://www.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500194?wlog_tag1=aiMbti_request_pc",
+          "실제부족확인": true,
+          "투표중단확인": null
+        }
+      ]
+    },
+    {
+      "gu": "강남구",
+      "dong": "개포1동",
+      "risk_ratio": 1.017,
+      "day_turnout_pct": 50.85,
+      "polling_place_count": 6,
+      "polling_places": [
+        "개포1동제1투",
+        "개포1동제2투",
+        "개포1동제3투",
+        "개포1동제4투",
+        "개포1동제5투",
+        "개포1동제6투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "서초구",
+      "dong": "반포3동",
+      "risk_ratio": 1.0126,
+      "day_turnout_pct": 50.63,
+      "polling_place_count": 5,
+      "polling_places": [
+        "반포3동제1투",
+        "반포3동제2투",
+        "반포3동제3투",
+        "반포3동제4투",
+        "반포3동제5투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    },
+    {
+      "gu": "송파구",
+      "dong": "잠실2동",
+      "risk_ratio": 1.0096,
+      "day_turnout_pct": 50.48,
+      "polling_place_count": 7,
+      "polling_places": [
+        "잠실2동제1투",
+        "잠실2동제2투",
+        "잠실2동제3투",
+        "잠실2동제4투",
+        "잠실2동제5투",
+        "잠실2동제6투",
+        "잠실2동제7투"
+      ],
+      "evidence_level": "confirmed_shortage",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "송파구",
+          "읍면동": "잠실2동",
+          "투표소명": "잠실2동 제6투표소",
+          "실제부족여부": true,
+          "투표중단여부": null,
+          "출처URL": "https://www.fnnews.com/news/202606040629007170",
+          "실제부족확인": true,
+          "투표중단확인": null
+        }
+      ]
+    },
+    {
+      "gu": "송파구",
+      "dong": "위례동",
+      "risk_ratio": 1.0026,
+      "day_turnout_pct": 50.13,
+      "polling_place_count": 8,
+      "polling_places": [
+        "위례동제1투",
+        "위례동제2투",
+        "위례동제3투",
+        "위례동제4투",
+        "위례동제5투",
+        "위례동제6투",
+        "위례동제7투",
+        "위례동제8투"
+      ],
+      "evidence_level": "confirmed_shortage",
+      "known_locations": [
+        {
+          "시도": "서울",
+          "구시군": "송파구",
+          "읍면동": "위례동",
+          "투표소명": "위례동 제5투표소",
+          "실제부족여부": true,
+          "투표중단여부": null,
+          "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+          "실제부족확인": true,
+          "투표중단확인": null
+        }
+      ]
+    },
+    {
+      "gu": "강남구",
+      "dong": "세곡동",
+      "risk_ratio": 1.0014,
+      "day_turnout_pct": 50.07,
+      "polling_place_count": 10,
+      "polling_places": [
+        "세곡동제1투",
+        "세곡동제2투",
+        "세곡동제3투",
+        "세곡동제4투",
+        "세곡동제5투",
+        "세곡동제6투",
+        "세곡동제7투",
+        "세곡동제8투",
+        "세곡동제9투",
+        "세곡동제10투"
+      ],
+      "evidence_level": "model_candidate",
+      "known_locations": []
+    }
+  ],
+  "known_locations": [
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "문정1동",
+      "투표소명": "문정1동 제4투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "문정2동",
+      "투표소명": "문정2동 제2투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "잠실2동",
+      "투표소명": "잠실2동 제6투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://www.fnnews.com/news/202606040629007170",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "잠실7동",
+      "투표소명": "잠실7동 제2투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://www.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500194?wlog_tag1=aiMbti_request_pc",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "잠실4동",
+      "투표소명": "잠실4동 제5투표소",
+      "실제부족여부": true,
+      "투표중단여부": true,
+      "출처URL": "https://www.donga.com/news/Politics/article/all/20260603/134042934/1?gid=134043412&regdate=&srev=1",
+      "실제부족확인": true,
+      "투표중단확인": true,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "가락2동",
+      "투표소명": "가락2동 제3투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "가락2동",
+      "투표소명": "가락2동 제7투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "서울",
+      "구시군": "송파구",
+      "읍면동": "위례동",
+      "투표소명": "위례동 제5투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "강남구",
+      "읍면동": "청담동",
+      "투표소명": "청담동 제4투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "서울",
+      "구시군": "강남구",
+      "읍면동": "개포2동",
+      "투표소명": "개포2동 제2투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "광진구",
+      "읍면동": "구의3동",
+      "투표소명": "구의3동 제6투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "서울",
+      "구시군": "동작구",
+      "읍면동": "노량진1동",
+      "투표소명": "노량진1동 제7투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "서울",
+      "구시군": "서초구",
+      "읍면동": "잠원동",
+      "투표소명": "잠원동 제7투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://www.newdaily.co.kr/site/data/html/2026/06/03/2026060300128.html",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": true
+    },
+    {
+      "시도": "서울",
+      "구시군": "서초구",
+      "읍면동": "반포4동",
+      "투표소명": "반포4동 제3투표소",
+      "실제부족여부": true,
+      "투표중단여부": null,
+      "출처URL": "https://www.fnnews.com/news/202606040629007170",
+      "실제부족확인": true,
+      "투표중단확인": null,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "인천",
+      "구시군": "연수구",
+      "읍면동": "송도5동",
+      "투표소명": "송도5동 제1투표소",
+      "실제부족여부": true,
+      "투표중단여부": true,
+      "출처URL": "https://www.khan.co.kr/article/202606041454011",
+      "실제부족확인": true,
+      "투표중단확인": true,
+      "stress_test_candidate": false
+    },
+    {
+      "시도": "인천",
+      "구시군": "연수구",
+      "읍면동": "동춘1동",
+      "투표소명": "동춘1동 제6투표소",
+      "실제부족여부": true,
+      "투표중단여부": true,
+      "출처URL": "https://www.khan.co.kr/article/202606041454011",
+      "실제부족확인": true,
+      "투표중단확인": true,
+      "stress_test_candidate": false
+    }
+  ],
+  "gu_only_unresolved": [
+    {
+      "gu": "광진구",
+      "official_shutdown_count": 2,
+      "max_dong_risk_ratio": 0.9942,
+      "evidence_level": "gu_only",
+      "reason": "구별 중단 수만 확인되며, 공개된 동 평균만으로 실제 중단 위치를 식별할 수 없음"
+    },
+    {
+      "gu": "연수구",
+      "official_shutdown_count": 3,
+      "max_dong_risk_ratio": 0.0,
+      "evidence_level": "gu_only",
+      "reason": "구별 중단 수만 확인되며, 공개된 동 평균만으로 실제 중단 위치를 식별할 수 없음"
+    }
+  ],
+  "summary": {
+    "model_candidate_dongs": 18,
+    "candidate_polling_places": 122,
+    "named_locations": 16,
+    "confirmed_shutdown_named": 3
+  }
+}

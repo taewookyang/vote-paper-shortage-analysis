@@ -73,7 +73,7 @@
 | `collect_nec_vote_progress.cjs` | VCVP01 시간대별 투표현황 (전국+서울, 7시~전체) | `data/raw/nec_vote_progress_2026.csv` |
 | `collect_songpa_2026_mayor.cjs` | VCCP08 구청장 선거 동별 결과 (송파구 27개 동) | `data/raw/songpa_2026_mayor_result.csv` |
 | `collect_songpa_2026_nec_results.cjs` | VCCP08 구의원 선거 선거구별 득표수 | `data/raw/songpa_2026_result.csv` |
-| `collect_national_codes.cjs` | 전국 18개 시도 274개 구시군 코드 | `data/raw/national_codes.json` |
+| `collect_national_codes.cjs` | 전국 17개 시도 256개 구시군 코드 | `data/raw/national_codes.json` |
 | `collect_national_turnout.cjs` | 전국 구시군별 동별 당일투표율 | `data/raw/national_dong_turnout.csv` |
 
 ### 2-2. 대시보드 공개 JSON
@@ -174,7 +174,7 @@ Phase 5 — 마무리                  🔄 진행 중
   □ DISCLAIMER.md 별도 파일화
 
 Phase 6 — 전국 확장               🔄 진행 중
-  ✅ 전국 274개 구시군 코드 수집
+  ✅ 전국 256개 구시군 코드 수집
   🔄 서울 25개 구 크롤링 중
   □ 전국 히트맵 / 위험도 지도
   □ 전국 선거구 표차 매핑

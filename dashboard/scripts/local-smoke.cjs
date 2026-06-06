@@ -10,7 +10,7 @@ function assert(condition, message) {
 async function inspect(page, viewportName) {
   await page.goto(target, { waitUntil: 'domcontentloaded', timeout: 30000 })
   await page.getByText('투표용지는 왜 모자랐나').waitFor({ timeout: 30000 })
-  await page.getByText('표차가 작은 곳부터 추가 조사').waitFor({ timeout: 30000 })
+  await page.getByText('22곳 중단 지역 — 50% 배부 가정 스트레스 테스트').waitFor({ timeout: 30000 })
   const state = await page.evaluate(() => ({
     text: document.body.innerText,
     redBars: document.querySelectorAll('.recharts-bar-rectangle').length,
@@ -19,11 +19,11 @@ async function inspect(page, viewportName) {
     horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
   }))
 
-  assert(state.text.includes('어느 동에서 바닥났나'), `${viewportName}: missing Songpa detail section`)
+  assert(state.text.includes('어느 동 — 송파구 27개 동 전체'), `${viewportName}: missing Songpa detail section`)
   assert(!state.text.includes('지도 경계 데이터를 불러오지 못했습니다'), `${viewportName}: broken map error is visible`)
   assert(state.redBars >= 27, `${viewportName}: expected fallback dong chart bars`)
   assert(state.mapSvg === 0, `${viewportName}: unlicensed boundary map should not render`)
-  assert(state.text.includes('표차가 작은 곳부터 추가 조사'), `${viewportName}: missing targeted screening section`)
+  assert(state.text.includes('추가 송부 27개 구시군'), `${viewportName}: missing targeted screening section`)
   assert(state.text.includes('남해군가선거구'), `${viewportName}: missing smallest-margin district`)
   assert(state.priorityRows === 8, `${viewportName}: expected eight initial priority rows`)
   assert(!state.horizontalOverflow, `${viewportName}: horizontal overflow detected`)

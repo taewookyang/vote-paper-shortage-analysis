@@ -241,6 +241,29 @@ def audit_shortages(path: Path) -> list[Check]:
     return checks
 
 
+def audit_shutdown_stress_test(path: Path) -> list[Check]:
+    dataset = "shutdown_stress_test_2026"
+    if not path.exists():
+        return [_skip(dataset, "file_exists", f"missing: {path}")]
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    official = payload.get("official_shutdown", {})
+    candidates = payload.get("model_candidates", [])
+    known = payload.get("known_locations", [])
+    checks = [
+        _check(dataset, "official_shutdown_total", official.get("합계") == 22, f"total={official.get('합계')}"),
+        _check(dataset, "official_shutdown_gu_count", len(official) - int("합계" in official) == 5, f"gu={len(official) - int('합계' in official)}"),
+        _check(dataset, "candidate_evidence_level_present", all(item.get("evidence_level") for item in candidates), f"candidates={len(candidates)}"),
+        _check(dataset, "known_location_source_present", all(item.get("출처URL") for item in known), f"known={len(known)}"),
+        _check(
+            dataset,
+            "candidate_polling_place_count_matches",
+            all(item.get("polling_place_count") == len(item.get("polling_places", [])) for item in candidates),
+            f"candidates={len(candidates)}",
+        ),
+    ]
+    return checks
+
+
 def historical_context() -> dict:
     try:
         from src.analysis.historical_baseline import build_songpa_historical_baseline
@@ -293,6 +316,7 @@ def run_audit(fail_on_error: bool = False) -> dict:
     checks.extend(audit_national_turnout(RAW_DIR / "national_dong_turnout.csv", RAW_DIR / "national_codes.json"))
     checks.extend(audit_vote_progress(RAW_DIR / "nec_vote_progress_2026.csv"))
     checks.extend(audit_shortages(RAW_DIR / "shortage_2026.csv"))
+    checks.extend(audit_shutdown_stress_test(PROCESSED_DIR / "dashboard" / "shutdown_stress_test_2026.json"))
 
     failures = [check for check in checks if check.status == "fail"]
     errors = [check for check in failures if check.severity == "error"]

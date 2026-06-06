@@ -15,7 +15,7 @@ const DATA_FILES = {
   yearlyCompare:  '/data/yearly_comparison.json',
   songpaMap:      '/data/songpa_boundaries_2026.json',
   targetedMargins:'/data/targeted_margin_screening_2026.json',
-  shutdownEstimation: '/data/shutdown_estimation_2026.json',
+  shutdownStressTest: '/data/shutdown_stress_test_2026.json',
 }
 
 export default function Dashboard() {
@@ -53,7 +53,7 @@ export default function Dashboard() {
   const songpaMap = data.songpaMap || null
   const targetedMargins = data.targetedMargins?.items || []
   const priorityMargins = targetedMargins.filter(item => item['검토등급'] === '우선검토')
-  const shutdownEst = data.shutdownEstimation || null
+  const shutdownStress = data.shutdownStressTest || null
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -119,7 +119,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div style={{ marginTop: 16, background: '#111', borderRadius: 8, padding: '12px 14px', color: 'white', fontSize: 14, lineHeight: 1.6, textAlign: 'center' }}>
-            총량은 충분했습니다. <strong>배분이 틀렸습니다.</strong>
+            구 전체 총량에는 여유가 있었습니다. <strong>투표소별 배분·이송 과정은 추가 확인이 필요합니다.</strong>
           </div>
           <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, textAlign: 'center' }}>
             송파구 기준 · 전국 27개 구시군으로 확대 집계 중
@@ -162,18 +162,18 @@ export default function Dashboard() {
           </CalloutBox>
         </Section>
 
-        {/* ── 22곳 투표 중단 추정 ── */}
-        {shutdownEst && (
-          <Section label="추정" title="22곳 투표 중단 — 동 단위 위험도 분석">
+        {/* ── 22곳 중단 지역 스트레스 테스트 ── */}
+        {shutdownStress && (
+          <Section label="추정" title="22곳 중단 지역 — 50% 배부 가정 스트레스 테스트">
             <CalloutBox color="#fff7ed" border="#fdba74">
-              <strong>추정값 안내.</strong> 동 단위 당일투표율/50% 기준으로 산출한 추정치입니다.
-              투표소별 실제 배분량은 공개되지 않아 정확한 특정이 불가능합니다.
-              선거 결과 영향을 단정하지 않습니다.
+              <strong>이 목록은 실제 중단 위치가 아닙니다.</strong> 동 전체 선거일 투표율이
+              선거인수의 50%를 넘었는지 확인한 추가 조사 후보입니다. 투표소별 실제 배부량과
+              전체 중단 위치는 공개되지 않았습니다.
             </CalloutBox>
 
             {/* 구별 공식 발표 */}
             <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 8 }}>
-              {Object.entries(shutdownEst.official_shutdown || {})
+              {Object.entries(shutdownStress.official_shutdown || {})
                 .filter(([k]) => k !== '합계')
                 .map(([gu, cnt]) => (
                   <div key={gu} style={{ background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 6px', textAlign: 'center' }}>
@@ -184,40 +184,50 @@ export default function Dashboard() {
                 ))}
             </div>
 
-            {/* 위험 동 목록 */}
+            {/* 스트레스 테스트 후보 동 목록 */}
             <p style={{ fontSize: 13, color: '#6b7280', marginTop: 16, marginBottom: 8 }}>
-              risk_ratio(당일투표율÷50%) &gt; 1.0인 동: <strong>{shutdownEst.danger_dongs?.length || 0}개</strong>
+              50% 배부 가정에서 동 평균 수요가 기준을 넘는 곳:
+              <strong> {shutdownStress.model_candidates?.length || 0}개 동</strong>
             </p>
             <div style={{ display: 'grid', gap: 6 }}>
-              {(shutdownEst.danger_dongs || []).map(d => (
+              {(shutdownStress.model_candidates || []).map(d => (
                 <div key={d.dong} style={{ background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: 8, padding: '10px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
                   <div>
                     <span style={{ fontSize: 13, fontWeight: 700 }}>{d.gu} {d.dong}</span>
-                    <span style={{ fontSize: 11, color: '#9ca3af', marginLeft: 8 }}>투표소 {d.polling_places}개</span>
+                    <span style={{ fontSize: 11, color: '#9ca3af', marginLeft: 8 }}>투표소 {d.polling_place_count}개</span>
+                    <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 3 }}>
+                      {d.evidence_level === 'confirmed_shutdown'
+                        ? '이 동에서 실제 중단 위치 1곳 이상 확인'
+                        : d.evidence_level === 'confirmed_shortage'
+                          ? '이 동에서 실제 부족 위치 1곳 이상 확인'
+                          : '모델 후보 · 실제 위치 미확인'}
+                    </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: 14, fontWeight: 800, color: '#be123c' }}>
                       {typeof d.risk_ratio === 'number' ? d.risk_ratio.toFixed(3) : d.risk_ratio}
                     </div>
-                    <div style={{ fontSize: 10, color: '#9ca3af' }}>risk_ratio</div>
+                    <div style={{ fontSize: 10, color: '#9ca3af' }}>동 평균 수요 ÷ 50%</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* 추정 불가 */}
-            {shutdownEst.undetectable && (
+            {/* 구 단위만 확인 */}
+            {shutdownStress.gu_only_unresolved?.length > 0 && (
               <div style={{ marginTop: 14, background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: 8, padding: '12px 14px' }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 6 }}>
-                  동 단위 분석으로 추정 불가 — {shutdownEst.undetectable.shutdown_count}곳
+                  실제 중단 동 위치 미공개
                 </p>
                 <ul style={{ fontSize: 12, color: '#6b7280', margin: 0, paddingLeft: 16, lineHeight: 1.7 }}>
-                  {(shutdownEst.undetectable.dongs || []).map((d, i) => (
-                    <li key={i}>{d}</li>
+                  {shutdownStress.gu_only_unresolved.map(item => (
+                    <li key={item.gu}>
+                      {item.gu}: 중단 {item.official_shutdown_count}곳, 동 평균 최고 비율 {item.max_dong_risk_ratio.toFixed(3)}
+                    </li>
                   ))}
                 </ul>
                 <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, marginBottom: 0 }}>
-                  동 내 투표소 간 편차가 크거나 인접 동 수요가 집중된 경우 동 평균이 50% 이하여도 특정 투표소에서 부족이 발생할 수 있습니다.
+                  동 평균이 50% 이하여도 특정 투표소에서는 부족과 중단이 발생할 수 있습니다.
                 </p>
               </div>
             )}
@@ -288,7 +298,7 @@ export default function Dashboard() {
         {/* ── STORY 1: 어느 동에서 바닥났나 ── */}
         <Section label="01" title="어느 동 — 송파구 27개 동 전체">
           <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 4, lineHeight: 1.6 }}>
-            <strong>50% 초과 = 바닥.</strong> 구청장 선거 개표결과 기준.
+            <strong>50% 수준으로 배부했다고 가정하면 여유가 부족할 수 있습니다.</strong> 구청장 선거 개표결과 기준.
           </p>
           {songpaMap
             ? <SongpaBoundaryMap boundaries={songpaMap} dongs={dongs} shortages={shortages} />
@@ -512,7 +522,7 @@ export default function Dashboard() {
             <div style={{ display: 'grid', gap: 10, marginBottom: 14 }}>
               <CalloutBox color="#fef3c7" border="#fbbf24">
                 <strong>선거소청 기한: {retally.legalPath.step1.deadline}</strong> — 아직 {retally.legalPath.step1.daysLeft}일 남았습니다.<br />
-                구의원 선거에서 표차가 좁은 선거구에 부족 투표소가 겹칩니다.
+                구의원 선거구 표차와 공개된 부족 투표소 위치를 추가 검토합니다.
               </CalloutBox>
             </div>
             <div style={{ display: 'grid', gap: 8, marginBottom: 14 }}>

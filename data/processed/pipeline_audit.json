@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-06T19:27:11",
+  "generatedAt": "2026-06-07T01:14:41",
   "summary": {
-    "checks": 31,
-    "passed": 29,
+    "checks": 36,
+    "passed": 34,
     "failed": 2,
     "errors": 0,
     "warnings": 2,
@@ -225,6 +225,41 @@
       "status": "fail",
       "severity": "warning",
       "detail": "named=16/67"
+    },
+    {
+      "dataset": "shutdown_stress_test_2026",
+      "check": "official_shutdown_total",
+      "status": "pass",
+      "severity": "error",
+      "detail": "total=22"
+    },
+    {
+      "dataset": "shutdown_stress_test_2026",
+      "check": "official_shutdown_gu_count",
+      "status": "pass",
+      "severity": "error",
+      "detail": "gu=5"
+    },
+    {
+      "dataset": "shutdown_stress_test_2026",
+      "check": "candidate_evidence_level_present",
+      "status": "pass",
+      "severity": "error",
+      "detail": "candidates=18"
+    },
+    {
+      "dataset": "shutdown_stress_test_2026",
+      "check": "known_location_source_present",
+      "status": "pass",
+      "severity": "error",
+      "detail": "known=16"
+    },
+    {
+      "dataset": "shutdown_stress_test_2026",
+      "check": "candidate_polling_place_count_matches",
+      "status": "pass",
+      "severity": "error",
+      "detail": "candidates=18"
     }
   ],
   "historicalContext": {

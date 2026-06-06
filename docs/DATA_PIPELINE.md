@@ -42,6 +42,20 @@
 - 시간대별 누적 투표자 수 단조 증가
 - 전국 코드 목록 대비 수집 완료 구시군 수
 - 부족 명단 `67 추가송부 / 50 실제부족 / 17 미사용` 보존
+- 중단 지역 스트레스 테스트에서 공식 수치·확인 위치·모델 후보의 증거수준 분리
+
+## 22곳 중단 지역 스트레스 테스트
+
+`scripts/build_shutdown_stress_test.py`는 다음 자료를 결합한다.
+
+- `data/raw/national_dong_turnout.csv`: 동별 선거일 수요
+- `data/raw/shortage_2026.csv`: 이름이 공개된 실제 부족·중단 위치
+- `data/processed/shortage_gu_polling_places.csv`: 대상 5개 구 전체 투표소 목록
+
+산출물 `shutdown_stress_test_2026.json`의 `model_candidates`는 실제 중단 위치 예측이
+아니다. 동 평균 선거일 수요가 50% 배부 가정을 넘는 추가 조사 후보이며, 각 행은
+`confirmed_shutdown`, `confirmed_shortage`, `model_candidate` 중 하나의 증거수준을
+가진다.
 
 실행:
 
@@ -75,7 +89,7 @@ python run_pipeline.py
 
 1. 서울 25개 구 수집 완료와 합계 검증
 2. 2026 부족 발생 시도 6곳 우선 수집
-3. 전국 274개 구시군 동별 수요 수집
+3. 전국 코드 목록의 256개 구시군 동별 수요 수집
 4. 작은 표차의 기초의원 선거구 결과 수집
 5. 2018·2022 동일 구조 정규화
 6. 검증 통과 데이터만 전국 대시보드에 노출

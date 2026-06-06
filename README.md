@@ -86,7 +86,7 @@ npm run build
 
 ```
 scripts/                           크롤링 스크립트 (Node.js + Playwright)
-  collect_national_codes.cjs       전국 18개 시도 274개 구시군 코드 수집
+  collect_national_codes.cjs       전국 17개 시도 256개 구시군 코드 수집
   collect_national_turnout.cjs     전국 동별 선거일투표율 수집
   collect_songpa_2026_mayor.cjs    송파구 구청장 선거 크롤링
   collect_songpa_2026_nec_results.cjs  구의원 득표수 (선거구별 표차)
@@ -112,7 +112,7 @@ dashboard/
 
 - ✅ **송파구 파일럿** — 27개 동 완전 분석, 구의원 선거구 표차, 재투표 가능성 검토
 - 🔄 **서울 25개 구** 크롤링 중 (선거일투표율 기준 수정 후 재수집)
-- ⬜ **전국 274개 구시군** 확장 예정 (히트맵 + 위험도 지도)
+- ⬜ **전국 코드 목록의 256개 구시군** 확장 예정 (히트맵 + 조사 우선순위 지도)
 
 ---
 

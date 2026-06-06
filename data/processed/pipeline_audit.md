@@ -1,8 +1,8 @@
 # 데이터 파이프라인 검증 보고서
 
-- 생성: 2026-06-06T19:27:11
-- 검사: 31개
-- 통과: 29개
+- 생성: 2026-06-07T01:14:41
+- 검사: 36개
+- 통과: 34개
 - 오류: 0개
 - 경고: 2개
 
@@ -41,6 +41,11 @@
 | shortage_2026 | official_unused_sent_count | pass | error | unused_sent=17 |
 | shortage_2026 | source_url_present | pass | error | missing_sources=0 |
 | shortage_2026 | named_polling_place_coverage | fail | warning | named=16/67 |
+| shutdown_stress_test_2026 | official_shutdown_total | pass | error | total=22 |
+| shutdown_stress_test_2026 | official_shutdown_gu_count | pass | error | gu=5 |
+| shutdown_stress_test_2026 | candidate_evidence_level_present | pass | error | candidates=18 |
+| shutdown_stress_test_2026 | known_location_source_present | pass | error | known=16 |
+| shutdown_stress_test_2026 | candidate_polling_place_count_matches | pass | error | candidates=18 |
 
 ## 과거 선거 비교 해석
 
