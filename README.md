@@ -46,6 +46,11 @@
 
 모든 크롤링 스크립트 공개 (`scripts/` 폴더).
 
+송파구 행정동 지도 경계는 [vuski/admdongkor](https://github.com/vuski/admdongkor)의
+2026-04-01 자료(통계청 SGIS 기반)를 후보로 검토 중입니다. 라이선스 확인 전까지
+경계 데이터 산출물은 저장소에 포함하거나 배포하지 않습니다.
+자세한 결정 기록은 [`docs/MAP_DATA_DECISION.md`](docs/MAP_DATA_DECISION.md)를 참고하세요.
+
 ---
 
 ## 실행 방법

@@ -13,6 +13,7 @@ const DATA_FILES = {
   retally:        '/data/retally_analysis.json',
   seoul:          '/data/seoul_analysis_2026.json',
   yearlyCompare:  '/data/yearly_comparison.json',
+  songpaMap:      '/data/songpa_boundaries_2026.json',
 }
 
 export default function Dashboard() {
@@ -46,6 +47,7 @@ export default function Dashboard() {
   const retally  = data.retally || null
   const seoul    = data.seoul || null
   const yearlyCompare = data.yearlyCompare?.years || []
+  const songpaMap = data.songpaMap || null
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -155,45 +157,10 @@ export default function Dashboard() {
             당일투표율이 <strong>50%를 넘은 동</strong>은 하한 수준으로 배부됐을 경우 부족 가능성이 있습니다.
             2026 구청장 선거 개표결과 기준 (27개 동 전체 크롤링).
           </p>
-          <div style={{ height: 520, marginTop: 12 }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={dongChart} layout="vertical" margin={{ left: 8, right: 44, top: 4, bottom: 4 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={false} />
-                <XAxis
-                  type="number"
-                  domain={[0, 65]}
-                  tickFormatter={v => `${v}%`}
-                  tick={{ fontSize: 11 }}
-                />
-                <YAxis
-                  dataKey="name"
-                  type="category"
-                  width={60}
-                  tick={{ fontSize: 11 }}
-                />
-                <ReferenceLine x={50} stroke="#be123c" strokeDasharray="4 3" strokeWidth={2} />
-                <Tooltip
-                  formatter={(v) => [`${v}%`, '당일투표율']}
-                  labelFormatter={l => l}
-                />
-                <Bar dataKey="rate" radius={[0, 3, 3, 0]} label={{ position: 'right', fontSize: 11, formatter: v => `${v}%` }}>
-                  {dongChart.map(d => (
-                    <Cell key={d.name} fill={d.over ? '#be123c' : '#0f766e'} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-          <div style={{ display: 'flex', gap: 16, fontSize: 12, color: '#6b7280', marginTop: 6 }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-              <span style={{ display: 'inline-block', width: 10, height: 10, background: '#be123c', borderRadius: 2 }}></span>
-              50% 초과 ({exceeding.length}개 동)
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
-              <span style={{ display: 'inline-block', width: 10, height: 10, background: '#0f766e', borderRadius: 2 }}></span>
-              50% 이하 ({dongChart.length - exceeding.length}개 동)
-            </span>
-          </div>
+          {songpaMap
+            ? <SongpaBoundaryMap boundaries={songpaMap} dongs={dongs} shortages={shortages} />
+            : <p style={{ color: '#9ca3af', fontSize: 13 }}>지도 경계 데이터를 불러오지 못했습니다.</p>
+          }
         </Section>
 
         {/* ── STORY 2: 왜 이렇게 됐나 ── */}
@@ -515,6 +482,121 @@ function Section({ label, title, children }) {
       {children}
     </div>
   )
+}
+
+function SongpaBoundaryMap({ boundaries, dongs, shortages }) {
+  const initialDong = [...dongs].sort((a, b) => b.electionDayRate - a.electionDayRate)[0]?.dong
+  const [selectedName, setSelectedName] = useState(initialDong)
+  const dongByName = new Map(dongs.map(dong => [dong.dong, dong]))
+  const confirmedByDong = shortages.reduce((counts, item) => {
+    counts[item.emdName] = (counts[item.emdName] || 0) + 1
+    return counts
+  }, {})
+  const selected = dongByName.get(selectedName)
+  const selectedConfirmed = confirmedByDong[selectedName] || 0
+
+  const fillFor = (name) => {
+    const dong = dongByName.get(name)
+    if (confirmedByDong[name]) return '#be123c'
+    if (dong?.exceedsPrintLimit) return '#e58b2b'
+    if (dong) return '#0f766e'
+    return '#d1d5db'
+  }
+
+  return (
+    <div className="songpa-boundary-map">
+      <svg
+        viewBox={boundaries.viewBox}
+        className="songpa-boundary-svg"
+        role="img"
+        aria-label="송파구 행정동별 선거일 당일투표율 지도"
+      >
+        {boundaries.features.map(feature => {
+          const dong = dongByName.get(feature.name)
+          const confirmed = confirmedByDong[feature.name] || 0
+          const isSelected = feature.name === selectedName
+          const title = dong
+            ? `${feature.name}: 당일투표율 ${(dong.electionDayRate * 100).toFixed(1)}%, 확인된 부족 투표소 ${confirmed}곳`
+            : `${feature.name}: 분석 데이터 없음`
+          return (
+            <g key={feature.code}>
+              <path
+                d={feature.path}
+                fill={fillFor(feature.name)}
+                className={`songpa-boundary-path${isSelected ? ' is-selected' : ''}`}
+                tabIndex="0"
+                role="button"
+                aria-label={title}
+                onClick={() => setSelectedName(feature.name)}
+                onKeyDown={event => {
+                  if (event.key === 'Enter' || event.key === ' ') setSelectedName(feature.name)
+                }}
+              >
+                <title>{title}</title>
+              </path>
+              <text
+                x={feature.centroid[0]}
+                y={feature.centroid[1]}
+                className="songpa-boundary-label"
+                aria-hidden="true"
+              >
+                {feature.name}
+              </text>
+            </g>
+          )
+        })}
+      </svg>
+
+      <div className="songpa-map-legend" aria-label="지도 범례">
+        <MapLegend color="#be123c" label={`실제 부족 확인 (${Object.keys(confirmedByDong).length}개 동)`} />
+        <MapLegend color="#e58b2b" label={`50% 하한 초과 (${exceedingCount(dongs)}개 동)`} />
+        <MapLegend color="#0f766e" label="50% 이하" />
+      </div>
+
+      {selected && (
+        <div className="songpa-map-selection" aria-live="polite">
+          <div>
+            <strong>{selected.dong}</strong>
+            <span>선거일 당일투표율</span>
+          </div>
+          <div>
+            <strong>{(selected.electionDayRate * 100).toFixed(1)}%</strong>
+            <span>50% 하한 대비 {selected.shortage > 0 ? `+${selected.shortage.toLocaleString()}표` : '초과 없음'}</span>
+          </div>
+          <div>
+            <strong>{selectedConfirmed}곳</strong>
+            <span>실제 부족 확인 투표소</span>
+          </div>
+        </div>
+      )}
+
+      <p className="songpa-map-note">
+        동을 선택하면 수치를 확인할 수 있습니다. 50% 하한 대비 표 수는 실제 투표소별 부족량이 아니라
+        동 전체 당일투표자와 가정상 하한의 차이입니다.
+      </p>
+      <a
+        className="songpa-map-source"
+        href={boundaries.source.repository}
+        target="_blank"
+        rel="noreferrer"
+      >
+        행정동 경계: {boundaries.source.attribution} ({boundaries.source.version})
+      </a>
+    </div>
+  )
+}
+
+function MapLegend({ color, label }) {
+  return (
+    <span>
+      <span style={{ background: color }}></span>
+      {label}
+    </span>
+  )
+}
+
+function exceedingCount(dongs) {
+  return dongs.filter(dong => dong.exceedsPrintLimit).length
 }
 
 function CalloutBox({ children, color, border, style: extraStyle }) {

@@ -204,3 +204,123 @@ button {
 .legend-neutral {
   background: #d9dee7;
 }
+
+.songpa-boundary-map {
+  margin-top: 14px;
+}
+
+.songpa-boundary-svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 620 / 500;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  background: #eef3f5;
+}
+
+.songpa-boundary-path {
+  cursor: pointer;
+  stroke: #fff;
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  transition: filter 120ms ease, stroke-width 120ms ease;
+}
+
+.songpa-boundary-path:hover,
+.songpa-boundary-path:focus-visible {
+  filter: brightness(1.12);
+  outline: none;
+  stroke: #111827;
+  stroke-width: 2.5;
+}
+
+.songpa-boundary-path.is-selected {
+  stroke: #111827;
+  stroke-width: 3;
+}
+
+.songpa-boundary-label {
+  pointer-events: none;
+  fill: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  paint-order: stroke;
+  stroke: rgba(17, 24, 39, 0.72);
+  stroke-width: 2px;
+}
+
+.songpa-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 10px;
+  color: #667085;
+  font-size: 12px;
+}
+
+.songpa-map-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.songpa-map-legend > span > span {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.songpa-map-selection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 12px;
+  border: 1px solid #d9dee7;
+  border-radius: 8px;
+  background: #d9dee7;
+}
+
+.songpa-map-selection > div {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  padding: 11px 10px;
+  background: #fff;
+}
+
+.songpa-map-selection strong {
+  color: #1c2430;
+  font-size: 15px;
+}
+
+.songpa-map-selection span {
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.songpa-map-note,
+.songpa-map-source {
+  display: block;
+  margin: 9px 0 0;
+  color: #8a94a3;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.songpa-map-source {
+  width: fit-content;
+}
+
+@media (max-width: 520px) {
+  .songpa-boundary-label {
+    font-size: 7.5px;
+  }
+
+  .songpa-map-selection {
+    grid-template-columns: 1fr;
+  }
+}
