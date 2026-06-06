@@ -15,6 +15,7 @@ const DATA_FILES = {
   yearlyCompare:  '/data/yearly_comparison.json',
   songpaMap:      '/data/songpa_boundaries_2026.json',
   targetedMargins:'/data/targeted_margin_screening_2026.json',
+  shutdownEstimation: '/data/shutdown_estimation_2026.json',
 }
 
 export default function Dashboard() {
@@ -52,6 +53,7 @@ export default function Dashboard() {
   const songpaMap = data.songpaMap || null
   const targetedMargins = data.targetedMargins?.items || []
   const priorityMargins = targetedMargins.filter(item => item['검토등급'] === '우선검토')
+  const shutdownEst = data.shutdownEstimation || null
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -105,9 +107,9 @@ export default function Dashboard() {
           <p style={{ fontSize: 13, fontWeight: 700, color: '#6b7280', letterSpacing: 1, marginBottom: 14 }}>핵심 역설</p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 12, alignItems: 'center' }}>
             <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: 30, fontWeight: 800, color: '#be123c', lineHeight: 1 }}>14곳</div>
-              <div style={{ fontSize: 13, color: '#374151', marginTop: 6, fontWeight: 600 }}>투표 중단·지연</div>
-              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3 }}>언론보도 · 송파구</div>
+              <div style={{ fontSize: 30, fontWeight: 800, color: '#be123c', lineHeight: 1 }}>15곳</div>
+              <div style={{ fontSize: 13, color: '#374151', marginTop: 6, fontWeight: 600 }}>추가 송부(12곳 중단)</div>
+              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3 }}>선관위 공식 · 송파구</div>
             </div>
             <div style={{ fontSize: 28, color: '#d1d5db', fontWeight: 300 }}>↔</div>
             <div style={{ textAlign: 'center' }}>
@@ -159,6 +161,68 @@ export default function Dashboard() {
             <span style={{ fontSize: 12, color: '#9ca3af' }}>기록 자체가 없습니다. · 출처: 파이낸셜뉴스 2026.06.05</span>
           </CalloutBox>
         </Section>
+
+        {/* ── 22곳 투표 중단 추정 ── */}
+        {shutdownEst && (
+          <Section label="추정" title="22곳 투표 중단 — 동 단위 위험도 분석">
+            <CalloutBox color="#fff7ed" border="#fdba74">
+              <strong>추정값 안내.</strong> 동 단위 당일투표율/50% 기준으로 산출한 추정치입니다.
+              투표소별 실제 배분량은 공개되지 않아 정확한 특정이 불가능합니다.
+              선거 결과 영향을 단정하지 않습니다.
+            </CalloutBox>
+
+            {/* 구별 공식 발표 */}
+            <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(5,1fr)', gap: 8 }}>
+              {Object.entries(shutdownEst.official_shutdown || {})
+                .filter(([k]) => k !== '합계')
+                .map(([gu, cnt]) => (
+                  <div key={gu} style={{ background: '#fef2f2', border: '1px solid #fca5a5', borderRadius: 8, padding: '10px 6px', textAlign: 'center' }}>
+                    <div style={{ fontSize: 18, fontWeight: 800, color: '#be123c' }}>{cnt}곳</div>
+                    <div style={{ fontSize: 11, color: '#374151', marginTop: 4, fontWeight: 600 }}>{gu}</div>
+                    <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 2 }}>선관위 공식</div>
+                  </div>
+                ))}
+            </div>
+
+            {/* 위험 동 목록 */}
+            <p style={{ fontSize: 13, color: '#6b7280', marginTop: 16, marginBottom: 8 }}>
+              risk_ratio(당일투표율÷50%) &gt; 1.0인 동: <strong>{shutdownEst.danger_dongs?.length || 0}개</strong>
+            </p>
+            <div style={{ display: 'grid', gap: 6 }}>
+              {(shutdownEst.danger_dongs || []).map(d => (
+                <div key={d.dong} style={{ background: '#f9fafb', border: '1px solid #e5e7eb', borderRadius: 8, padding: '10px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
+                  <div>
+                    <span style={{ fontSize: 13, fontWeight: 700 }}>{d.gu} {d.dong}</span>
+                    <span style={{ fontSize: 11, color: '#9ca3af', marginLeft: 8 }}>투표소 {d.polling_places}개</span>
+                  </div>
+                  <div style={{ textAlign: 'right' }}>
+                    <div style={{ fontSize: 14, fontWeight: 800, color: '#be123c' }}>
+                      {typeof d.risk_ratio === 'number' ? d.risk_ratio.toFixed(3) : d.risk_ratio}
+                    </div>
+                    <div style={{ fontSize: 10, color: '#9ca3af' }}>risk_ratio</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* 추정 불가 */}
+            {shutdownEst.undetectable && (
+              <div style={{ marginTop: 14, background: '#f1f5f9', border: '1px solid #cbd5e1', borderRadius: 8, padding: '12px 14px' }}>
+                <p style={{ fontSize: 13, fontWeight: 700, color: '#374151', marginBottom: 6 }}>
+                  동 단위 분석으로 추정 불가 — {shutdownEst.undetectable.shutdown_count}곳
+                </p>
+                <ul style={{ fontSize: 12, color: '#6b7280', margin: 0, paddingLeft: 16, lineHeight: 1.7 }}>
+                  {(shutdownEst.undetectable.dongs || []).map((d, i) => (
+                    <li key={i}>{d}</li>
+                  ))}
+                </ul>
+                <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, marginBottom: 0 }}>
+                  동 내 투표소 간 편차가 크거나 인접 동 수요가 집중된 경우 동 평균이 50% 이하여도 특정 투표소에서 부족이 발생할 수 있습니다.
+                </p>
+              </div>
+            )}
+          </Section>
+        )}
 
         {/* ── 전국 표차 ── */}
         {priorityMargins.length > 0 && (
