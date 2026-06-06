@@ -6,7 +6,6 @@ import {
 } from 'recharts'
 
 const DATA_FILES = {
-  actuals2026:    '/data/songpa_2026_actuals.json',
   dongAnalysis:   '/data/dong_analysis_2026.json',
   voteTimeline:   '/data/vote_progress_timeline_2026.json',
   shortages:      '/data/confirmed_shortages.json',
@@ -221,7 +220,7 @@ export default function Dashboard() {
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontSize: 14, fontWeight: 800, color: '#be123c' }}>
-                      {typeof d.risk_ratio === 'number' ? `${(d.risk_ratio * 100).toFixed(1)}%` : d.risk_ratio}
+                      {typeof d.demand_ratio === 'number' ? `${(d.demand_ratio * 100).toFixed(1)}%` : d.demand_ratio}
                     </div>
                     <div style={{ fontSize: 10, color: '#9ca3af' }}>50% 가정 대비 수요 수준</div>
                   </div>
@@ -238,7 +237,7 @@ export default function Dashboard() {
                 <ul style={{ fontSize: 12, color: '#6b7280', margin: 0, paddingLeft: 16, lineHeight: 1.7 }}>
                   {shutdownStress.gu_only_unresolved.map(item => (
                     <li key={item.gu}>
-                      {item.gu}: 중단 {item.official_shutdown_count}곳, 50% 가정 대비 동 평균 최고 {(item.max_dong_risk_ratio * 100).toFixed(1)}%
+                      {item.gu}: 중단 {item.official_shutdown_count}곳, 50% 가정 대비 동 평균 최고 {(item.max_dong_demand_ratio * 100).toFixed(1)}%
                     </li>
                   ))}
                 </ul>
@@ -318,9 +317,9 @@ export default function Dashboard() {
             </p>
             <div style={{ display: 'grid', gap: 8 }}>
               {seoul.districts.filter(d => d.overDongs > 0).map(d => {
-                const color = d.riskLevel === 'HIGH' ? '#be123c' : d.riskLevel === 'MEDIUM' ? '#b45309' : '#6b7280'
-                const bg    = d.riskLevel === 'HIGH' ? '#fef2f2' : d.riskLevel === 'MEDIUM' ? '#fffbeb' : '#f9fafb'
-                const bdr   = d.riskLevel === 'HIGH' ? '#fca5a5' : d.riskLevel === 'MEDIUM' ? '#fbbf24' : '#e5e7eb'
+                const color = d.comparisonBand === 'HIGH' ? '#be123c' : d.comparisonBand === 'MEDIUM' ? '#b45309' : '#6b7280'
+                const bg    = d.comparisonBand === 'HIGH' ? '#fef2f2' : d.comparisonBand === 'MEDIUM' ? '#fffbeb' : '#f9fafb'
+                const bdr   = d.comparisonBand === 'HIGH' ? '#fca5a5' : d.comparisonBand === 'MEDIUM' ? '#fbbf24' : '#e5e7eb'
                 return (
                   <div key={d.gu} style={{ background: bg, border: `1px solid ${bdr}`, borderRadius: 8, padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div>

@@ -26,7 +26,7 @@
     {
       "gu": "송파구",
       "dong": "잠실3동",
-      "risk_ratio": 1.1342,
+      "demand_ratio": 1.1342,
       "day_turnout_pct": 56.71,
       "polling_place_count": 8,
       "polling_places": [
@@ -45,7 +45,7 @@
     {
       "gu": "강남구",
       "dong": "도곡2동",
-      "risk_ratio": 1.093,
+      "demand_ratio": 1.093,
       "day_turnout_pct": 54.65,
       "polling_place_count": 7,
       "polling_places": [
@@ -63,7 +63,7 @@
     {
       "gu": "강남구",
       "dong": "개포2동",
-      "risk_ratio": 1.0916,
+      "demand_ratio": 1.0916,
       "day_turnout_pct": 54.58,
       "polling_place_count": 7,
       "polling_places": [
@@ -93,7 +93,7 @@
     {
       "gu": "서초구",
       "dong": "서초4동",
-      "risk_ratio": 1.0776,
+      "demand_ratio": 1.0776,
       "day_turnout_pct": 53.88,
       "polling_place_count": 6,
       "polling_places": [
@@ -110,7 +110,7 @@
     {
       "gu": "서초구",
       "dong": "반포2동",
-      "risk_ratio": 1.0768,
+      "demand_ratio": 1.0768,
       "day_turnout_pct": 53.84,
       "polling_place_count": 5,
       "polling_places": [
@@ -126,7 +126,7 @@
     {
       "gu": "송파구",
       "dong": "잠실4동",
-      "risk_ratio": 1.0662,
+      "demand_ratio": 1.0662,
       "day_turnout_pct": 53.31,
       "polling_place_count": 7,
       "polling_places": [
@@ -156,7 +156,7 @@
     {
       "gu": "강남구",
       "dong": "대치1동",
-      "risk_ratio": 1.0652,
+      "demand_ratio": 1.0652,
       "day_turnout_pct": 53.26,
       "polling_place_count": 5,
       "polling_places": [
@@ -172,7 +172,7 @@
     {
       "gu": "강남구",
       "dong": "대치2동",
-      "risk_ratio": 1.0594,
+      "demand_ratio": 1.0594,
       "day_turnout_pct": 52.97,
       "polling_place_count": 8,
       "polling_places": [
@@ -191,7 +191,7 @@
     {
       "gu": "강남구",
       "dong": "압구정동",
-      "risk_ratio": 1.0584,
+      "demand_ratio": 1.0584,
       "day_turnout_pct": 52.92,
       "polling_place_count": 7,
       "polling_places": [
@@ -209,7 +209,7 @@
     {
       "gu": "서초구",
       "dong": "양재1동",
-      "risk_ratio": 1.0446,
+      "demand_ratio": 1.0446,
       "day_turnout_pct": 52.23,
       "polling_place_count": 10,
       "polling_places": [
@@ -230,7 +230,7 @@
     {
       "gu": "송파구",
       "dong": "문정2동",
-      "risk_ratio": 1.0416,
+      "demand_ratio": 1.0416,
       "day_turnout_pct": 52.08,
       "polling_place_count": 6,
       "polling_places": [
@@ -259,7 +259,7 @@
     {
       "gu": "서초구",
       "dong": "잠원동",
-      "risk_ratio": 1.0392,
+      "demand_ratio": 1.0392,
       "day_turnout_pct": 51.96,
       "polling_place_count": 8,
       "polling_places": [
@@ -290,7 +290,7 @@
     {
       "gu": "송파구",
       "dong": "잠실7동",
-      "risk_ratio": 1.0386,
+      "demand_ratio": 1.0386,
       "day_turnout_pct": 51.93,
       "polling_place_count": 2,
       "polling_places": [
@@ -315,7 +315,7 @@
     {
       "gu": "강남구",
       "dong": "개포1동",
-      "risk_ratio": 1.017,
+      "demand_ratio": 1.017,
       "day_turnout_pct": 50.85,
       "polling_place_count": 6,
       "polling_places": [
@@ -332,7 +332,7 @@
     {
       "gu": "서초구",
       "dong": "반포3동",
-      "risk_ratio": 1.0126,
+      "demand_ratio": 1.0126,
       "day_turnout_pct": 50.63,
       "polling_place_count": 5,
       "polling_places": [
@@ -348,7 +348,7 @@
     {
       "gu": "송파구",
       "dong": "잠실2동",
-      "risk_ratio": 1.0096,
+      "demand_ratio": 1.0096,
       "day_turnout_pct": 50.48,
       "polling_place_count": 7,
       "polling_places": [
@@ -378,7 +378,7 @@
     {
       "gu": "송파구",
       "dong": "위례동",
-      "risk_ratio": 1.0026,
+      "demand_ratio": 1.0026,
       "day_turnout_pct": 50.13,
       "polling_place_count": 8,
       "polling_places": [
@@ -409,7 +409,7 @@
     {
       "gu": "강남구",
       "dong": "세곡동",
-      "risk_ratio": 1.0014,
+      "demand_ratio": 1.0014,
       "day_turnout_pct": 50.07,
       "polling_place_count": 10,
       "polling_places": [
@@ -626,14 +626,14 @@
     {
       "gu": "광진구",
       "official_shutdown_count": 2,
-      "max_dong_risk_ratio": 0.9942,
+      "max_dong_demand_ratio": 0.9942,
       "evidence_level": "gu_only",
       "reason": "구별 중단 수만 확인되며, 공개된 동 평균만으로 실제 중단 위치를 식별할 수 없음"
     },
     {
       "gu": "연수구",
       "official_shutdown_count": 3,
-      "max_dong_risk_ratio": 0.9598,
+      "max_dong_demand_ratio": 0.9598,
       "evidence_level": "gu_only",
       "reason": "구별 중단 수만 확인되며, 공개된 동 평균만으로 실제 중단 위치를 식별할 수 없음"
     }

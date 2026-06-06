@@ -39,16 +39,14 @@
 현재 대시보드가 직접 읽는 다음 파일은 저장소에 존재하지만, 모두를 재생성하는 단일
 빌드 스크립트는 없다.
 
-- `songpa_2026_actuals.json`
 - `dong_analysis_2026.json`
 - `vote_progress_timeline_2026.json`
-- `retally_analysis.json`
 - `seoul_analysis_2026.json`
 - `yearly_comparison.json`
 
-반면 `run_pipeline.py`가 생성하는 기존 민감도 분석 JSON 대부분은 현재
-`Dashboard.jsx`가 읽지 않는다. 다음 배포 이후에는 현재 화면용 JSON 생성기를 하나로
-통합해야 한다.
+`run_pipeline.py`가 생성하는 기존 민감도 분석 JSON은 연구 산출물로
+`data/processed/dashboard`에만 저장하며, 현재 화면이 읽지 않는 파일은
+`dashboard/public/data`에 배포하지 않는다.
 
 ## 권장 변경 순서
 

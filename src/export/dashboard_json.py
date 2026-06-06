@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[2]
 PROCESSED_DIR = ROOT / "data" / "processed"
 DASHBOARD_DIR = PROCESSED_DIR / "dashboard"
 PUBLIC_DASHBOARD_DIR = ROOT / "dashboard" / "public" / "data"
+PUBLIC_PAYLOADS = {"confirmed_shortages.json"}
 
 
 def to_records(frame: pd.DataFrame, limit: int | None = None) -> list[dict]:
@@ -210,8 +211,6 @@ def build_payloads() -> dict[str, object]:
                         "placeName",
                         "addr",
                         "투표소명",
-                        "risk_ratio",
-                        "risk_grade",
                         "출처URL",
                     ]
                 ]
@@ -251,7 +250,8 @@ def main() -> None:
     payloads = build_payloads()
     for name, payload in payloads.items():
         write_json(DASHBOARD_DIR / name, payload)
-        write_json(PUBLIC_DASHBOARD_DIR / name, payload)
+        if name in PUBLIC_PAYLOADS:
+            write_json(PUBLIC_DASHBOARD_DIR / name, payload)
     print(f"Exported {len(payloads)} dashboard JSON files")
     print(f"- {DASHBOARD_DIR}")
     print(f"- {PUBLIC_DASHBOARD_DIR}")

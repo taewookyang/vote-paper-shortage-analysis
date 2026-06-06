@@ -45,7 +45,7 @@ def main() -> None:
     polling = pd.read_csv(PROCESSED / "shortage_gu_polling_places.csv")
 
     target = turnout[turnout["구시군"].isin(TARGET_GU)].copy()
-    target["risk_ratio"] = (target["당일투표율"] / 50).round(4)
+    target["demand_ratio"] = (target["당일투표율"] / 50).round(4)
 
     named = shortages[shortages["투표소명"].notna()].copy()
     named["실제부족확인"] = named["실제부족여부"].map(clean_bool)
@@ -56,7 +56,7 @@ def main() -> None:
         known_by_dong.setdefault((row["구시군"], row["읍면동"]), []).append(row)
 
     candidates = []
-    for row in records(target[target["risk_ratio"] > 1].sort_values("risk_ratio", ascending=False)):
+    for row in records(target[target["demand_ratio"] > 1].sort_values("demand_ratio", ascending=False)):
         gu, dong = row["구시군"], row["동"]
         known = known_by_dong.get((gu, dong), [])
         if any(item["투표중단확인"] is True for item in known):
@@ -70,7 +70,7 @@ def main() -> None:
             {
                 "gu": gu,
                 "dong": dong,
-                "risk_ratio": row["risk_ratio"],
+                "demand_ratio": row["demand_ratio"],
                 "day_turnout_pct": row["당일투표율"],
                 "polling_place_count": len(places),
                 "polling_places": places,
@@ -91,12 +91,12 @@ def main() -> None:
             }
         )
 
-    below = target[target["risk_ratio"] <= 1].groupby("구시군")["risk_ratio"].max().to_dict()
+    below = target[target["demand_ratio"] <= 1].groupby("구시군")["demand_ratio"].max().to_dict()
     unresolved = [
         {
             "gu": gu,
             "official_shutdown_count": OFFICIAL_SHUTDOWN[gu],
-            "max_dong_risk_ratio": round(float(below.get(gu, 0)), 4),
+            "max_dong_demand_ratio": round(float(below.get(gu, 0)), 4),
             "evidence_level": "gu_only",
             "reason": "구별 중단 수만 확인되며, 공개된 동 평균만으로 실제 중단 위치를 식별할 수 없음",
         }

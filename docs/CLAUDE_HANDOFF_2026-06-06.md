@@ -1,4 +1,7 @@
-# Claude 인계 메모
+# Claude 인계 메모 (2026-06-06 보관본)
+
+> 이 문서는 당시 작업 상태를 보존한 기록이다. 현재 상태와 우선순위는
+> `docs/CURRENT_STATUS.md` 및 `docs/DASHBOARD_EDITORIAL_GUIDE.md`를 따른다.
 
 기준일: 2026-06-06
 
@@ -52,4 +55,3 @@ cd dashboard
 npm run build
 npm run dev:local
 ```
-
