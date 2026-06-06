@@ -111,7 +111,9 @@ async function main() {
 
         for (const r of rows) {
           const over     = r.rate !== null && r.rate > 0.5;
-          const shortage = over && r.electors ? Math.round(r.electors * r.rate - r.electors * 0.5) : 0;
+          // Calculate from integer source counts to avoid floating-point drift
+          // from multiplying the derived turnout rate back by electors.
+          const shortage = over && r.electors ? Math.round(r.voters - r.electors * 0.5) : 0;
           csvLines.push([
             r.cityName, r.townName, r.dong,
             r.electors, r.voters,

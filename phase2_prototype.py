@@ -29,7 +29,7 @@ SHORTAGE_CSV = RAW_DIR / "shortage_2026.csv"
 POLLING_2022_CSV = PROCESSED_DIR / "songpa_2022_polling_places.csv"
 POLLING_2026_CSV = PROCESSED_DIR / "songpa_2026_polling_places.csv"
 RESULT_XLSX = RAW_DIR / "중앙선거관리위원회_제8회 전국동시지방선거 개표결과_20220601.xlsx"
-RESULT_2026_CSV = RAW_DIR / "songpa_2026_result.csv"
+RESULT_2026_MAYOR_CSV = RAW_DIR / "songpa_2026_mayor_result.csv"
 
 
 def normalize_polling_name(value: str) -> str:
@@ -46,14 +46,13 @@ def parse_int(value) -> int:
 
 
 def load_songpa_emd_2026() -> pd.DataFrame:
-    """2026 실제 개표결과 CSV에서 동별 선거인수 + 선거일투표수 추출.
+    """2026 구청장 개표결과에서 중복 없는 동별 선거일 수요를 추출한다.
 
-    동일 읍면동이 여러 선거구에 걸칠 수 있으므로 구·시·군의회의원선거의
-    첫 번째 선거구 기준으로 중복 제거 후 집계한다.
+    구의원 결과는 한 동이 여러 선거구에 걸릴 수 있으므로 동별 수요 기준으로
+    사용하지 않는다. 관외사전투표 등 동명이 없는 개표단위도 배분하지 않는다.
     """
-    df = pd.read_csv(RESULT_2026_CSV, dtype=str)
+    df = pd.read_csv(RESULT_2026_MAYOR_CSV, dtype=str)
     df = df[df["구시군"] == "송파구"].copy()
-    df = df[df["선거명"].str.contains("구·시·군의회의원", na=False)].copy()
     df["선거인수"] = df["선거인수"].map(lambda v: int(str(v).replace(",", "").strip()) if pd.notna(v) and str(v).strip() else 0)
     df["투표수"] = df["투표수"].map(lambda v: int(str(v).replace(",", "").strip()) if pd.notna(v) and str(v).strip() else 0)
 
@@ -65,7 +64,6 @@ def load_songpa_emd_2026() -> pd.DataFrame:
         vote_day = group[group["개표단위"] == "선거일투표"]
         if total.empty or vote_day.empty:
             continue
-        # 동이 여러 선거구에 속할 경우 첫 번째만 사용
         total_voters = int(total.iloc[0]["선거인수"])
         election_day_votes = int(vote_day.iloc[0]["투표수"])
         election_day_eligible = int(vote_day.iloc[0]["선거인수"])
@@ -132,7 +130,7 @@ def build_polling_risk() -> tuple[pd.DataFrame, pd.DataFrame]:
     polling["normalized_psName"] = polling["psName"].map(normalize_polling_name)
 
     # 수요 측: 2026 실제 개표결과 우선, 없으면 2022 proxy
-    if RESULT_2026_CSV.exists():
+    if RESULT_2026_MAYOR_CSV.exists():
         emd = load_songpa_emd_2026()
         voters_col = "voters_2026"
         votes_col = "election_day_votes_2026"

@@ -29,7 +29,7 @@ async function main() {
   // 시도 목록
   const cities = await page.evaluate(() =>
     Array.from(document.querySelectorAll("#cityCode option"))
-      .filter(o => o.value)
+      .filter(o => o.value && o.value !== "-1")
       .map(o => ({ code: o.value, name: o.textContent.trim() }))
   );
   console.log(`시도 ${cities.length}개 수집`);
@@ -41,7 +41,7 @@ async function main() {
 
     const towns = await page.evaluate(() =>
       Array.from(document.querySelectorAll("#townCode option"))
-        .filter(o => o.value)
+        .filter(o => o.value && o.value !== "-1")
         .map(o => ({ code: o.value, name: o.textContent.trim() }))
     );
     result.push({ ...city, towns });
