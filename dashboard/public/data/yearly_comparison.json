@@ -1,0 +1,517 @@
+{
+  "years": [
+    {
+      "year": 2018,
+      "totalDongs": 27,
+      "overDongs": 7,
+      "maxEdayRate": 55.3,
+      "minSlack": -16.0,
+      "dongs": [
+        {
+          "dong": "잠실3동",
+          "edayRate": 55.3,
+          "advanceRate": 11.7,
+          "over50": true
+        },
+        {
+          "dong": "가락2동",
+          "edayRate": 52.4,
+          "advanceRate": 10.8,
+          "over50": true
+        },
+        {
+          "dong": "잠실4동",
+          "edayRate": 51.4,
+          "advanceRate": 15.8,
+          "over50": true
+        },
+        {
+          "dong": "문정2동",
+          "edayRate": 51.4,
+          "advanceRate": 9.2,
+          "over50": true
+        },
+        {
+          "dong": "잠실7동",
+          "edayRate": 51.4,
+          "advanceRate": 17.2,
+          "over50": true
+        },
+        {
+          "dong": "잠실2동",
+          "edayRate": 50.4,
+          "advanceRate": 15.6,
+          "over50": true
+        },
+        {
+          "dong": "오륜동",
+          "edayRate": 50.3,
+          "advanceRate": 17.3,
+          "over50": true
+        },
+        {
+          "dong": "송파2동",
+          "edayRate": 49.3,
+          "advanceRate": 16.5,
+          "over50": false
+        },
+        {
+          "dong": "위례동",
+          "edayRate": 48.7,
+          "advanceRate": 16.2,
+          "over50": false
+        },
+        {
+          "dong": "오금동",
+          "edayRate": 47.1,
+          "advanceRate": 12.2,
+          "over50": false
+        },
+        {
+          "dong": "문정1동",
+          "edayRate": 46.8,
+          "advanceRate": 13.2,
+          "over50": false
+        },
+        {
+          "dong": "장지동",
+          "edayRate": 46.5,
+          "advanceRate": 13.1,
+          "over50": false
+        },
+        {
+          "dong": "잠실6동",
+          "edayRate": 46.2,
+          "advanceRate": 18.5,
+          "over50": false
+        },
+        {
+          "dong": "거여2동",
+          "edayRate": 45.7,
+          "advanceRate": 13.7,
+          "over50": false
+        },
+        {
+          "dong": "풍납2동",
+          "edayRate": 45.6,
+          "advanceRate": 15.7,
+          "over50": false
+        },
+        {
+          "dong": "방이1동",
+          "edayRate": 45.6,
+          "advanceRate": 17.1,
+          "over50": false
+        },
+        {
+          "dong": "거여1동",
+          "edayRate": 44.1,
+          "advanceRate": 14.3,
+          "over50": false
+        },
+        {
+          "dong": "가락본동",
+          "edayRate": 43.2,
+          "advanceRate": 13.4,
+          "over50": false
+        },
+        {
+          "dong": "송파1동",
+          "edayRate": 43.1,
+          "advanceRate": 14.4,
+          "over50": false
+        },
+        {
+          "dong": "마천1동",
+          "edayRate": 42.9,
+          "advanceRate": 11.6,
+          "over50": false
+        },
+        {
+          "dong": "방이2동",
+          "edayRate": 40.9,
+          "advanceRate": 12.7,
+          "over50": false
+        },
+        {
+          "dong": "마천2동",
+          "edayRate": 40.8,
+          "advanceRate": 13.5,
+          "over50": false
+        },
+        {
+          "dong": "삼전동",
+          "edayRate": 40.6,
+          "advanceRate": 13.7,
+          "over50": false
+        },
+        {
+          "dong": "석촌동",
+          "edayRate": 39.8,
+          "advanceRate": 16.1,
+          "over50": false
+        },
+        {
+          "dong": "잠실본동",
+          "edayRate": 39.6,
+          "advanceRate": 14.9,
+          "over50": false
+        },
+        {
+          "dong": "풍납1동",
+          "edayRate": 39.5,
+          "advanceRate": 16.7,
+          "over50": false
+        },
+        {
+          "dong": "가락1동",
+          "edayRate": 34.0,
+          "advanceRate": 12.5,
+          "over50": false
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "totalDongs": 27,
+      "overDongs": 0,
+      "maxEdayRate": 46.9,
+      "minSlack": -23.2,
+      "dongs": [
+        {
+          "dong": "잠실3동",
+          "edayRate": 46.9,
+          "advanceRate": 13.0,
+          "over50": false
+        },
+        {
+          "dong": "잠실7동",
+          "edayRate": 44.0,
+          "advanceRate": 22.5,
+          "over50": false
+        },
+        {
+          "dong": "오륜동",
+          "edayRate": 41.5,
+          "advanceRate": 21.5,
+          "over50": false
+        },
+        {
+          "dong": "잠실2동",
+          "edayRate": 41.2,
+          "advanceRate": 16.0,
+          "over50": false
+        },
+        {
+          "dong": "잠실4동",
+          "edayRate": 40.9,
+          "advanceRate": 19.6,
+          "over50": false
+        },
+        {
+          "dong": "가락2동",
+          "edayRate": 40.2,
+          "advanceRate": 12.7,
+          "over50": false
+        },
+        {
+          "dong": "문정2동",
+          "edayRate": 39.8,
+          "advanceRate": 10.8,
+          "over50": false
+        },
+        {
+          "dong": "오금동",
+          "edayRate": 39.5,
+          "advanceRate": 12.6,
+          "over50": false
+        },
+        {
+          "dong": "가락1동",
+          "edayRate": 39.2,
+          "advanceRate": 20.4,
+          "over50": false
+        },
+        {
+          "dong": "송파2동",
+          "edayRate": 38.7,
+          "advanceRate": 19.6,
+          "over50": false
+        },
+        {
+          "dong": "위례동",
+          "edayRate": 37.9,
+          "advanceRate": 14.7,
+          "over50": false
+        },
+        {
+          "dong": "잠실6동",
+          "edayRate": 36.9,
+          "advanceRate": 24.2,
+          "over50": false
+        },
+        {
+          "dong": "거여2동",
+          "edayRate": 36.7,
+          "advanceRate": 17.5,
+          "over50": false
+        },
+        {
+          "dong": "장지동",
+          "edayRate": 36.5,
+          "advanceRate": 15.1,
+          "over50": false
+        },
+        {
+          "dong": "문정1동",
+          "edayRate": 36.0,
+          "advanceRate": 15.6,
+          "over50": false
+        },
+        {
+          "dong": "방이1동",
+          "edayRate": 35.4,
+          "advanceRate": 18.3,
+          "over50": false
+        },
+        {
+          "dong": "가락본동",
+          "edayRate": 33.6,
+          "advanceRate": 14.4,
+          "over50": false
+        },
+        {
+          "dong": "마천1동",
+          "edayRate": 32.9,
+          "advanceRate": 14.2,
+          "over50": false
+        },
+        {
+          "dong": "거여1동",
+          "edayRate": 32.5,
+          "advanceRate": 17.3,
+          "over50": false
+        },
+        {
+          "dong": "풍납2동",
+          "edayRate": 31.7,
+          "advanceRate": 20.2,
+          "over50": false
+        },
+        {
+          "dong": "마천2동",
+          "edayRate": 31.5,
+          "advanceRate": 17.1,
+          "over50": false
+        },
+        {
+          "dong": "송파1동",
+          "edayRate": 30.9,
+          "advanceRate": 16.4,
+          "over50": false
+        },
+        {
+          "dong": "방이2동",
+          "edayRate": 30.5,
+          "advanceRate": 10.8,
+          "over50": false
+        },
+        {
+          "dong": "삼전동",
+          "edayRate": 29.7,
+          "advanceRate": 13.9,
+          "over50": false
+        },
+        {
+          "dong": "풍납1동",
+          "edayRate": 28.5,
+          "advanceRate": 23.0,
+          "over50": false
+        },
+        {
+          "dong": "석촌동",
+          "edayRate": 28.1,
+          "advanceRate": 15.3,
+          "over50": false
+        },
+        {
+          "dong": "잠실본동",
+          "edayRate": 26.8,
+          "advanceRate": 15.7,
+          "over50": false
+        }
+      ]
+    },
+    {
+      "year": 2026,
+      "totalDongs": 27,
+      "overDongs": 6,
+      "maxEdayRate": 56.7,
+      "minSlack": -13.0,
+      "dongs": [
+        {
+          "dong": "잠실3동",
+          "edayRate": 56.7,
+          "advanceRate": 11.3,
+          "over50": true
+        },
+        {
+          "dong": "잠실4동",
+          "edayRate": 53.3,
+          "advanceRate": 17.4,
+          "over50": true
+        },
+        {
+          "dong": "문정2동",
+          "edayRate": 52.1,
+          "advanceRate": 9.6,
+          "over50": true
+        },
+        {
+          "dong": "잠실7동",
+          "edayRate": 51.9,
+          "advanceRate": 20.0,
+          "over50": true
+        },
+        {
+          "dong": "잠실2동",
+          "edayRate": 50.5,
+          "advanceRate": 17.1,
+          "over50": true
+        },
+        {
+          "dong": "위례동",
+          "edayRate": 50.1,
+          "advanceRate": 15.6,
+          "over50": true
+        },
+        {
+          "dong": "가락1동",
+          "edayRate": 49.3,
+          "advanceRate": 19.7,
+          "over50": false
+        },
+        {
+          "dong": "가락2동",
+          "edayRate": 49.2,
+          "advanceRate": 14.1,
+          "over50": false
+        },
+        {
+          "dong": "오륜동",
+          "edayRate": 48.7,
+          "advanceRate": 20.9,
+          "over50": false
+        },
+        {
+          "dong": "오금동",
+          "edayRate": 48.0,
+          "advanceRate": 14.6,
+          "over50": false
+        },
+        {
+          "dong": "거여2동",
+          "edayRate": 47.3,
+          "advanceRate": 18.5,
+          "over50": false
+        },
+        {
+          "dong": "송파2동",
+          "edayRate": 47.2,
+          "advanceRate": 20.6,
+          "over50": false
+        },
+        {
+          "dong": "장지동",
+          "edayRate": 46.7,
+          "advanceRate": 18.2,
+          "over50": false
+        },
+        {
+          "dong": "잠실6동",
+          "edayRate": 46.0,
+          "advanceRate": 22.7,
+          "over50": false
+        },
+        {
+          "dong": "방이1동",
+          "edayRate": 44.5,
+          "advanceRate": 20.8,
+          "over50": false
+        },
+        {
+          "dong": "문정1동",
+          "edayRate": 44.4,
+          "advanceRate": 17.4,
+          "over50": false
+        },
+        {
+          "dong": "가락본동",
+          "edayRate": 43.6,
+          "advanceRate": 16.5,
+          "over50": false
+        },
+        {
+          "dong": "마천1동",
+          "edayRate": 43.2,
+          "advanceRate": 17.2,
+          "over50": false
+        },
+        {
+          "dong": "거여1동",
+          "edayRate": 42.0,
+          "advanceRate": 19.3,
+          "over50": false
+        },
+        {
+          "dong": "방이2동",
+          "edayRate": 41.7,
+          "advanceRate": 13.2,
+          "over50": false
+        },
+        {
+          "dong": "풍납2동",
+          "edayRate": 40.9,
+          "advanceRate": 23.1,
+          "over50": false
+        },
+        {
+          "dong": "송파1동",
+          "edayRate": 39.7,
+          "advanceRate": 19.5,
+          "over50": false
+        },
+        {
+          "dong": "마천2동",
+          "edayRate": 39.4,
+          "advanceRate": 20.9,
+          "over50": false
+        },
+        {
+          "dong": "석촌동",
+          "edayRate": 38.4,
+          "advanceRate": 16.9,
+          "over50": false
+        },
+        {
+          "dong": "삼전동",
+          "edayRate": 38.2,
+          "advanceRate": 17.8,
+          "over50": false
+        },
+        {
+          "dong": "잠실본동",
+          "edayRate": 37.3,
+          "advanceRate": 17.7,
+          "over50": false
+        },
+        {
+          "dong": "풍납1동",
+          "edayRate": 37.0,
+          "advanceRate": 25.7,
+          "over50": false
+        }
+      ]
+    }
+  ]
+}

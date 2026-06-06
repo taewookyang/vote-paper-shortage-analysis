@@ -6,12 +6,13 @@ import {
 } from 'recharts'
 
 const DATA_FILES = {
-  actuals2026:  '/data/songpa_2026_actuals.json',
-  dongAnalysis: '/data/dong_analysis_2026.json',
-  voteTimeline: '/data/vote_progress_timeline_2026.json',
-  shortages:    '/data/confirmed_shortages.json',
-  retally:      '/data/retally_analysis.json',
-  seoul:        '/data/seoul_analysis_2026.json',
+  actuals2026:    '/data/songpa_2026_actuals.json',
+  dongAnalysis:   '/data/dong_analysis_2026.json',
+  voteTimeline:   '/data/vote_progress_timeline_2026.json',
+  shortages:      '/data/confirmed_shortages.json',
+  retally:        '/data/retally_analysis.json',
+  seoul:          '/data/seoul_analysis_2026.json',
+  yearlyCompare:  '/data/yearly_comparison.json',
 }
 
 export default function Dashboard() {
@@ -44,6 +45,7 @@ export default function Dashboard() {
   const shortages = data.shortages?.items || []
   const retally  = data.retally || null
   const seoul    = data.seoul || null
+  const yearlyCompare = data.yearlyCompare?.years || []
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -247,6 +249,37 @@ export default function Dashboard() {
             </div>
           </div>
         </Section>
+
+        {/* ── 연도별 비교 ── */}
+        {yearlyCompare.length > 0 && (
+          <div style={{ marginTop: 20 }}>
+            <div style={{ fontSize: 13, fontWeight: 700, marginBottom: 10, color: '#374151' }}>
+              연도별 비교 — 2018·2022·2026 송파구
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 10, marginBottom: 12 }}>
+              {yearlyCompare.map(y => {
+                const hasIssue = y.overDongs > 0
+                const color = y.year === 2026 ? '#be123c' : hasIssue ? '#b45309' : '#0f766e'
+                const bg    = y.year === 2026 ? '#fef2f2' : hasIssue ? '#fffbeb' : '#f0fdf4'
+                const bdr   = y.year === 2026 ? '#fca5a5' : hasIssue ? '#fbbf24' : '#86efac'
+                return (
+                  <div key={y.year} style={{ background: bg, border: `1px solid ${bdr}`, borderRadius: 10, padding: '14px 12px', textAlign: 'center' }}>
+                    <div style={{ fontSize: 12, color: '#9ca3af', marginBottom: 4 }}>{y.year}년</div>
+                    <div style={{ fontSize: 26, fontWeight: 900, color, lineHeight: 1 }}>{y.overDongs}</div>
+                    <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>개 동 초과</div>
+                    <div style={{ fontSize: 12, fontWeight: 600, color, marginTop: 6 }}>최대 {y.maxEdayRate}%</div>
+                  </div>
+                )
+              })}
+            </div>
+            <CalloutBox color="#fef3c7" border="#fbbf24">
+              <strong>2018년에도 7개 동이 50%를 넘었습니다.</strong><br />
+              당시 투표소 부족 사태가 없었다면, 실제 배부량이 50%보다 많았거나
+              비상 재고가 별도로 있었을 가능성이 있습니다.
+              2018년 실제 배부량은 공개 데이터로 확인되지 않습니다.
+            </CalloutBox>
+          </div>
+        )}
 
         {/* ── STORY 3: 언제 터졌나 ── */}
         <Section label="03" title="언제 터졌나 — 오후 1시">
