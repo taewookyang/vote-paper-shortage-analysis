@@ -46,7 +46,7 @@ const HISTORY = [
     year: '2026',
     date: '6월 3일',
     label: '관리받지 못한 한 표',
-    desc: '제9회 전국동시지방선거. 14개 투표소에서 용지가 바닥났습니다. 구 전체로는 4만 3천 장이 남아있었습니다.',
+    desc: '제9회 전국동시지방선거. 서울 송파구에서만 14개 투표소에 용지 부족 또는 지연이 발생했습니다. 구 전체 합계로는 약 4만 3천 장의 여유가 계산됩니다. 전국 상세 현황은 현재 수집 중입니다.',
     color: '#e63946',
     icon: '?',
     isFinal: true,
@@ -222,24 +222,30 @@ export default function Landing() {
                     </p>
 
                     {item.isFinal && (
-                      <div style={{
-                        marginTop: 20,
-                        display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10,
-                      }}>
-                        {[
-                          { num: '14곳', label: '투표 중단·지연' },
-                          { num: '4.3만장', label: '구 전체 잉여' },
-                          { num: '6개 동', label: '한도 초과' },
-                        ].map(s => (
-                          <div key={s.num} style={{
-                            background: '#111', border: '1px solid #333',
-                            borderRadius: 10, padding: '14px 10px',
-                            textAlign: 'center',
-                          }}>
-                            <div style={{ fontSize: 22, fontWeight: 900, color: '#e63946', letterSpacing: -0.5 }}>{s.num}</div>
-                            <div style={{ fontSize: 11, color: '#888', marginTop: 4 }}>{s.label}</div>
-                          </div>
-                        ))}
+                      <div style={{ marginTop: 20 }}>
+                        <div style={{
+                          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10,
+                        }}>
+                          {[
+                            { num: '14곳', label: '투표 중단·지연', sub: '언론보도 · 송파구' },
+                            { num: '4.3만장', label: '구 전체 잉여', sub: '자체 크롤링 · 송파구' },
+                            { num: '6개 동', label: '한도 초과', sub: '자체 크롤링 · 송파구' },
+                          ].map(s => (
+                            <div key={s.num} style={{
+                              background: '#111', border: '1px solid #333',
+                              borderRadius: 10, padding: '14px 10px',
+                              textAlign: 'center',
+                            }}>
+                              <div style={{ fontSize: 22, fontWeight: 900, color: '#e63946', letterSpacing: -0.5 }}>{s.num}</div>
+                              <div style={{ fontSize: 11, color: '#888', marginTop: 4 }}>{s.label}</div>
+                              <div style={{ fontSize: 10, color: '#555', marginTop: 3 }}>{s.sub}</div>
+                            </div>
+                          ))}
+                        </div>
+                        <p style={{ fontSize: 11, color: '#555', marginTop: 12, lineHeight: 1.6, textAlign: 'center' }}>
+                          수치는 현재 <strong style={{ color: '#888' }}>서울 송파구 기준</strong>.
+                          전국 256개 구·시·군 집계가 완료되면 업데이트됩니다.
+                        </p>
                       </div>
                     )}
                   </div>
@@ -264,14 +270,14 @@ export default function Landing() {
             maxWidth: 520,
             letterSpacing: -1,
           }}>
-            총량은 충분했습니다.
-            <br />
-            <span style={{ color: '#e63946' }}>배분이 틀렸습니다.</span>
+              구 전체 합계에는 여유가 있었습니다.
+              <br />
+              <span style={{ color: '#e63946' }}>투표소별 배분은 더 확인해야 합니다.</span>
           </h2>
           <p style={{ fontSize: 15, color: '#777', lineHeight: 1.8, maxWidth: 400, margin: '0 auto 40px' }}>
-            선관위 내부 지침: 지방선거 투표용지는 선거인의 50%만 인쇄.
+            선관위 내부 지침: 지방선거 투표용지 인쇄량은 선거인의 50%를 하한으로 설정.
             <br />
-            법적 기준 없음. 안전 여유 없음.
+            법령이 아닌 내부 지침이며, 실제 투표소별 배부량은 공개되지 않았습니다.
           </p>
         </FadeIn>
       </section>

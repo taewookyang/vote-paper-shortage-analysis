@@ -101,17 +101,17 @@ export default function Dashboard() {
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: 30, fontWeight: 800, color: '#be123c', lineHeight: 1 }}>14곳</div>
               <div style={{ fontSize: 13, color: '#374151', marginTop: 6, fontWeight: 600 }}>투표 중단·지연</div>
-              <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 3 }}>투표용지 바닥</div>
+              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3 }}>언론보도 · 송파구</div>
             </div>
             <div style={{ fontSize: 28, color: '#d1d5db', fontWeight: 300 }}>↔</div>
             <div style={{ textAlign: 'center' }}>
               <div style={{ fontSize: 30, fontWeight: 800, color: '#0f766e', lineHeight: 1 }}>+4.3만장</div>
               <div style={{ fontSize: 13, color: '#374151', marginTop: 6, fontWeight: 600 }}>구 전체 잉여</div>
-              <div style={{ fontSize: 12, color: '#9ca3af', marginTop: 3 }}>남은 용지</div>
+              <div style={{ fontSize: 11, color: '#9ca3af', marginTop: 3 }}>자체 크롤링 · 송파구</div>
             </div>
           </div>
           <div style={{ marginTop: 16, background: '#111', borderRadius: 8, padding: '12px 14px', color: 'white', fontSize: 14, lineHeight: 1.6, textAlign: 'center' }}>
-            총량이 부족했던 게 아닙니다. <strong>배분이 틀렸습니다.</strong>
+            구 전체 합계에는 여유가 있었습니다. <strong>투표소별 배분 과정은 추가 확인이 필요합니다.</strong>
           </div>
         </div>
 
@@ -152,7 +152,7 @@ export default function Dashboard() {
         {/* ── STORY 1: 어느 동에서 바닥났나 ── */}
         <Section label="01" title="어느 동에서 바닥났나 — 송파구 상세">
           <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 4, lineHeight: 1.6 }}>
-            당일투표율이 <strong>50% 인쇄 한도를 넘으면</strong> 용지가 부족합니다.
+            당일투표율이 <strong>50%를 넘은 동</strong>은 하한 수준으로 배부됐을 경우 부족 가능성이 있습니다.
             2026 구청장 선거 개표결과 기준 (27개 동 전체 크롤링).
           </p>
           <div style={{ height: 520, marginTop: 12 }}>
@@ -203,15 +203,15 @@ export default function Dashboard() {
               <RuleCard
                 icon="📏"
                 title="선관위 내부 지침"
-                body="지방선거: 선거인의 50%만 인쇄"
-                note="법적 구속력 없음"
+                body="지방선거: 선거인의 50%를 인쇄 하한으로 설정"
+                note="법령이 아닌 내부 지침"
                 noteColor="#b45309"
               />
               <RuleCard
                 icon="⚠️"
                 title="문제"
-                body="50%가 최솟값이자 실제 적용값"
-                note="안전 여유 없음"
+                body="일부 지역에서 하한 수준으로 준비"
+                note="투표소별 배부량 미공개"
                 noteColor="#be123c"
               />
             </div>
@@ -331,8 +331,8 @@ export default function Dashboard() {
             />
             <FactRow
               label="선관위 사무편람 (현행)"
-              text="대통령선거·국회의원선거: 60% 하한. 지방선거: 50% 하한. 법적 구속력 없는 내부 지침입니다."
-              tag="법적 구속력 없음"
+              text="대통령선거·국회의원선거: 60% 하한. 지방선거: 50% 하한. 법령이 아닌 내부 지침입니다."
+              tag="내부 지침"
               tagColor="#b45309"
             />
 
@@ -371,7 +371,7 @@ export default function Dashboard() {
                 선관위는 21대 대선 이후 사무편람을 개정했습니다.
                 대선·총선은 <strong>60% 유지</strong>, 지방선거만 <strong>50%로 하향</strong>.
                 2022년까지 실무에서 60%로 운용하던 지방선거 기준이 낮아진 것이
-                이번 사태의 직접 원인으로 지목됩니다.
+                이번 사태의 주요 원인 중 하나로 지목됩니다.
               </p>
               <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, borderTop: '1px solid #fca5a5', paddingTop: 8 }}>
                 출처: 한국행정연구원 (2022). 「선거 절차사무 개선방안」. 중앙선관위 정책연구용역. p.36. /
