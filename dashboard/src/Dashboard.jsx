@@ -330,39 +330,52 @@ export default function Dashboard() {
               tagColor="#be123c"
             />
             <FactRow
-              label="선관위 내부 지침"
-              text="법적 구속력 없는 내부 지침만 존재합니다. 대선 60%, 지방선거 하한을 정하고 있습니다."
+              label="선관위 사무편람 (현행)"
+              text="대통령선거·국회의원선거: 60% 하한. 지방선거: 50% 하한. 법적 구속력 없는 내부 지침입니다."
               tag="법적 구속력 없음"
               tagColor="#b45309"
             />
 
             {/* 결정적 변화 강조 */}
             <div style={{ background: '#fff1f2', border: '2px solid #fca5a5', borderRadius: 10, padding: '14px 14px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 8 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8, marginBottom: 10 }}>
                 <span style={{ fontSize: 13, fontWeight: 800, color: '#be123c' }}>기준 변화 — 결정적 차이</span>
                 <span style={{ background: '#be123c20', color: '#be123c', fontSize: 11, padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap', flexShrink: 0 }}>60% → 50%</span>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', gap: 8, alignItems: 'center', margin: '10px 0' }}>
-                <div style={{ background: '#f0fdf4', border: '1px solid #86efac', borderRadius: 8, padding: '10px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 4 }}>2022년 지방선거</div>
-                  <div style={{ fontSize: 28, fontWeight: 900, color: '#0f766e', lineHeight: 1 }}>60%</div>
-                  <div style={{ fontSize: 11, color: '#6b7280', marginTop: 4 }}>인쇄 기준</div>
-                </div>
-                <div style={{ fontSize: 20, color: '#be123c', fontWeight: 700 }}>→</div>
-                <div style={{ background: '#fef2f2', border: '2px solid #fca5a5', borderRadius: 8, padding: '10px', textAlign: 'center' }}>
-                  <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 4 }}>2026년 지방선거</div>
-                  <div style={{ fontSize: 28, fontWeight: 900, color: '#be123c', lineHeight: 1 }}>50%</div>
-                  <div style={{ fontSize: 11, color: '#be123c', marginTop: 4, fontWeight: 600 }}>−10%p 하락</div>
-                </div>
+
+              {/* 선거 종류별 기준 비교 */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 6, marginBottom: 12 }}>
+                {[
+                  { label: '대선', prev: '70%', curr: '60%', safe: true },
+                  { label: '총선', prev: '—', curr: '60%', safe: true },
+                  { label: '지방선거', prev: '60%', curr: '50%', safe: false },
+                ].map(s => (
+                  <div key={s.label} style={{
+                    background: s.safe ? '#f0fdf4' : '#fef2f2',
+                    border: `1px solid ${s.safe ? '#86efac' : '#fca5a5'}`,
+                    borderRadius: 8, padding: '10px 8px', textAlign: 'center',
+                  }}>
+                    <div style={{ fontSize: 11, color: '#6b7280', marginBottom: 6, fontWeight: 600 }}>{s.label}</div>
+                    {s.prev !== '—' && (
+                      <div style={{ fontSize: 11, color: '#9ca3af', marginBottom: 2 }}>과거 실무 {s.prev}</div>
+                    )}
+                    <div style={{ fontSize: 20, fontWeight: 900, color: s.safe ? '#0f766e' : '#be123c', lineHeight: 1 }}>{s.curr}</div>
+                    <div style={{ fontSize: 10, color: s.safe ? '#6b7280' : '#be123c', marginTop: 4 }}>
+                      {s.safe ? '현행 하한' : '현행 하한 ↓'}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p style={{ fontSize: 13, color: '#374151', lineHeight: 1.6, margin: 0 }}>
-                2022년 연구보고서는 지방선거 인쇄 기준을 <strong>60% 정도</strong>로 기술했습니다.
-                2026년 송파구는 <strong>50%</strong>를 적용했습니다. 10%p의 차이가
-                6개 동에서 용지 부족으로 이어졌습니다.
+
+              <p style={{ fontSize: 13, color: '#374151', lineHeight: 1.7, margin: 0 }}>
+                선관위는 21대 대선 이후 사무편람을 개정했습니다.
+                대선·총선은 <strong>60% 유지</strong>, 지방선거만 <strong>50%로 하향</strong>.
+                2022년까지 실무에서 60%로 운용하던 지방선거 기준이 낮아진 것이
+                이번 사태의 직접 원인으로 지목됩니다.
               </p>
               <p style={{ fontSize: 11, color: '#9ca3af', marginTop: 8, borderTop: '1px solid #fca5a5', paddingTop: 8 }}>
-                출처: 한국행정연구원 (2022). 「선거 절차사무 개선방안 — 구·시·군위원회 절차사무를 중심으로」.
-                중앙선거관리위원회 정책연구용역. p.36.
+                출처: 한국행정연구원 (2022). 「선거 절차사무 개선방안」. 중앙선관위 정책연구용역. p.36. /
+                국민일보 2026.06.05 "[단독] 최소 50% 인쇄 지침에 투표용지 부족…선관위, 기준 손질한다"
               </p>
             </div>
 
