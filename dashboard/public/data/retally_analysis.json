@@ -1,0 +1,71 @@
+{
+  "title": "재투표 가능성 법적·통계적 검토",
+  "analysisDate": "2026-06-06",
+  "disclaimer": "이 분석은 재투표를 단정하지 않습니다. 공개 데이터 기반 통계적 검토입니다.",
+
+  "legalPath": {
+    "step1": { "name": "선거소청 (제219조)", "deadline": "2026-06-17", "daysLeft": 11, "target": "시·도선거관리위원회" },
+    "step2": { "name": "소청 결정 (제220조)", "deadline": "접수 후 60일", "target": "시·도선관위" },
+    "step3": { "name": "선거소송 (제222조)", "deadline": "결정서 후 10일", "target": "고등법원" },
+    "retallyCriteria": "제198조: 부득이한 사유 + 선거결과에 영향 가능성"
+  },
+
+  "districtMargins": [
+    {
+      "district": "마선거구",
+      "winner": "이혜숙",
+      "margin": 2405,
+      "shortageDongs": ["잠실2동", "잠실7동"],
+      "shortagePollingPlaces": 2,
+      "riskLevel": "HIGH",
+      "note": "표차 2,405 — 부족 투표소 2곳 포함"
+    },
+    {
+      "district": "아선거구",
+      "winner": "조용근",
+      "margin": 2396,
+      "shortageDongs": ["위례동"],
+      "shortagePollingPlaces": 1,
+      "riskLevel": "HIGH",
+      "note": "표차 2,396 — 위례동 제5투표소 포함"
+    },
+    {
+      "district": "라선거구",
+      "winner": "손병화",
+      "margin": 2714,
+      "shortageDongs": ["문정2동"],
+      "shortagePollingPlaces": 1,
+      "riskLevel": "MEDIUM",
+      "note": "표차 2,714 — 문정2동 제2투표소 포함"
+    },
+    {
+      "district": "차선거구",
+      "winner": "박지효",
+      "margin": 3843,
+      "shortageDongs": ["가락2동", "문정1동"],
+      "shortagePollingPlaces": 3,
+      "riskLevel": "MEDIUM",
+      "note": "표차 3,843 — 가락2동 2곳·문정1동 1곳"
+    },
+    {
+      "district": "가선거구",
+      "winner": "이강무",
+      "margin": 4915,
+      "shortageDongs": ["잠실4동"],
+      "shortagePollingPlaces": 1,
+      "riskLevel": "LOW",
+      "note": "표차 4,915 — 잠실4동 제5투표소 포함"
+    }
+  ],
+
+  "legalAssessment": {
+    "retalloProbability": "낮음",
+    "reasoning": [
+      "제198조 '부득이한 사유'는 천재지변 등이 대상 — 선관위 자체 배분 실수는 해당 여부 불명확",
+      "대법원 선거무효 인정 기준이 매우 엄격 (완전 투표불능 수준)",
+      "각 투표소에서 실제로 투표 못 한 인원 수가 공개되지 않아 영향 입증 어려움"
+    ],
+    "meaningfulPath": "선거소청으로 기록 남기기 + 공직선거법 개정 촉구가 현실적",
+    "so청Deadline": "2026-06-17"
+  }
+}

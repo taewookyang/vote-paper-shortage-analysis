@@ -11,6 +11,7 @@ const DATA_FILES = {
   dongAnalysis: '/data/dong_analysis_2026.json',
   voteTimeline: '/data/vote_progress_timeline_2026.json',
   shortages:    '/data/confirmed_shortages.json',
+  retally:      '/data/retally_analysis.json',
 }
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
   const timeline = data.voteTimeline?.songpaTimeline || []
   const exceeding = data.dongAnalysis?.exceedingDongs || []
   const shortages = data.shortages?.items || []
+  const retally  = data.retally || null
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -271,6 +273,46 @@ function App() {
             ③ 신설·재획정 투표구 안전계수 추가 적용
           </CalloutBox>
         </Section>
+
+        {/* ── STORY 5: 재투표 가능성 ── */}
+        {retally && (
+          <Section label="05" title="재투표 가능성은?">
+            <div style={{ display: 'grid', gap: 10, marginBottom: 14 }}>
+              <CalloutBox color="#fef3c7" border="#fbbf24">
+                <strong>선거소청 기한: {retally.legalPath.step1.deadline}</strong> — 아직 {retally.legalPath.step1.daysLeft}일 남았습니다.<br />
+                구의원 선거에서 표차가 좁은 선거구에 부족 투표소가 겹칩니다.
+              </CalloutBox>
+            </div>
+            <div style={{ display: 'grid', gap: 8, marginBottom: 14 }}>
+              {retally.districtMargins.map(d => {
+                const riskColor = d.riskLevel === 'HIGH' ? '#be123c' : d.riskLevel === 'MEDIUM' ? '#b45309' : '#6b7280'
+                const riskBg    = d.riskLevel === 'HIGH' ? '#fef2f2' : d.riskLevel === 'MEDIUM' ? '#fffbeb' : '#f9fafb'
+                const riskBdr   = d.riskLevel === 'HIGH' ? '#fca5a5' : d.riskLevel === 'MEDIUM' ? '#fbbf24' : '#e5e7eb'
+                return (
+                  <div key={d.district} style={{ background: riskBg, border: `1px solid ${riskBdr}`, borderRadius: 8, padding: '12px 14px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 8 }}>
+                      <div>
+                        <span style={{ fontSize: 14, fontWeight: 700 }}>구의원 {d.district}</span>
+                        <span style={{ fontSize: 12, color: '#6b7280', marginLeft: 8 }}>당선: {d.winner}</span>
+                      </div>
+                      <span style={{ background: riskColor + '20', color: riskColor, fontSize: 11, padding: '2px 8px', borderRadius: 4, whiteSpace: 'nowrap' }}>
+                        표차 {d.margin.toLocaleString()}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: 12, color: '#6b7280', marginTop: 6 }}>
+                      부족 투표소: {d.shortageDongs.join(', ')} ({d.shortagePollingPlaces}곳)
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+            <CalloutBox color="#f1f5f9" border="#cbd5e1">
+              <strong>법적 현실.</strong> 제198조 '부득이한 사유'는 천재지변이 기준입니다.
+              선관위 배분 실수가 여기 해당하는지 판례가 없어요.
+              현실적 경로는 <strong>선거소청 제기 + 공직선거법 개정 촉구</strong>입니다.
+            </CalloutBox>
+          </Section>
+        )}
 
         {/* ── 상세 보기 ── */}
         <button
