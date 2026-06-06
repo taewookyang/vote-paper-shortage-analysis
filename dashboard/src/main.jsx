@@ -12,6 +12,7 @@ const DATA_FILES = {
   voteTimeline: '/data/vote_progress_timeline_2026.json',
   shortages:    '/data/confirmed_shortages.json',
   retally:      '/data/retally_analysis.json',
+  seoul:        '/data/seoul_analysis_2026.json',
 }
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
   const exceeding = data.dongAnalysis?.exceedingDongs || []
   const shortages = data.shortages?.items || []
   const retally  = data.retally || null
+  const seoul    = data.seoul || null
 
   const timelineChart = timeline
     .filter(r => r.time !== '전체')
@@ -66,7 +68,7 @@ function App() {
       <header style={{ background: '#111', color: '#fff', padding: '20px 16px 22px' }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
           <p style={{ fontSize: 12, color: '#888', marginBottom: 8, letterSpacing: 1 }}>
-            2026.6.3 제9회 지방선거 · 서울 송파구 · 데이터 검증
+            2026.6.3 제9회 지방선거 · 서울 25개 구 + 송파구 상세 · 데이터 검증
           </p>
           <h1 style={{ fontSize: 24, fontWeight: 800, lineHeight: 1.25, margin: 0 }}>
             투표용지는 왜 모자랐나
@@ -101,8 +103,42 @@ function App() {
           </div>
         </div>
 
+        {/* ── 서울 현황 ── */}
+        {seoul && (
+          <Section label="서울" title="서울 25개 구 현황">
+            <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 12, lineHeight: 1.6 }}>
+              서울 전체 427개 동 중 <strong style={{ color: '#be123c' }}>{seoul.totalOverDongs}개 동</strong>이
+              선거일 당일투표율 50%를 초과했습니다. 송파구만의 문제가 아닙니다.
+            </p>
+            <div style={{ display: 'grid', gap: 8 }}>
+              {seoul.districts.filter(d => d.overDongs > 0).map(d => {
+                const color = d.riskLevel === 'HIGH' ? '#be123c' : d.riskLevel === 'MEDIUM' ? '#b45309' : '#6b7280'
+                const bg    = d.riskLevel === 'HIGH' ? '#fef2f2' : d.riskLevel === 'MEDIUM' ? '#fffbeb' : '#f9fafb'
+                const bdr   = d.riskLevel === 'HIGH' ? '#fca5a5' : d.riskLevel === 'MEDIUM' ? '#fbbf24' : '#e5e7eb'
+                return (
+                  <div key={d.gu} style={{ background: bg, border: `1px solid ${bdr}`, borderRadius: 8, padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <span style={{ fontSize: 14, fontWeight: 700 }}>{d.gu}</span>
+                      <span style={{ fontSize: 12, color: '#9ca3af', marginLeft: 8 }}>
+                        {d.overDongs}/{d.totalDongs}개 동 초과
+                      </span>
+                    </div>
+                    <div style={{ textAlign: 'right' }}>
+                      <span style={{ fontSize: 13, fontWeight: 700, color }}>{d.maxElectionDayRate}%</span>
+                      <span style={{ fontSize: 11, color: '#9ca3af', marginLeft: 4 }}>최고</span>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+            <p style={{ fontSize: 12, color: '#9ca3af', marginTop: 10, lineHeight: 1.6 }}>
+              선거일(당일)투표율 = 선거일 투표자 수 / 전체 선거인수. 구청장 선거 기준. NEC VCCP08 직접 크롤링.
+            </p>
+          </Section>
+        )}
+
         {/* ── STORY 1: 어느 동에서 바닥났나 ── */}
-        <Section label="01" title="어느 동에서 바닥났나">
+        <Section label="01" title="어느 동에서 바닥났나 — 송파구 상세">
           <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 4, lineHeight: 1.6 }}>
             당일투표율이 <strong>50% 인쇄 한도를 넘으면</strong> 용지가 부족합니다.
             2026 구청장 선거 개표결과 기준 (27개 동 전체 크롤링).

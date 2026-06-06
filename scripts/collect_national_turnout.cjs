@@ -53,21 +53,33 @@ async function fetchDongData(page, cityCode, townCode) {
 }
 
 function parseRows(rawRows, cityName, townName) {
-  const rows = [];
+  // "계" 행에서 전체 선거인수 수집 (인쇄 기준은 전체 선거인수의 50%)
+  // "선거일투표" 행에서 당일 투표자 수 수집
+  const electorsMap = {};  // emd → 전체 선거인수
+  const dayVotersMap = {}; // emd → 선거일 투표자 수
+
   for (const cells of rawRows.slice(2)) {
     if (cells.length < 4) continue;
     const emd  = clean(cells[0]);
     const unit = clean(cells[1]);
-    const electors = num(cells[2]);
-    const voters   = num(cells[3]);
-
-    // 동별 합계 행만 (개표단위 = "계" 또는 emd가 있고 unit이 "계")
-    if (unit !== "계" && unit !== "합계") continue;
     if (!emd) continue;
-    if (!electors || electors < 100) continue;
 
-    const rate = electors > 0 ? voters / electors : null;
-    rows.push({ cityName, townName, dong: emd, electors, voters, rate });
+    if (unit === "계") {
+      const e = num(cells[2]);
+      if (e && e >= 100) electorsMap[emd] = e;
+    } else if (unit === "선거일투표") {
+      const v = num(cells[3]);
+      if (v != null) dayVotersMap[emd] = v;
+    }
+  }
+
+  const rows = [];
+  for (const emd of Object.keys(electorsMap)) {
+    const electors  = electorsMap[emd];
+    const dayVoters = dayVotersMap[emd];
+    if (dayVoters == null) continue;
+    const rate = electors > 0 ? dayVoters / electors : null;
+    rows.push({ cityName, townName, dong: emd, electors, voters: dayVoters, rate });
   }
   return rows;
 }

@@ -1,0 +1,2846 @@
+{
+  "title": "서울특별시 구별 당일투표율 분석 (선거일투표율 기준)",
+  "electionDate": "2026-06-03",
+  "dataSource": "NEC VCCP08 구청장 선거 직접 크롤링",
+  "totalDongs": 427,
+  "totalOverDongs": 35,
+  "districts": [
+    {
+      "gu": "강남구",
+      "totalDongs": 22,
+      "overDongs": 7,
+      "overRate": 31.8,
+      "maxElectionDayRate": 54.7,
+      "totalEstShortage": 4564,
+      "riskLevel": "HIGH",
+      "dongs": [
+        {
+          "dong": "도곡2동",
+          "rate": 54.7,
+          "over": true,
+          "shortage": 1108
+        },
+        {
+          "dong": "개포2동",
+          "rate": 54.6,
+          "over": true,
+          "shortage": 1286
+        },
+        {
+          "dong": "대치1동",
+          "rate": 53.3,
+          "over": true,
+          "shortage": 551
+        },
+        {
+          "dong": "대치2동",
+          "rate": 53,
+          "over": true,
+          "shortage": 827
+        },
+        {
+          "dong": "압구정동",
+          "rate": 52.9,
+          "over": true,
+          "shortage": 592
+        },
+        {
+          "dong": "개포1동",
+          "rate": 50.9,
+          "over": true,
+          "shortage": 175
+        },
+        {
+          "dong": "세곡동",
+          "rate": 50.1,
+          "over": true,
+          "shortage": 25
+        },
+        {
+          "dong": "신사동",
+          "rate": 48.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "청담동",
+          "rate": 48.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "도곡1동",
+          "rate": 48.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "일원본동",
+          "rate": 47,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "수서동",
+          "rate": 47,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "개포3동",
+          "rate": 46.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼성2동",
+          "rate": 46.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼성1동",
+          "rate": 45.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "일원1동",
+          "rate": 45.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "역삼2동",
+          "rate": 43.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "개포4동",
+          "rate": 43.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "논현2동",
+          "rate": 39.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대치4동",
+          "rate": 35.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "역삼1동",
+          "rate": 33.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "논현1동",
+          "rate": 32.6,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "양천구",
+      "totalDongs": 18,
+      "overDongs": 6,
+      "overRate": 33.3,
+      "maxElectionDayRate": 55.3,
+      "totalEstShortage": 3542,
+      "riskLevel": "HIGH",
+      "dongs": [
+        {
+          "dong": "신정6동",
+          "rate": 55.3,
+          "over": true,
+          "shortage": 930
+        },
+        {
+          "dong": "신정7동",
+          "rate": 54.1,
+          "over": true,
+          "shortage": 872
+        },
+        {
+          "dong": "신정3동",
+          "rate": 52.2,
+          "over": true,
+          "shortage": 756
+        },
+        {
+          "dong": "목1동",
+          "rate": 51.9,
+          "over": true,
+          "shortage": 399
+        },
+        {
+          "dong": "목5동",
+          "rate": 51.5,
+          "over": true,
+          "shortage": 429
+        },
+        {
+          "dong": "신정1동",
+          "rate": 51.1,
+          "over": true,
+          "shortage": 156
+        },
+        {
+          "dong": "목2동",
+          "rate": 42.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월7동",
+          "rate": 42.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월4동",
+          "rate": 42,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월2동",
+          "rate": 41.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월6동",
+          "rate": 41.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신정4동",
+          "rate": 41.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "목4동",
+          "rate": 40.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "목3동",
+          "rate": 40.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신정2동",
+          "rate": 39.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월1동",
+          "rate": 38.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월3동",
+          "rate": 34.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신월5동",
+          "rate": 33.4,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "송파구",
+      "totalDongs": 27,
+      "overDongs": 6,
+      "overRate": 22.2,
+      "maxElectionDayRate": 56.7,
+      "totalEstShortage": 3268,
+      "riskLevel": "HIGH",
+      "dongs": [
+        {
+          "dong": "잠실3동",
+          "rate": 56.7,
+          "over": true,
+          "shortage": 1677
+        },
+        {
+          "dong": "잠실4동",
+          "rate": 53.3,
+          "over": true,
+          "shortage": 785
+        },
+        {
+          "dong": "문정2동",
+          "rate": 52.1,
+          "over": true,
+          "shortage": 490
+        },
+        {
+          "dong": "잠실7동",
+          "rate": 51.9,
+          "over": true,
+          "shortage": 155
+        },
+        {
+          "dong": "잠실2동",
+          "rate": 50.5,
+          "over": true,
+          "shortage": 122
+        },
+        {
+          "dong": "위례동",
+          "rate": 50.1,
+          "over": true,
+          "shortage": 39
+        },
+        {
+          "dong": "가락1동",
+          "rate": 49.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가락2동",
+          "rate": 49.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "오륜동",
+          "rate": 48.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "오금동",
+          "rate": 48,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "거여2동",
+          "rate": 47.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "송파2동",
+          "rate": 47.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "장지동",
+          "rate": 46.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "잠실6동",
+          "rate": 46,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방이1동",
+          "rate": 44.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "문정1동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가락본동",
+          "rate": 43.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "마천1동",
+          "rate": 43.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "거여1동",
+          "rate": 42,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방이2동",
+          "rate": 41.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "풍납2동",
+          "rate": 40.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "송파1동",
+          "rate": 39.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "마천2동",
+          "rate": 39.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "석촌동",
+          "rate": 38.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼전동",
+          "rate": 38.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "잠실본동",
+          "rate": 37.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "풍납1동",
+          "rate": 37,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "서초구",
+      "totalDongs": 18,
+      "overDongs": 5,
+      "overRate": 27.8,
+      "maxElectionDayRate": 53.9,
+      "totalEstShortage": 2968,
+      "riskLevel": "MEDIUM",
+      "dongs": [
+        {
+          "dong": "서초4동",
+          "rate": 53.9,
+          "over": true,
+          "shortage": 873
+        },
+        {
+          "dong": "반포2동",
+          "rate": 53.8,
+          "over": true,
+          "shortage": 758
+        },
+        {
+          "dong": "양재1동",
+          "rate": 52.2,
+          "over": true,
+          "shortage": 700
+        },
+        {
+          "dong": "잠원동",
+          "rate": 52,
+          "over": true,
+          "shortage": 523
+        },
+        {
+          "dong": "반포3동",
+          "rate": 50.6,
+          "over": true,
+          "shortage": 114
+        },
+        {
+          "dong": "반포4동",
+          "rate": 49.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방배2동",
+          "rate": 48.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방배3동",
+          "rate": 48.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방배본동",
+          "rate": 48.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방배4동",
+          "rate": 47.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서초2동",
+          "rate": 47.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서초3동",
+          "rate": 46.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방배1동",
+          "rate": 46.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "내곡동",
+          "rate": 46.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "반포1동",
+          "rate": 45.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서초1동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "양재2동",
+          "rate": 40.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "반포본동",
+          "rate": 22.3,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "영등포구",
+      "totalDongs": 18,
+      "overDongs": 3,
+      "overRate": 16.7,
+      "maxElectionDayRate": 51.1,
+      "totalEstShortage": 348,
+      "riskLevel": "MEDIUM",
+      "dongs": [
+        {
+          "dong": "문래동",
+          "rate": 51.1,
+          "over": true,
+          "shortage": 260
+        },
+        {
+          "dong": "신길제7동",
+          "rate": 50.6,
+          "over": true,
+          "shortage": 83
+        },
+        {
+          "dong": "여의동",
+          "rate": 50,
+          "over": true,
+          "shortage": 5
+        },
+        {
+          "dong": "당산제2동",
+          "rate": 49.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신길제4동",
+          "rate": 46.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "양평제2동",
+          "rate": 45.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "당산제1동",
+          "rate": 45,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신길제3동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "영등포본동",
+          "rate": 44.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대림제3동",
+          "rate": 42.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신길제5동",
+          "rate": 42.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신길제6동",
+          "rate": 41.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "양평제1동",
+          "rate": 41,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신길제1동",
+          "rate": 40.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "영등포동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "도림동",
+          "rate": 38.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대림제1동",
+          "rate": 35.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대림제2동",
+          "rate": 33.3,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "강동구",
+      "totalDongs": 19,
+      "overDongs": 3,
+      "overRate": 15.8,
+      "maxElectionDayRate": 52,
+      "totalEstShortage": 1184,
+      "riskLevel": "MEDIUM",
+      "dongs": [
+        {
+          "dong": "상일제1동",
+          "rate": 52,
+          "over": true,
+          "shortage": 568
+        },
+        {
+          "dong": "둔촌제1동",
+          "rate": 51.8,
+          "over": true,
+          "shortage": 452
+        },
+        {
+          "dong": "명일제2동",
+          "rate": 51.3,
+          "over": true,
+          "shortage": 164
+        },
+        {
+          "dong": "고덕제2동",
+          "rate": 49.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "암사제3동",
+          "rate": 47.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "고덕제1동",
+          "rate": 47.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "강일동",
+          "rate": 47.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "둔촌제2동",
+          "rate": 46.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상일제2동",
+          "rate": 46.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "명일제1동",
+          "rate": 45.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성내제1동",
+          "rate": 42.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "길동",
+          "rate": 41.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "천호제2동",
+          "rate": 41.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "천호제3동",
+          "rate": 41.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "암사제1동",
+          "rate": 41.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "천호제1동",
+          "rate": 39.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성내제2동",
+          "rate": 39,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성내제3동",
+          "rate": 38.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "암사제2동",
+          "rate": 38.3,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "중구",
+      "totalDongs": 15,
+      "overDongs": 1,
+      "overRate": 6.7,
+      "maxElectionDayRate": 52.8,
+      "totalEstShortage": 248,
+      "riskLevel": "LOW",
+      "dongs": [
+        {
+          "dong": "청구동",
+          "rate": 52.8,
+          "over": true,
+          "shortage": 248
+        },
+        {
+          "dong": "약수동",
+          "rate": 48.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중림동",
+          "rate": 45.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "동화동",
+          "rate": 44.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "다산동",
+          "rate": 42.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "광희동",
+          "rate": 41.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "황학동",
+          "rate": 41.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "장충동",
+          "rate": 39.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신당동",
+          "rate": 38.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "소공동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "을지로동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "필동",
+          "rate": 38.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "회현동",
+          "rate": 37.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신당제5동",
+          "rate": 36.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "명동",
+          "rate": 33.1,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "용산구",
+      "totalDongs": 16,
+      "overDongs": 1,
+      "overRate": 6.3,
+      "maxElectionDayRate": 51.1,
+      "totalEstShortage": 69,
+      "riskLevel": "LOW",
+      "dongs": [
+        {
+          "dong": "이촌제2동",
+          "rate": 51.1,
+          "over": true,
+          "shortage": 69
+        },
+        {
+          "dong": "이촌제1동",
+          "rate": 47.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서빙고동",
+          "rate": 47.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "한강로동",
+          "rate": 46.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "원효로제2동",
+          "rate": 45.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "원효로제1동",
+          "rate": 42.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "효창동",
+          "rate": 42.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "용문동",
+          "rate": 41.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "한남동",
+          "rate": 40.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "청파동",
+          "rate": 39.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "이태원제1동",
+          "rate": 39.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "이태원제2동",
+          "rate": 38.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "후암동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "남영동",
+          "rate": 36.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "용산2가동",
+          "rate": 34.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "보광동",
+          "rate": 33.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "동대문구",
+      "totalDongs": 15,
+      "overDongs": 1,
+      "overRate": 6.7,
+      "maxElectionDayRate": 52.8,
+      "totalEstShortage": 664,
+      "riskLevel": "LOW",
+      "dongs": [
+        {
+          "dong": "이문제1동",
+          "rate": 52.8,
+          "over": true,
+          "shortage": 664
+        },
+        {
+          "dong": "휘경제2동",
+          "rate": 47.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "답십리제1동",
+          "rate": 47.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "전농제1동",
+          "rate": 47.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "답십리제2동",
+          "rate": 46.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "장안제2동",
+          "rate": 45.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "이문제2동",
+          "rate": 45,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "청량리동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "전농제2동",
+          "rate": 43.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "장안제1동",
+          "rate": 42.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신설동",
+          "rate": 41.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "제기동",
+          "rate": 40.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "휘경제1동",
+          "rate": 40.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "용두동",
+          "rate": 38.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "회기동",
+          "rate": 34,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "노원구",
+      "totalDongs": 19,
+      "overDongs": 1,
+      "overRate": 5.3,
+      "maxElectionDayRate": 52.8,
+      "totalEstShortage": 618,
+      "riskLevel": "LOW",
+      "dongs": [
+        {
+          "dong": "월계3동",
+          "rate": 52.8,
+          "over": true,
+          "shortage": 618
+        },
+        {
+          "dong": "상계6·7동",
+          "rate": 49.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "하계2동",
+          "rate": 48.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "공릉2동",
+          "rate": 46.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "하계1동",
+          "rate": 45.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계3·4동",
+          "rate": 45.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중계본동",
+          "rate": 45.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중계2·3동",
+          "rate": 44.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중계1동",
+          "rate": 44.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계9동",
+          "rate": 44.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "월계2동",
+          "rate": 44,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계8동",
+          "rate": 43.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계10동",
+          "rate": 43.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중계4동",
+          "rate": 42.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "공릉1동",
+          "rate": 42.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계1동",
+          "rate": 42.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계5동",
+          "rate": 40.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "월계1동",
+          "rate": 39.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상계2동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "서대문구",
+      "totalDongs": 14,
+      "overDongs": 1,
+      "overRate": 7.1,
+      "maxElectionDayRate": 50.3,
+      "totalEstShortage": 62,
+      "riskLevel": "LOW",
+      "dongs": [
+        {
+          "dong": "홍제제1동",
+          "rate": 50.3,
+          "over": true,
+          "shortage": 62
+        },
+        {
+          "dong": "천연동",
+          "rate": 46.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "충현동",
+          "rate": 46,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "남가좌제2동",
+          "rate": 45.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "홍제제3동",
+          "rate": 44,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "홍제제2동",
+          "rate": 42.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "홍은제1동",
+          "rate": 42.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "홍은제2동",
+          "rate": 42.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "남가좌제1동",
+          "rate": 42.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "북아현동",
+          "rate": 42.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "연희동",
+          "rate": 42.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "북가좌제1동",
+          "rate": 40.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "북가좌제2동",
+          "rate": 40.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신촌동",
+          "rate": 38.7,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "종로구",
+      "totalDongs": 17,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "교남동",
+          "rate": 44.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "무악동",
+          "rate": 44.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "부암동",
+          "rate": 43.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "평창동",
+          "rate": 43.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼청동",
+          "rate": 43.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사직동",
+          "rate": 41.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "청운효자동",
+          "rate": 40.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "혜화동",
+          "rate": 39.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창신제3동",
+          "rate": 38.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "이화동",
+          "rate": 37.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가회동",
+          "rate": 37,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창신제2동",
+          "rate": 36.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "숭인제1동",
+          "rate": 36.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "숭인제2동",
+          "rate": 36.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "종로5·6가동",
+          "rate": 36.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "종로1·2·3·4가동",
+          "rate": 34.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창신제1동",
+          "rate": 32,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "성동구",
+      "totalDongs": 17,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "옥수동",
+          "rate": 49.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "금호1가동",
+          "rate": 49.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "행당제2동",
+          "rate": 48.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "왕십리도선동",
+          "rate": 47.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "마장동",
+          "rate": 46.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "행당제1동",
+          "rate": 46.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성수1가제2동",
+          "rate": 46.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "금호2·3가동",
+          "rate": 45.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성수1가제1동",
+          "rate": 44.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "왕십리제2동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "응봉동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성수2가제3동",
+          "rate": 43.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "금호4가동",
+          "rate": 42.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "송정동",
+          "rate": 40,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사근동",
+          "rate": 39.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성수2가제1동",
+          "rate": 39,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "용답동",
+          "rate": 37.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "광진구",
+      "totalDongs": 15,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "광장동",
+          "rate": 49.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "자양제2동",
+          "rate": 45.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구의제3동",
+          "rate": 45.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "자양제3동",
+          "rate": 45,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구의제2동",
+          "rate": 43,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중곡제4동",
+          "rate": 42.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "능동",
+          "rate": 41.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중곡제3동",
+          "rate": 39.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "자양제4동",
+          "rate": 39.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중곡제2동",
+          "rate": 38.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "군자동",
+          "rate": 38.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구의제1동",
+          "rate": 38.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중곡제1동",
+          "rate": 38,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "자양제1동",
+          "rate": 36.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화양동",
+          "rate": 34.9,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "중랑구",
+      "totalDongs": 16,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "신내제1동",
+          "rate": 48.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상봉제1동",
+          "rate": 44.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "묵제1동",
+          "rate": 43.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신내제2동",
+          "rate": 42.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "망우본동",
+          "rate": 41.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "면목제4동",
+          "rate": 39.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "면목제5동",
+          "rate": 39.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "면목제3·8동",
+          "rate": 38.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중화제1동",
+          "rate": 37.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중화제2동",
+          "rate": 37.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "면목제7동",
+          "rate": 35.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "면목제2동",
+          "rate": 35.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "망우제3동",
+          "rate": 34.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "묵제2동",
+          "rate": 34.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상봉제2동",
+          "rate": 33.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "면목본동",
+          "rate": 33.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "성북구",
+      "totalDongs": 20,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "장위제3동",
+          "rate": 48.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "돈암제2동",
+          "rate": 48.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "길음제1동",
+          "rate": 48,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "길음제2동",
+          "rate": 47.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "돈암제1동",
+          "rate": 46.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "석관동",
+          "rate": 43.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "종암동",
+          "rate": 43.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "월곡제1동",
+          "rate": 43.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "정릉제1동",
+          "rate": 43.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "장위제2동",
+          "rate": 43.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "월곡제2동",
+          "rate": 43,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "장위제1동",
+          "rate": 40.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "동선동",
+          "rate": 39.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "정릉제4동",
+          "rate": 39.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "안암동",
+          "rate": 38.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "정릉제2동",
+          "rate": 37.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성북동",
+          "rate": 37,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "보문동",
+          "rate": 36.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼선동",
+          "rate": 36.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "정릉제3동",
+          "rate": 34.6,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "강북구",
+      "totalDongs": 13,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "삼각산동",
+          "rate": 48.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "번2동",
+          "rate": 40.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "송중동",
+          "rate": 39.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "번3동",
+          "rate": 39.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼양동",
+          "rate": 39.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "송천동",
+          "rate": 38.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "수유3동",
+          "rate": 38.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "우이동",
+          "rate": 36.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "수유2동",
+          "rate": 36.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "미아동",
+          "rate": 35.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "인수동",
+          "rate": 35.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "수유1동",
+          "rate": 33.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "번1동",
+          "rate": 32.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "도봉구",
+      "totalDongs": 14,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "도봉2동",
+          "rate": 49.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창4동",
+          "rate": 47.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "쌍문4동",
+          "rate": 43.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창5동",
+          "rate": 43,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창1동",
+          "rate": 42,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방학3동",
+          "rate": 40.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방학1동",
+          "rate": 40.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "쌍문2동",
+          "rate": 40,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "쌍문1동",
+          "rate": 38.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "도봉1동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창2동",
+          "rate": 38.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "쌍문3동",
+          "rate": 37.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "창3동",
+          "rate": 36.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방학2동",
+          "rate": 35.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "은평구",
+      "totalDongs": 16,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "불광제1동",
+          "rate": 46.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "응암제2동",
+          "rate": 45.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "진관동",
+          "rate": 45.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "수색동",
+          "rate": 43.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "응암제1동",
+          "rate": 41.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "증산동",
+          "rate": 40.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신사제2동",
+          "rate": 40.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "녹번동",
+          "rate": 38.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "불광제2동",
+          "rate": 38,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대조동",
+          "rate": 37.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구산동",
+          "rate": 37.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "역촌동",
+          "rate": 37.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "갈현제2동",
+          "rate": 36.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "갈현제1동",
+          "rate": 34.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신사제1동",
+          "rate": 34.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "응암제3동",
+          "rate": 32.7,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "마포구",
+      "totalDongs": 16,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "아현동",
+          "rate": 48.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "도화동",
+          "rate": 48.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "공덕동",
+          "rate": 47.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상암동",
+          "rate": 47.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "용강동",
+          "rate": 47,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성산2동",
+          "rate": 46.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신수동",
+          "rate": 45.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서강동",
+          "rate": 44.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "염리동",
+          "rate": 42.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "망원2동",
+          "rate": 42.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대흥동",
+          "rate": 40.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "합정동",
+          "rate": 39.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "성산1동",
+          "rate": 39.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "망원1동",
+          "rate": 38.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서교동",
+          "rate": 37.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "연남동",
+          "rate": 36.5,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "강서구",
+      "totalDongs": 20,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "염창동",
+          "rate": 47.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "등촌제3동",
+          "rate": 46.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "발산제1동",
+          "rate": 46.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "우장산동",
+          "rate": 46.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡제3동",
+          "rate": 45.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가양제2동",
+          "rate": 44.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방화제1동",
+          "rate": 44.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가양제3동",
+          "rate": 43.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가양제1동",
+          "rate": 43.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방화제3동",
+          "rate": 42.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "공항동",
+          "rate": 42.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "등촌제2동",
+          "rate": 40.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "방화제2동",
+          "rate": 39.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡제6동",
+          "rate": 38.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "등촌제1동",
+          "rate": 38.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡제1동",
+          "rate": 35.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡본동",
+          "rate": 33.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡제2동",
+          "rate": 33.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡제8동",
+          "rate": 32.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "화곡제4동",
+          "rate": 32.7,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "구로구",
+      "totalDongs": 16,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "신도림동",
+          "rate": 47.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "수궁동",
+          "rate": 46.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "오류제2동",
+          "rate": 46,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "개봉제2동",
+          "rate": 45.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구로제5동",
+          "rate": 44,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "고척제2동",
+          "rate": 43.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "개봉제1동",
+          "rate": 43.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "고척제1동",
+          "rate": 42.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "항동",
+          "rate": 41.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구로제1동",
+          "rate": 40.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "개봉제3동",
+          "rate": 39.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구로제4동",
+          "rate": 37.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "오류제1동",
+          "rate": 37.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구로제3동",
+          "rate": 36.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "구로제2동",
+          "rate": 35,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가리봉동",
+          "rate": 29,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "금천구",
+      "totalDongs": 10,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "시흥제2동",
+          "rate": 45.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "독산제1동",
+          "rate": 44.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "시흥제3동",
+          "rate": 40,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "시흥제4동",
+          "rate": 39.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "시흥제1동",
+          "rate": 38.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "가산동",
+          "rate": 34.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "독산제3동",
+          "rate": 34.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "독산제2동",
+          "rate": 33.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "시흥제5동",
+          "rate": 33.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "독산제4동",
+          "rate": 32.6,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "동작구",
+      "totalDongs": 15,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "노량진제1동",
+          "rate": 49.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사당제3동",
+          "rate": 47.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "흑석동",
+          "rate": 45.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신대방제1동",
+          "rate": 45.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대방동",
+          "rate": 45,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사당제5동",
+          "rate": 44.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상도제1동",
+          "rate": 44.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상도제2동",
+          "rate": 44.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신대방제2동",
+          "rate": 43.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사당제2동",
+          "rate": 43.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사당제1동",
+          "rate": 41.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "사당제4동",
+          "rate": 40.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상도제4동",
+          "rate": 37.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "상도제3동",
+          "rate": 37.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "노량진제2동",
+          "rate": 32.2,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    },
+    {
+      "gu": "관악구",
+      "totalDongs": 21,
+      "overDongs": 0,
+      "overRate": 0,
+      "maxElectionDayRate": 0,
+      "totalEstShortage": 0,
+      "riskLevel": "SAFE",
+      "dongs": [
+        {
+          "dong": "성현동",
+          "rate": 48.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "청림동",
+          "rate": 46.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "삼성동",
+          "rate": 42.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "은천동",
+          "rate": 41.6,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "행운동",
+          "rate": 41.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "난향동",
+          "rate": 40.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "미성동",
+          "rate": 40.3,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "청룡동",
+          "rate": 40,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "보라매동",
+          "rate": 39.9,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "낙성대동",
+          "rate": 39.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "남현동",
+          "rate": 39.1,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서림동",
+          "rate": 38.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "난곡동",
+          "rate": 37,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "인헌동",
+          "rate": 36.4,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "조원동",
+          "rate": 35.5,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "서원동",
+          "rate": 34.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "중앙동",
+          "rate": 34,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "대학동",
+          "rate": 33.2,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신원동",
+          "rate": 31.8,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신사동",
+          "rate": 31.7,
+          "over": false,
+          "shortage": 0
+        },
+        {
+          "dong": "신림동",
+          "rate": 29.6,
+          "over": false,
+          "shortage": 0
+        }
+      ]
+    }
+  ]
+}
