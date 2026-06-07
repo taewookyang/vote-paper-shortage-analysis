@@ -44,18 +44,18 @@
 - 부족 명단 `67 추가송부 / 50 실제부족 / 17 미사용` 보존
 - 중단 지역 스트레스 테스트에서 공식 수치·확인 위치·모델 후보의 증거수준 분리
 
-## 22곳 중단 지역 스트레스 테스트
+## 22곳 중단 집계와 증거수준별 위치
 
 `scripts/build_shutdown_stress_test.py`는 다음 자료를 결합한다.
 
 - `data/raw/national_dong_turnout.csv`: 동별 선거일 수요
-- `data/raw/shortage_2026.csv`: 이름이 공개된 실제 부족·중단 위치
+- `data/raw/shortage_2026.csv`: 언론 보도에 이름이 등장한 부족 위치
 - `data/processed/shortage_gu_polling_places.csv`: 대상 5개 구 전체 투표소 목록
 
-산출물 `shutdown_stress_test_2026.json`의 `model_candidates`는 실제 중단 위치 예측이
-아니다. 동 평균 선거일 수요가 50% 배부 가정을 넘는 추가 조사 후보이며, 각 행은
-`confirmed_shutdown`, `confirmed_shortage`, `model_candidate` 중 하나의 증거수준을
-가진다.
+산출물 `shutdown_stress_test_2026.json`은 중앙선관위의 구별 중단 수 합계,
+언론 현장 보도상 중단 위치, 지역선관위 설명 인용 보도상 지연 위치, 모델 조사 후보를
+서로 분리한다. `model_candidates`는 실제 중단 위치 예측이 아니라 동 평균 선거일
+수요가 50% 배부 가정을 넘는 추가 조사 후보다.
 
 ## 이름 공개 투표소의 선거구 직접 매핑
 
@@ -65,7 +65,7 @@ python scripts/build_known_location_margin_mapping.py
 ```
 
 첫 명령은 선관위 VCCP08 결과표에 실제 등장하는 읍면동을 광역·기초의원 선거구에
-연결한다. 두 번째 명령은 이름이 공개된 부족·중단 투표소와 당선권 경계 표차를
+연결한다. 두 번째 명령은 언론 보도에 이름이 등장한 부족·중단·지연 투표소와 당선권 경계 표차를
 결합한다. 상세 위치가 공개되지 않은 투표소는 임의로 선거구에 배정하지 않는다.
 
 실행:

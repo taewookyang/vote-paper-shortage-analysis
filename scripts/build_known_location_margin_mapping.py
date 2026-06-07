@@ -19,18 +19,22 @@ def bool_value(value: object) -> bool | None:
 
 
 def evidence(row: pd.Series) -> str:
-    if row["투표중단확인"] is True:
-        return "실제중단확인"
-    if row["실제부족확인"] is True:
-        return "실제부족확인"
-    return "추가송부확인"
+    if row["보도증거수준"] == "media_reported_shutdown":
+        return "언론보도상중단"
+    if row["보도증거수준"] == "local_nec_reported_delay":
+        return "지역선관위설명상지연"
+    if row["보도증거수준"] == "media_reported_delay":
+        return "언론보도상지연"
+    if row["부족보도여부"] is True:
+        return "언론보도상부족"
+    return "추가송부구단위집계"
 
 
 def review_grade(row: pd.Series) -> str:
     margin = row["표차"]
     if pd.isna(margin):
         return "자료확인필요"
-    if row["증거수준"] == "실제중단확인" and margin <= 500:
+    if row["증거수준"] == "언론보도상중단" and margin <= 500:
         return "최우선확인"
     if margin <= 500:
         return "우선조사"
@@ -50,10 +54,27 @@ def main() -> None:
     shortage = pd.read_csv(RAW / "shortage_2026.csv")
     mapping = pd.read_csv(RAW / "district_dong_mapping_2026.csv")
     margins = pd.read_csv(PROCESSED / "targeted_margin_screening_2026.csv")
+    stress = json.loads(
+        (PROCESSED / "dashboard" / "shutdown_stress_test_2026.json").read_text(encoding="utf-8")
+    )
+    reported = {
+        item["polling_place"]: item for item in stress.get("reported_events", [])
+    }
 
     named = shortage[shortage["투표소명"].notna()].copy()
-    named["실제부족확인"] = named["실제부족여부"].map(bool_value)
-    named["투표중단확인"] = named["투표중단여부"].map(bool_value)
+    named["부족보도여부"] = named["실제부족여부"].map(bool_value)
+    named["보도증거수준"] = named["투표소명"].map(
+        lambda name: reported.get(name, {}).get("evidence_level")
+    )
+    named["보도사건"] = named["투표소명"].map(
+        lambda name: reported.get(name, {}).get("event")
+    )
+    named["사건출처주체"] = named["투표소명"].map(
+        lambda name: reported.get(name, {}).get("source_actor")
+    )
+    named["사건출처URL"] = named["투표소명"].map(
+        lambda name: reported.get(name, {}).get("source_url")
+    )
     named["증거수준"] = named.apply(evidence, axis=1)
     named["읍면동_정규화"] = named["읍면동"].map(normalize_dong)
     mapping["읍면동_정규화"] = mapping["읍면동"].map(normalize_dong)
@@ -86,7 +107,8 @@ def main() -> None:
     joined["검토등급"] = joined.apply(review_grade, axis=1)
     joined["해석제한"] = "표차가 작다는 사실만으로 투표용지 부족이 선거 결과에 영향을 미쳤다고 단정할 수 없음"
     columns = [
-        "시도", "구시군", "읍면동", "투표소명", "증거수준", "실제부족확인", "투표중단확인",
+        "시도", "구시군", "읍면동", "투표소명", "증거수준", "부족보도여부", "보도사건",
+        "사건출처주체", "사건출처URL",
         "선거종류", "선거구코드", "선거구명", "당선자", "낙선자", "표차", "검토등급",
         "위치출처URL", "결과출처URL", "해석제한",
     ]
@@ -106,7 +128,7 @@ def main() -> None:
 
     payload = {
         "meta": {
-            "description": "이름이 공개된 실제 부족·중단 투표소의 광역·기초의원 선거구 및 표차 매핑",
+            "description": "언론 보도로 이름이 공개된 부족·중단·지연 투표소의 광역·기초의원 선거구 및 표차 매핑",
             "disclaimer": "표차가 작다는 사실만으로 결과 영향을 단정할 수 없음",
             "namedPollingPlaces": int(named["투표소명"].nunique()),
             "mappedRows": int(result["선거구코드"].notna().sum()),

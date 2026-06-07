@@ -1,8 +1,8 @@
 # 데이터 파이프라인 검증 보고서
 
-- 생성: 2026-06-07T01:31:21
-- 검사: 42개
-- 통과: 41개
+- 생성: 2026-06-07T09:11:57
+- 검사: 46개
+- 통과: 45개
 - 오류: 0개
 - 경고: 1개
 
@@ -43,6 +43,10 @@
 | shortage_2026 | named_polling_place_coverage | fail | warning | named=16/67 |
 | shutdown_stress_test_2026 | official_shutdown_total | pass | error | total=22 |
 | shutdown_stress_test_2026 | official_shutdown_gu_count | pass | error | gu=5 |
+| shutdown_stress_test_2026 | media_reported_shutdown_locations | pass | error | reported=7 |
+| shutdown_stress_test_2026 | local_nec_reported_delay_locations | pass | error | reported=7 |
+| shutdown_stress_test_2026 | media_reported_delay_locations | pass | error | reported=7 |
+| shutdown_stress_test_2026 | reported_event_sources_present | pass | error | reported=7 |
 | shutdown_stress_test_2026 | candidate_evidence_level_present | pass | error | candidates=18 |
 | shutdown_stress_test_2026 | known_location_source_present | pass | error | known=16 |
 | shutdown_stress_test_2026 | candidate_polling_place_count_matches | pass | error | candidates=18 |

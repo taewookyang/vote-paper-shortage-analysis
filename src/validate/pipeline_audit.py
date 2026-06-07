@@ -247,11 +247,16 @@ def audit_shutdown_stress_test(path: Path) -> list[Check]:
         return [_skip(dataset, "file_exists", f"missing: {path}")]
     payload = json.loads(path.read_text(encoding="utf-8"))
     official = payload.get("official_shutdown", {})
+    reported = payload.get("reported_events", [])
     candidates = payload.get("model_candidates", [])
     known = payload.get("known_locations", [])
     checks = [
         _check(dataset, "official_shutdown_total", official.get("합계") == 22, f"total={official.get('합계')}"),
         _check(dataset, "official_shutdown_gu_count", len(official) - int("합계" in official) == 5, f"gu={len(official) - int('합계' in official)}"),
+        _check(dataset, "media_reported_shutdown_locations", sum(item.get("evidence_level") == "media_reported_shutdown" for item in reported) == 3, f"reported={len(reported)}"),
+        _check(dataset, "local_nec_reported_delay_locations", sum(item.get("evidence_level") == "local_nec_reported_delay" for item in reported) == 2, f"reported={len(reported)}"),
+        _check(dataset, "media_reported_delay_locations", sum(item.get("evidence_level") == "media_reported_delay" for item in reported) == 2, f"reported={len(reported)}"),
+        _check(dataset, "reported_event_sources_present", all(item.get("source_url") and item.get("source_actor") for item in reported), f"reported={len(reported)}"),
         _check(dataset, "candidate_evidence_level_present", all(item.get("evidence_level") for item in candidates), f"candidates={len(candidates)}"),
         _check(dataset, "known_location_source_present", all(item.get("출처URL") for item in known), f"known={len(known)}"),
         _check(

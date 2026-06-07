@@ -1,7 +1,7 @@
 {
   "meta": {
-    "description": "22곳 중단 지역의 50% 배부 가정 동 단위 스트레스 테스트",
-    "interpretation": "실제 중단 위치 예측이 아니다. 동 전체 선거일 투표율이 선거인수의 50%를 넘었는지 확인하여 추가 조사 후보를 제시한다.",
+    "description": "선관위 공식 구별 중단 집계, 보도상 위치, 모델 조사 후보를 분리한 자료",
+    "interpretation": "중앙선관위 공식 자료는 5개 구의 중단 수 합계만 뜻한다. 보도상 위치는 기사 또는 지역선관위 설명 인용으로 장소가 특정된 사례이며, 모델 후보는 동 전체 선거일 투표율로 좁힌 조사 대상일 뿐 실제 중단 위치가 아니다.",
     "disclaimer": "투표소별 실제 배부량과 전체 중단 위치가 미공개이므로 결과 영향이나 실제 중단 투표소를 단정할 수 없다.",
     "officialSourceUrls": [
       "https://news.sbs.co.kr/news/endPage.do?news_id=N1008597087",
@@ -22,6 +22,78 @@
     "연수구": 3,
     "합계": 22
   },
+  "reported_events": [
+    {
+      "gu": "송파구",
+      "dong": "잠실2동",
+      "polling_place": "잠실2동 제6투표소",
+      "evidence_level": "media_reported_shutdown",
+      "event": "투표 중단",
+      "source_actor": "언론 현장 취재",
+      "source_url": "https://www.mk.co.kr/news/politics/12064878",
+      "note": "기사 사진 설명과 본문에서 투표 중단을 명시"
+    },
+    {
+      "gu": "송파구",
+      "dong": "잠실4동",
+      "polling_place": "잠실4동 제5투표소",
+      "evidence_level": "media_reported_shutdown",
+      "event": "투표 일시 중단",
+      "source_actor": "언론 현장 취재",
+      "source_url": "https://www.donga.com/news/Politics/article/all/20260603/134042934/1",
+      "note": "오후 4시 중단, 오후 5시 10분 재개를 명시"
+    },
+    {
+      "gu": "송파구",
+      "dong": "잠실7동",
+      "polling_place": "잠실7동 제2투표소",
+      "evidence_level": "media_reported_shutdown",
+      "event": "투표 중단",
+      "source_actor": "언론 현장 취재",
+      "source_url": "https://www.seoul.co.kr/news/politics/local-election2026/2026/06/04/20260604001003",
+      "note": "기사 사진 설명에서 투표 중단 및 오후 10시까지 연장을 명시"
+    },
+    {
+      "gu": "송파구",
+      "dong": "가락2동",
+      "polling_place": "가락2동 제3투표소",
+      "evidence_level": "media_reported_delay",
+      "event": "투표 지연",
+      "source_actor": "언론 현장 보도",
+      "source_url": "https://biz.chosun.com/policy/politics/election/2026/06/03/R4OC75Y73BGQ7C7XA2LS4W3TQM/",
+      "note": "용지 부족으로 지연돼 오후 6시 이후에도 투표가 이어졌다고 보도"
+    },
+    {
+      "gu": "송파구",
+      "dong": "가락2동",
+      "polling_place": "가락2동 제7투표소",
+      "evidence_level": "media_reported_delay",
+      "event": "투표 지연",
+      "source_actor": "언론 현장 보도",
+      "source_url": "https://biz.chosun.com/policy/politics/election/2026/06/03/R4OC75Y73BGQ7C7XA2LS4W3TQM/",
+      "note": "용지 부족 해결을 기다린 뒤 오후 6시 이후에도 투표가 이어졌다고 보도"
+    },
+    {
+      "gu": "연수구",
+      "dong": "송도5동",
+      "polling_place": "송도5동 제1투표소",
+      "evidence_level": "local_nec_reported_delay",
+      "event": "투표 지연",
+      "source_actor": "인천선관위 설명을 인용한 언론 보도",
+      "source_url": "https://biz.chosun.com/topics/topics_social/2026/06/04/XKNC5TGJ2VCHBENZFULTNNNMBI/",
+      "note": "인천선관위 설명상 용지 부족으로 약 20분 대기"
+    },
+    {
+      "gu": "연수구",
+      "dong": "동춘1동",
+      "polling_place": "동춘1동 제6투표소",
+      "evidence_level": "local_nec_reported_delay",
+      "event": "투표 지연",
+      "source_actor": "인천선관위 설명을 인용한 언론 보도",
+      "source_url": "https://biz.chosun.com/topics/topics_social/2026/06/04/XKNC5TGJ2VCHBENZFULTNNNMBI/",
+      "note": "인천선관위 설명상 추가 용지까지 소진돼 약 10분 지연"
+    }
+  ],
   "model_candidates": [
     {
       "gu": "송파구",
@@ -75,7 +147,7 @@
         "개포2동제6투",
         "개포2동제7투"
       ],
-      "evidence_level": "confirmed_shortage",
+      "evidence_level": "reported_shortage",
       "known_locations": [
         {
           "시도": "서울",
@@ -86,7 +158,8 @@
           "투표중단여부": null,
           "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
           "실제부족확인": true,
-          "투표중단확인": null
+          "보도사건": null,
+          "보도증거수준": null
         }
       ]
     },
@@ -138,7 +211,7 @@
         "잠실4동제6투",
         "잠실4동제7투"
       ],
-      "evidence_level": "confirmed_shutdown",
+      "evidence_level": "media_reported_shutdown",
       "known_locations": [
         {
           "시도": "서울",
@@ -149,7 +222,8 @@
           "투표중단여부": true,
           "출처URL": "https://www.donga.com/news/Politics/article/all/20260603/134042934/1?gid=134043412&regdate=&srev=1",
           "실제부족확인": true,
-          "투표중단확인": true
+          "보도사건": "투표 일시 중단",
+          "보도증거수준": "media_reported_shutdown"
         }
       ]
     },
@@ -241,7 +315,7 @@
         "문정2동제5투",
         "문정2동제6투"
       ],
-      "evidence_level": "confirmed_shortage",
+      "evidence_level": "reported_shortage",
       "known_locations": [
         {
           "시도": "서울",
@@ -252,7 +326,8 @@
           "투표중단여부": null,
           "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
           "실제부족확인": true,
-          "투표중단확인": null
+          "보도사건": null,
+          "보도증거수준": null
         }
       ]
     },
@@ -272,7 +347,7 @@
         "잠원동제7투",
         "잠원동제8투"
       ],
-      "evidence_level": "confirmed_shortage",
+      "evidence_level": "reported_shortage",
       "known_locations": [
         {
           "시도": "서울",
@@ -283,7 +358,8 @@
           "투표중단여부": null,
           "출처URL": "https://www.newdaily.co.kr/site/data/html/2026/06/03/2026060300128.html",
           "실제부족확인": true,
-          "투표중단확인": null
+          "보도사건": null,
+          "보도증거수준": null
         }
       ]
     },
@@ -297,7 +373,7 @@
         "잠실7동제1투",
         "잠실7동제2투"
       ],
-      "evidence_level": "confirmed_shortage",
+      "evidence_level": "media_reported_shutdown",
       "known_locations": [
         {
           "시도": "서울",
@@ -308,7 +384,8 @@
           "투표중단여부": null,
           "출처URL": "https://www.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500194?wlog_tag1=aiMbti_request_pc",
           "실제부족확인": true,
-          "투표중단확인": null
+          "보도사건": "투표 중단",
+          "보도증거수준": "media_reported_shutdown"
         }
       ]
     },
@@ -360,7 +437,7 @@
         "잠실2동제6투",
         "잠실2동제7투"
       ],
-      "evidence_level": "confirmed_shortage",
+      "evidence_level": "media_reported_shutdown",
       "known_locations": [
         {
           "시도": "서울",
@@ -371,7 +448,8 @@
           "투표중단여부": null,
           "출처URL": "https://www.fnnews.com/news/202606040629007170",
           "실제부족확인": true,
-          "투표중단확인": null
+          "보도사건": "투표 중단",
+          "보도증거수준": "media_reported_shutdown"
         }
       ]
     },
@@ -391,7 +469,7 @@
         "위례동제7투",
         "위례동제8투"
       ],
-      "evidence_level": "confirmed_shortage",
+      "evidence_level": "reported_shortage",
       "known_locations": [
         {
           "시도": "서울",
@@ -402,7 +480,8 @@
           "투표중단여부": null,
           "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
           "실제부족확인": true,
-          "투표중단확인": null
+          "보도사건": null,
+          "보도증거수준": null
         }
       ]
     },
@@ -438,7 +517,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": false
     },
     {
@@ -450,7 +530,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": true
     },
     {
@@ -462,7 +543,8 @@
       "투표중단여부": null,
       "출처URL": "https://www.fnnews.com/news/202606040629007170",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": "투표 중단",
+      "보도증거수준": "media_reported_shutdown",
       "stress_test_candidate": true
     },
     {
@@ -474,7 +556,8 @@
       "투표중단여부": null,
       "출처URL": "https://www.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500194?wlog_tag1=aiMbti_request_pc",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": "투표 중단",
+      "보도증거수준": "media_reported_shutdown",
       "stress_test_candidate": true
     },
     {
@@ -486,7 +569,8 @@
       "투표중단여부": true,
       "출처URL": "https://www.donga.com/news/Politics/article/all/20260603/134042934/1?gid=134043412&regdate=&srev=1",
       "실제부족확인": true,
-      "투표중단확인": true,
+      "보도사건": "투표 일시 중단",
+      "보도증거수준": "media_reported_shutdown",
       "stress_test_candidate": true
     },
     {
@@ -498,7 +582,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": "투표 지연",
+      "보도증거수준": "media_reported_delay",
       "stress_test_candidate": false
     },
     {
@@ -510,7 +595,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": "투표 지연",
+      "보도증거수준": "media_reported_delay",
       "stress_test_candidate": false
     },
     {
@@ -522,7 +608,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": true
     },
     {
@@ -534,7 +621,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": false
     },
     {
@@ -546,7 +634,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": true
     },
     {
@@ -558,7 +647,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": false
     },
     {
@@ -570,7 +660,8 @@
       "투표중단여부": null,
       "출처URL": "https://amp.seoul.co.kr/news/politics/local-election2026/2026/06/03/20260603500165?cp=seoul&wlog_tag4=mo_rel_3",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": false
     },
     {
@@ -582,7 +673,8 @@
       "투표중단여부": null,
       "출처URL": "https://www.newdaily.co.kr/site/data/html/2026/06/03/2026060300128.html",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": true
     },
     {
@@ -594,7 +686,8 @@
       "투표중단여부": null,
       "출처URL": "https://www.fnnews.com/news/202606040629007170",
       "실제부족확인": true,
-      "투표중단확인": null,
+      "보도사건": null,
+      "보도증거수준": null,
       "stress_test_candidate": false
     },
     {
@@ -606,7 +699,8 @@
       "투표중단여부": true,
       "출처URL": "https://www.khan.co.kr/article/202606041454011",
       "실제부족확인": true,
-      "투표중단확인": true,
+      "보도사건": "투표 지연",
+      "보도증거수준": "local_nec_reported_delay",
       "stress_test_candidate": false
     },
     {
@@ -618,7 +712,8 @@
       "투표중단여부": true,
       "출처URL": "https://www.khan.co.kr/article/202606041454011",
       "실제부족확인": true,
-      "투표중단확인": true,
+      "보도사건": "투표 지연",
+      "보도증거수준": "local_nec_reported_delay",
       "stress_test_candidate": false
     }
   ],
@@ -642,6 +737,9 @@
     "model_candidate_dongs": 18,
     "candidate_polling_places": 122,
     "named_locations": 16,
-    "confirmed_shutdown_named": 3
+    "officially_named_shutdown_locations": 0,
+    "media_reported_shutdown_locations": 3,
+    "local_nec_reported_delay_locations": 2,
+    "media_reported_delay_locations": 2
   }
 }

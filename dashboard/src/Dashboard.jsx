@@ -130,7 +130,7 @@ export default function Dashboard() {
 
         <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8 }}>
           {[
-            { label: '확인된 사실', body: '67곳 추가 송부 · 22곳 중단', color: '#be123c', bg: '#fef2f2' },
+            { label: '선관위 공식 집계', body: '67곳 추가 송부 · 22곳 중단', color: '#be123c', bg: '#fef2f2' },
             { label: '계산으로 보는 것', body: '50% 일률 가정의 여유 수준', color: '#b45309', bg: '#fff7ed' },
             { label: '아직 모르는 것', body: '실제 배부량 · 이탈 인원', color: '#475569', bg: '#f1f5f9' },
           ].map(item => (
@@ -179,11 +179,10 @@ export default function Dashboard() {
 
         {/* ── 22곳 중단 지역 스트레스 테스트 ── */}
         {shutdownStress && (
-          <Section label="추정" title="22곳 중단 지역 — 50% 배부 가정 스트레스 테스트">
+          <Section label="증거 구분" title="중단 22곳 — 공식 집계·보도 위치·모델 후보">
             <CalloutBox color="#fff7ed" border="#fdba74">
-              <strong>이 목록은 실제 중단 위치가 아닙니다.</strong> 동 전체 선거일 투표율이
-              선거인수의 50%를 넘었는지 확인한 추가 조사 후보입니다. 투표소별 실제 배부량과
-              전체 중단 위치는 공개되지 않았습니다.
+              <strong>선관위가 공식 발표한 것은 5개 구의 중단 수 합계입니다.</strong>
+              중앙선관위가 투표소명 22개를 공개한 명단은 아직 확인되지 않았습니다.
             </CalloutBox>
 
             {/* 구별 공식 발표 */}
@@ -199,10 +198,43 @@ export default function Dashboard() {
                 ))}
             </div>
 
+            <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: 'repeat(2,1fr)', gap: 8 }}>
+              {[
+                { num: '0곳', label: '중앙선관위 명단상 위치', sub: '명단 미공개' },
+                { num: `${shutdownStress.summary?.media_reported_shutdown_locations || 0}곳`, label: '언론 보도상 중단 위치', sub: '현장 기사 기준' },
+                { num: `${shutdownStress.summary?.local_nec_reported_delay_locations || 0}곳`, label: '지역선관위 설명상 지연', sub: '언론 인용 기준' },
+                { num: `${shutdownStress.summary?.media_reported_delay_locations || 0}곳`, label: '언론 보도상 지연 위치', sub: '현장 기사 기준' },
+              ].map(item => (
+                <div key={item.label} style={{ background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 8, padding: '10px 7px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 18, fontWeight: 800, color: '#334155' }}>{item.num}</div>
+                  <div style={{ fontSize: 11, fontWeight: 700, color: '#475569', marginTop: 4 }}>{item.label}</div>
+                  <div style={{ fontSize: 10, color: '#94a3b8', marginTop: 2 }}>{item.sub}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ marginTop: 14, display: 'grid', gap: 6 }}>
+              {(shutdownStress.reported_events || []).map(item => (
+                <div key={item.polling_place} style={{ background: '#fff', border: '1px solid #e5e7eb', borderRadius: 8, padding: '10px 12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+                    <strong style={{ fontSize: 13 }}>{item.gu} {item.polling_place}</strong>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: item.evidence_level === 'media_reported_shutdown' ? '#be123c' : '#b45309', whiteSpace: 'nowrap' }}>
+                      {item.event}
+                    </span>
+                  </div>
+                  <div style={{ fontSize: 11, color: '#64748b', marginTop: 4 }}>{item.source_actor}</div>
+                  <div style={{ fontSize: 10, color: '#94a3b8', marginTop: 3 }}>{item.note}</div>
+                </div>
+              ))}
+            </div>
+
             {/* 스트레스 테스트 후보 동 목록 */}
             <p style={{ fontSize: 13, color: '#6b7280', marginTop: 16, marginBottom: 8 }}>
-              50% 배부 가정에서 동 평균 수요가 기준을 넘는 곳:
+              별도 모델 조사 후보 — 50% 배부 가정에서 동 평균 수요가 기준을 넘는 곳:
               <strong> {shutdownStress.model_candidates?.length || 0}개 동</strong>
+            </p>
+            <p style={{ fontSize: 11, color: '#9ca3af', marginTop: -3, marginBottom: 8 }}>
+              아래 목록은 실제 중단 위치 추정 확률이 아니라 운영 기록을 먼저 확인할 후보입니다.
             </p>
             <div style={{ display: 'grid', gap: 6 }}>
               {(shutdownStress.model_candidates || []).map(d => (
@@ -211,10 +243,14 @@ export default function Dashboard() {
                     <span style={{ fontSize: 13, fontWeight: 700 }}>{d.gu} {d.dong}</span>
                     <span style={{ fontSize: 11, color: '#9ca3af', marginLeft: 8 }}>투표소 {d.polling_place_count}개</span>
                     <div style={{ fontSize: 10, color: '#9ca3af', marginTop: 3 }}>
-                      {d.evidence_level === 'confirmed_shutdown'
-                        ? '이 동에서 실제 중단 위치 1곳 이상 확인'
-                        : d.evidence_level === 'confirmed_shortage'
-                          ? '이 동에서 실제 부족 위치 1곳 이상 확인'
+                      {d.evidence_level === 'media_reported_shutdown'
+                        ? '이 동에서 언론 보도상 중단 위치 존재'
+                        : d.evidence_level === 'local_nec_reported_delay'
+                          ? '이 동에서 지역선관위 설명상 지연 위치 존재'
+                          : d.evidence_level === 'media_reported_delay'
+                            ? '이 동에서 언론 보도상 지연 위치 존재'
+                          : d.evidence_level === 'reported_shortage'
+                            ? '이 동에서 언론 보도상 부족 위치 존재'
                           : '모델 후보 · 실제 위치 미확인'}
                     </div>
                   </div>
@@ -250,9 +286,9 @@ export default function Dashboard() {
         )}
 
         {knownLocationPriority.length > 0 && (
-          <Section label="직접 연결 확인" title={`이름 공개 투표소 ${namedPollingPlaces}곳 — 우선 확인 연결 ${knownLocationPriority.length}건`}>
+          <Section label="보도 위치 직접 연결" title={`언론 보도상 이름 공개 투표소 ${namedPollingPlaces}곳 — 우선 확인 연결 ${knownLocationPriority.length}건`}>
             <p style={{ fontSize: 14, color: '#6b7280', marginBottom: 10, lineHeight: 1.6 }}>
-              공개된 투표소명을 선관위 결과표의 읍면동 구성과 연결해 실제 광역·기초의원 선거구를 확인했습니다.
+              언론 보도에 등장한 투표소명을 선관위 결과표의 읍면동 구성과 연결해 광역·기초의원 선거구를 확인했습니다.
             </p>
             <CalloutBox color="#fff7ed" border="#fdba74">
               표차는 영향의 증거가 아닙니다.

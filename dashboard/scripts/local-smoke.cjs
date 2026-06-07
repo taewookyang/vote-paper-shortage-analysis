@@ -10,7 +10,7 @@ function assert(condition, message) {
 async function inspect(page, viewportName) {
   await page.goto(target, { waitUntil: 'domcontentloaded', timeout: 30000 })
   await page.getByText('송파구 50% 가정에는 여유가 남는데, 왜 일부 투표소에서는 부족했나').waitFor({ timeout: 30000 })
-  await page.getByText('22곳 중단 지역 — 50% 배부 가정 스트레스 테스트').waitFor({ timeout: 30000 })
+  await page.getByText('중단 22곳 — 공식 집계·보도 위치·모델 후보').waitFor({ timeout: 30000 })
   const state = await page.evaluate(() => ({
     text: document.body.innerText,
     redBars: document.querySelectorAll('.recharts-bar-rectangle').length,
@@ -24,8 +24,11 @@ async function inspect(page, viewportName) {
   assert(state.redBars >= 27, `${viewportName}: expected fallback dong chart bars`)
   assert(state.mapSvg === 0, `${viewportName}: unlicensed boundary map should not render`)
   assert(state.text.includes('추가 송부 27개 구시군'), `${viewportName}: missing targeted screening section`)
-  assert(state.text.includes('이름 공개 투표소 16곳'), `${viewportName}: missing known-location mapping section`)
-  assert(state.text.indexOf('이름 공개 투표소 16곳') < state.text.indexOf('추가 송부 27개 구시군'), `${viewportName}: verified mapping should precede broad screening`)
+  assert(state.text.includes('중앙선관위 명단상 위치'), `${viewportName}: missing official-location gap`)
+  assert(state.text.includes('언론 보도상 중단 위치'), `${viewportName}: missing media evidence layer`)
+  assert(state.text.includes('모델 조사 후보'), `${viewportName}: missing model evidence layer`)
+  assert(state.text.includes('언론 보도상 이름 공개 투표소 16곳'), `${viewportName}: missing known-location mapping section`)
+  assert(state.text.indexOf('언론 보도상 이름 공개 투표소 16곳') < state.text.indexOf('추가 송부 27개 구시군'), `${viewportName}: verified mapping should precede broad screening`)
   assert(state.text.includes('오후 1시 급증은 부족 발생 시각이 아니다'), `${viewportName}: timeline limitation is missing`)
   assert(!state.text.includes('언제 터졌나 — 오후 1시'), `${viewportName}: outdated timeline overclaim is visible`)
   assert(!state.text.includes('재투표 가능성은?'), `${viewportName}: outdated legal assessment is visible`)
