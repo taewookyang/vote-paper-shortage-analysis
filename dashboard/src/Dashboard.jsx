@@ -14,6 +14,7 @@ const DATA_FILES = {
   songpaMap:      '/data/songpa_boundaries_2026.json',
   targetedMargins:'/data/targeted_margin_screening_2026.json',
   shutdownStressTest: '/data/shutdown_stress_test_2026.json',
+  shutdownRegistry: '/data/shutdown_22_registry_2026.json',
   knownLocationMargins: '/data/known_location_margin_mapping_2026.json',
 }
 
@@ -52,6 +53,7 @@ export default function Dashboard() {
   const targetedMargins = data.targetedMargins?.items || []
   const priorityMargins = targetedMargins.filter(item => item['검토등급'] === '우선검토')
   const shutdownStress = data.shutdownStressTest || null
+  const shutdownRegistry = data.shutdownRegistry || null
   const knownLocationMargins = data.knownLocationMargins?.items || []
   const knownLocationPriority = knownLocationMargins.filter(item => item['검토등급'] !== '참고')
   const namedPollingPlaces = data.knownLocationMargins?.meta?.namedPollingPlaces || 0
@@ -178,6 +180,41 @@ export default function Dashboard() {
         </Section>
 
         {/* ── 22곳 중단 지역 스트레스 테스트 ── */}
+        {shutdownRegistry && (
+          <Section label="22곳 추적표" title={`공식 중단 22곳 중 위치 연결 ${shutdownRegistry.meta?.linkedReportedShutdownLocations || 0}곳`}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginBottom: 12 }}>
+              {[
+                { num: shutdownRegistry.meta?.officialTotal || 22, label: '공식 구별 집계' },
+                { num: shutdownRegistry.meta?.linkedReportedShutdownLocations || 0, label: '보도상 중단 위치 연결' },
+                { num: shutdownRegistry.meta?.unpublishedLocations || 0, label: '위치 미공개' },
+              ].map(item => (
+                <div key={item.label} style={{ background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: 8, padding: '12px 6px', textAlign: 'center' }}>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: '#334155' }}>{item.num}곳</div>
+                  <div style={{ fontSize: 10, color: '#64748b', marginTop: 4 }}>{item.label}</div>
+                </div>
+              ))}
+            </div>
+            <CalloutBox color="#f1f5f9" border="#cbd5e1">
+              보도상 위치 연결은 중앙선관위 공식 투표소명 명단 확인이 아닙니다.
+              위치가 공개되지 않은 19곳은 추정으로 채우지 않았습니다.
+            </CalloutBox>
+            <div style={{ marginTop: 12, display: 'grid', gap: 6 }}>
+              {(shutdownRegistry.items || []).filter(item => item['투표소명']).map(item => (
+                <div key={`${item['구시군']}-${item['공식중단순번']}`} style={{ border: '1px solid #fecaca', background: '#fef2f2', borderRadius: 8, padding: '10px 12px' }}>
+                  <div style={{ fontSize: 13, fontWeight: 800 }}>{item['구시군']} {item['투표소명']}</div>
+                  <div style={{ fontSize: 10, color: '#64748b', marginTop: 4 }}>{item['사건표현']} · {item['출처주체']}</div>
+                  <a href={item['출처URL']} target="_blank" rel="noreferrer" style={{ display: 'inline-block', fontSize: 10, color: '#2563eb', marginTop: 5 }}>
+                    근거 기사 보기
+                  </a>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 10, lineHeight: 1.6 }}>
+              별도 관련 사건: 중단 여부가 확인되지 않은 보도상 지연 위치 {shutdownRegistry.meta?.relatedDelayLocationsNotAssigned || 0}곳은 22개 슬롯에 배정하지 않았습니다.
+            </p>
+          </Section>
+        )}
+
         {shutdownStress && (
           <Section label="증거 구분" title="중단 22곳 — 공식 집계·보도 위치·모델 후보">
             <CalloutBox color="#fff7ed" border="#fdba74">

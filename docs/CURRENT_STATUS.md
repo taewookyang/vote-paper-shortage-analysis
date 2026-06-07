@@ -14,6 +14,7 @@
 - 전국 광역·기초의원 1,540개 선거구의 당선권 경계 표차 기준선을 수집했다.
 - 전국 256개 구시군의 동별 선거일 투표 수요 3,558행을 수집했다.
 - 언론 보도에 이름이 등장한 투표소 16곳을 선관위 결과표 기준 광역·기초의원 선거구에 직접 매핑했다.
+- 공식 중단 22개 슬롯의 추적표를 만들고, 언론 보도상 중단 위치 3곳만 연결했으며 19곳은 비워두었다.
 
 ## 아직 할 수 없는 분석
 
@@ -39,6 +40,7 @@
 
 ```bash
 python scripts/build_shutdown_stress_test.py
+python scripts/build_shutdown_22_registry.py
 python scripts/build_known_location_margin_mapping.py
 python scripts/merge_national_overnight.py
 python validate_pipeline.py --strict

@@ -269,6 +269,29 @@ def audit_shutdown_stress_test(path: Path) -> list[Check]:
     return checks
 
 
+def audit_shutdown_registry(path: Path) -> list[Check]:
+    dataset = "shutdown_22_registry_2026"
+    if not path.exists():
+        return [_skip(dataset, "file_exists", f"missing: {path}")]
+    frame = pd.read_csv(path)
+    required = [
+        "구시군", "공식중단순번", "읍면동", "투표소명", "위치연결상태",
+        "증거수준", "출처주체", "출처URL", "비고",
+    ]
+    checks = [_required_columns(dataset, frame, required)]
+    if checks[0].status == "fail":
+        return checks
+    named = frame["투표소명"].notna().sum()
+    checks.extend([
+        _check(dataset, "official_slot_count", len(frame) == 22, f"slots={len(frame)}"),
+        _check(dataset, "reported_shutdown_locations_linked", named == 3, f"linked={named}"),
+        _check(dataset, "unpublished_slots_blank", frame.loc[frame["위치연결상태"].eq("위치미공개"), "투표소명"].isna().all(), "unpublished slots stay blank"),
+        _check(dataset, "all_slots_have_sources", frame["출처URL"].notna().all(), f"sources={frame['출처URL'].notna().sum()}/{len(frame)}"),
+        _check(dataset, "unique_official_slots", not frame.duplicated(["구시군", "공식중단순번"]).any(), f"duplicates={frame.duplicated(['구시군', '공식중단순번']).sum()}"),
+    ])
+    return checks
+
+
 def audit_known_location_mapping(path: Path) -> list[Check]:
     dataset = "known_location_margin_mapping_2026"
     if not path.exists():
@@ -345,6 +368,7 @@ def run_audit(fail_on_error: bool = False) -> dict:
     checks.extend(audit_vote_progress(RAW_DIR / "nec_vote_progress_2026.csv"))
     checks.extend(audit_shortages(RAW_DIR / "shortage_2026.csv"))
     checks.extend(audit_shutdown_stress_test(PROCESSED_DIR / "dashboard" / "shutdown_stress_test_2026.json"))
+    checks.extend(audit_shutdown_registry(PROCESSED_DIR / "shutdown_22_registry_2026.csv"))
     checks.extend(audit_known_location_mapping(PROCESSED_DIR / "known_location_margin_mapping_2026.csv"))
 
     failures = [check for check in checks if check.status == "fail"]

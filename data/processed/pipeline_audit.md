@@ -1,8 +1,8 @@
 # 데이터 파이프라인 검증 보고서
 
-- 생성: 2026-06-07T09:11:57
-- 검사: 46개
-- 통과: 45개
+- 생성: 2026-06-07T09:31:36
+- 검사: 52개
+- 통과: 51개
 - 오류: 0개
 - 경고: 1개
 
@@ -50,6 +50,12 @@
 | shutdown_stress_test_2026 | candidate_evidence_level_present | pass | error | candidates=18 |
 | shutdown_stress_test_2026 | known_location_source_present | pass | error | known=16 |
 | shutdown_stress_test_2026 | candidate_polling_place_count_matches | pass | error | candidates=18 |
+| shutdown_22_registry_2026 | required_columns | pass | error | missing=[] |
+| shutdown_22_registry_2026 | official_slot_count | pass | error | slots=22 |
+| shutdown_22_registry_2026 | reported_shutdown_locations_linked | pass | error | linked=3 |
+| shutdown_22_registry_2026 | unpublished_slots_blank | pass | error | unpublished slots stay blank |
+| shutdown_22_registry_2026 | all_slots_have_sources | pass | error | sources=22/22 |
+| shutdown_22_registry_2026 | unique_official_slots | pass | error | duplicates=0 |
 | known_location_margin_mapping_2026 | required_columns | pass | error | missing=[] |
 | known_location_margin_mapping_2026 | all_named_locations_covered | pass | error | named=16/16 |
 | known_location_margin_mapping_2026 | all_rows_mapped_to_district | pass | error | mapped=31/31 |

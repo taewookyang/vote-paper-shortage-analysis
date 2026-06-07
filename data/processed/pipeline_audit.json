@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T09:11:57",
+  "generatedAt": "2026-06-07T09:31:36",
   "summary": {
-    "checks": 46,
-    "passed": 45,
+    "checks": 52,
+    "passed": 51,
     "failed": 1,
     "errors": 0,
     "warnings": 1,
@@ -288,6 +288,48 @@
       "status": "pass",
       "severity": "error",
       "detail": "candidates=18"
+    },
+    {
+      "dataset": "shutdown_22_registry_2026",
+      "check": "required_columns",
+      "status": "pass",
+      "severity": "error",
+      "detail": "missing=[]"
+    },
+    {
+      "dataset": "shutdown_22_registry_2026",
+      "check": "official_slot_count",
+      "status": "pass",
+      "severity": "error",
+      "detail": "slots=22"
+    },
+    {
+      "dataset": "shutdown_22_registry_2026",
+      "check": "reported_shutdown_locations_linked",
+      "status": "pass",
+      "severity": "error",
+      "detail": "linked=3"
+    },
+    {
+      "dataset": "shutdown_22_registry_2026",
+      "check": "unpublished_slots_blank",
+      "status": "pass",
+      "severity": "error",
+      "detail": "unpublished slots stay blank"
+    },
+    {
+      "dataset": "shutdown_22_registry_2026",
+      "check": "all_slots_have_sources",
+      "status": "pass",
+      "severity": "error",
+      "detail": "sources=22/22"
+    },
+    {
+      "dataset": "shutdown_22_registry_2026",
+      "check": "unique_official_slots",
+      "status": "pass",
+      "severity": "error",
+      "detail": "duplicates=0"
     },
     {
       "dataset": "known_location_margin_mapping_2026",

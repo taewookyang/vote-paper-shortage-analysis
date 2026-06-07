@@ -25,6 +25,8 @@ async function inspect(page, viewportName) {
   assert(state.mapSvg === 0, `${viewportName}: unlicensed boundary map should not render`)
   assert(state.text.includes('추가 송부 27개 구시군'), `${viewportName}: missing targeted screening section`)
   assert(state.text.includes('중앙선관위 명단상 위치'), `${viewportName}: missing official-location gap`)
+  assert(state.text.includes('공식 중단 22곳 중 위치 연결 3곳'), `${viewportName}: missing 22-slot registry`)
+  assert(state.text.includes('위치가 공개되지 않은 19곳'), `${viewportName}: missing unpublished registry count`)
   assert(state.text.includes('언론 보도상 중단 위치'), `${viewportName}: missing media evidence layer`)
   assert(state.text.includes('모델 조사 후보'), `${viewportName}: missing model evidence layer`)
   assert(state.text.includes('언론 보도상 이름 공개 투표소 16곳'), `${viewportName}: missing known-location mapping section`)

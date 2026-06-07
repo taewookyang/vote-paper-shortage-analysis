@@ -63,6 +63,7 @@
 
 ```bash
 python scripts/build_shutdown_stress_test.py
+python scripts/build_shutdown_22_registry.py
 python scripts/build_known_location_margin_mapping.py
 python scripts/merge_national_overnight.py
 python validate_pipeline.py --strict
@@ -72,6 +73,9 @@ npm install
 npm run build
 npm run smoke:local
 ```
+
+중단 22곳 추적표는 `data/processed/shutdown_22_registry_2026.csv`, 필요한 운영 기록의
+정보공개청구 초안은 [`docs/INFORMATION_DISCLOSURE_REQUEST.md`](docs/INFORMATION_DISCLOSURE_REQUEST.md)에 있다.
 
 `validate_pipeline.py --strict`의 남은 경고는 오류가 아니라 상세 투표소명 공개 범위가
 67곳 중 16곳에 그친다는 자료 한계입니다.
