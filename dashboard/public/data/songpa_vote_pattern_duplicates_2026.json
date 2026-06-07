@@ -1,0 +1,18 @@
+{
+  "description": "송파구 구의원 선거 후보별 득표 동일·유사 패턴 탐색",
+  "scope": "송파구 구의원 선거, 선거구×읍면동×개표단위 공개 집계",
+  "unitLimit": "투표소별 후보 득표는 공개자료에 없어 분석하지 않음",
+  "disclaimer": "동일·유사 패턴은 이례성 탐색 지표일 뿐 오류나 부정의 증거가 아님",
+  "input": "data\\raw\\songpa_2026_result.csv",
+  "districts": 6,
+  "dongs": 18,
+  "countingUnits": [
+    "관내사전투표",
+    "선거일투표"
+  ],
+  "rowsAnalyzed": 150,
+  "exactVectorMatches": 0,
+  "singleCandidateMatches": 0,
+  "nearRatioPairs": 0,
+  "items": []
+}
