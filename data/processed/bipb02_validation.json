@@ -1,0 +1,2232 @@
+{
+  "passed": [
+    "전국 구시군 수: 253개 ✓ (세종·제주 기초의원 제외)",
+    "투표구 선거인수 null 비율: 0.01% ✓",
+    "ps_name_key 생성률: 100.00% ✓",
+    "투표소 목록 이름 매칭률: 96.18% (10933/11367)",
+    "남+여=계 선거인수 일치 ✓"
+  ],
+  "warnings": [
+    "미매칭 BIPB02 키 샘플(최대20): ['만경읍제1투', '장남면제1투', '고남면제1투', '능주면제1투', '충화면제1투', '소이면제1투', '간전면제1투', '동계면제1투', '운곡면제1투', '용궁면제1투', '회인면제1투', '고제면제1투', '진상면제1투', '구만면제1투', '서남동제1투', '대가면제1투', '죽교동제1투', '지보면제1투', '개정동제1투', '유등면제1투']",
+    "투표구 수 불일치 구시군: 87개"
+  ],
+  "errors": [],
+  "mismatch_detail": [
+    {
+      "구시군코드": "1101",
+      "투표소목록": 43,
+      "BIPB02": 19
+    },
+    {
+      "구시군코드": "1102",
+      "투표소목록": 43,
+      "BIPB02": 30
+    },
+    {
+      "구시군코드": "1103",
+      "투표소목록": 56,
+      "BIPB02": 35
+    },
+    {
+      "구시군코드": "1104",
+      "투표소목록": 71,
+      "BIPB02": 52
+    },
+    {
+      "구시군코드": "1107",
+      "투표소목록": 88,
+      "BIPB02": 68
+    },
+    {
+      "구시군코드": "1108",
+      "투표소목록": 96,
+      "BIPB02": 48
+    },
+    {
+      "구시군코드": "1109",
+      "투표소목록": 82,
+      "BIPB02": 63
+    },
+    {
+      "구시군코드": "1110",
+      "투표소목록": 79,
+      "BIPB02": 66
+    },
+    {
+      "구시군코드": "1111",
+      "투표소목록": 118,
+      "BIPB02": 76
+    },
+    {
+      "구시군코드": "1112",
+      "투표소목록": 99,
+      "BIPB02": 63
+    },
+    {
+      "구시군코드": "1113",
+      "투표소목록": 78,
+      "BIPB02": 61
+    },
+    {
+      "구시군코드": "1114",
+      "투표소목록": 93,
+      "BIPB02": 62
+    },
+    {
+      "구시군코드": "1115",
+      "투표소목록": 105,
+      "BIPB02": 49
+    },
+    {
+      "구시군코드": "1117",
+      "투표소목록": 98,
+      "BIPB02": 72
+    },
+    {
+      "구시군코드": "1119",
+      "투표소목록": 96,
+      "BIPB02": 47
+    },
+    {
+      "구시군코드": "1120",
+      "투표소목록": 81,
+      "BIPB02": 62
+    },
+    {
+      "구시군코드": "1123",
+      "투표소목록": 126,
+      "BIPB02": 99
+    },
+    {
+      "구시군코드": "1124",
+      "투표소목록": 146,
+      "BIPB02": 95
+    },
+    {
+      "구시군코드": "1125",
+      "투표소목록": 104,
+      "BIPB02": 89
+    },
+    {
+      "구시군코드": "2605",
+      "투표소목록": 92,
+      "BIPB02": 25
+    },
+    {
+      "구시군코드": "2606",
+      "투표소목록": 65,
+      "BIPB02": 44
+    },
+    {
+      "구시군코드": "2607",
+      "투표소목록": 71,
+      "BIPB02": 35
+    },
+    {
+      "구시군코드": "2609",
+      "투표소목록": 100,
+      "BIPB02": 64
+    },
+    {
+      "구시군코드": "2612",
+      "투표소목록": 57,
+      "BIPB02": 42
+    },
+    {
+      "구시군코드": "2615",
+      "투표소목록": 42,
+      "BIPB02": 21
+    },
+    {
+      "구시군코드": "2616",
+      "투표소목록": 60,
+      "BIPB02": 45
+    },
+    {
+      "구시군코드": "2705",
+      "투표소목록": 111,
+      "BIPB02": 71
+    },
+    {
+      "구시군코드": "2707",
+      "투표소목록": 140,
+      "BIPB02": 118
+    },
+    {
+      "구시군코드": "2804",
+      "투표소목록": 87,
+      "BIPB02": 72
+    },
+    {
+      "구시군코드": "2806",
+      "투표소목록": 114,
+      "BIPB02": 22
+    },
+    {
+      "구시군코드": "2807",
+      "투표소목록": 69,
+      "BIPB02": 56
+    },
+    {
+      "구시군코드": "2811",
+      "투표소목록": 29,
+      "BIPB02": 17
+    },
+    {
+      "구시군코드": "2904",
+      "투표소목록": 110,
+      "BIPB02": 88
+    },
+    {
+      "구시군코드": "2905",
+      "투표소목록": 95,
+      "BIPB02": 83
+    },
+    {
+      "구시군코드": "3003",
+      "투표소목록": 108,
+      "BIPB02": 77
+    },
+    {
+      "구시군코드": "3005",
+      "투표소목록": 53,
+      "BIPB02": 20
+    },
+    {
+      "구시군코드": "4101",
+      "투표소목록": 56,
+      "BIPB02": 41
+    },
+    {
+      "구시군코드": "4102",
+      "투표소목록": 90,
+      "BIPB02": 46
+    },
+    {
+      "구시군코드": "4104",
+      "투표소목록": 72,
+      "BIPB02": 56
+    },
+    {
+      "구시군코드": "4105",
+      "투표소목록": 66,
+      "BIPB02": 31
+    },
+    {
+      "구시군코드": "4107",
+      "투표소목록": 116,
+      "BIPB02": 55
+    },
+    {
+      "구시군코드": "4109",
+      "투표소목록": 57,
+      "BIPB02": 46
+    },
+    {
+      "구시군코드": "4114",
+      "투표소목록": 83,
+      "BIPB02": 64
+    },
+    {
+      "구시군코드": "4115",
+      "투표소목록": 144,
+      "BIPB02": 129
+    },
+    {
+      "구시군코드": "4116",
+      "투표소목록": 69,
+      "BIPB02": 43
+    },
+    {
+      "구시군코드": "4118",
+      "투표소목록": 75,
+      "BIPB02": 61
+    },
+    {
+      "구시군코드": "4119",
+      "투표소목록": 76,
+      "BIPB02": 60
+    },
+    {
+      "구시군코드": "4121",
+      "투표소목록": 62,
+      "BIPB02": 42
+    },
+    {
+      "구시군코드": "4122",
+      "투표소목록": 64,
+      "BIPB02": 34
+    },
+    {
+      "구시군코드": "4127",
+      "투표소목록": 55,
+      "BIPB02": 26
+    },
+    {
+      "구시군코드": "4130",
+      "투표소목록": 69,
+      "BIPB02": 54
+    },
+    {
+      "구시군코드": "4131",
+      "투표소목록": 62,
+      "BIPB02": 38
+    },
+    {
+      "구시군코드": "4135",
+      "투표소목록": 68,
+      "BIPB02": 47
+    },
+    {
+      "구시군코드": "4136",
+      "투표소목록": 55,
+      "BIPB02": 37
+    },
+    {
+      "구시군코드": "4137",
+      "투표소목록": 112,
+      "BIPB02": 100
+    },
+    {
+      "구시군코드": "4140",
+      "투표소목록": 85,
+      "BIPB02": 45
+    },
+    {
+      "구시군코드": "4155",
+      "투표소목록": 37,
+      "BIPB02": 12
+    },
+    {
+      "구시군코드": "4306",
+      "투표소목록": 55,
+      "BIPB02": 40
+    },
+    {
+      "구시군코드": "4314",
+      "투표소목록": 49,
+      "BIPB02": 32
+    },
+    {
+      "구시군코드": "4404",
+      "투표소목록": 103,
+      "BIPB02": 90
+    },
+    {
+      "구시군코드": "4418",
+      "투표소목록": 84,
+      "BIPB02": 29
+    },
+    {
+      "구시군코드": "4601",
+      "투표소목록": 64,
+      "BIPB02": 54
+    },
+    {
+      "구시군코드": "4602",
+      "투표소목록": 111,
+      "BIPB02": 85
+    },
+    {
+      "구시군코드": "4612",
+      "투표소목록": 31,
+      "BIPB02": 16
+    },
+    {
+      "구시군코드": "4617",
+      "투표소목록": 30,
+      "BIPB02": 22
+    },
+    {
+      "구시군코드": "4624",
+      "투표소목록": 50,
+      "BIPB02": 39
+    },
+    {
+      "구시군코드": "4701",
+      "투표소목록": 83,
+      "BIPB02": 66
+    },
+    {
+      "구시군코드": "4704",
+      "투표소목록": 66,
+      "BIPB02": 61
+    },
+    {
+      "구시군코드": "4705",
+      "투표소목록": 51,
+      "BIPB02": 44
+    },
+    {
+      "구시군코드": "4706",
+      "투표소목록": 73,
+      "BIPB02": 66
+    },
+    {
+      "구시군코드": "4715",
+      "투표소목록": 21,
+      "BIPB02": 14
+    },
+    {
+      "구시군코드": "4717",
+      "투표소목록": 36,
+      "BIPB02": 28
+    },
+    {
+      "구시군코드": "4723",
+      "투표소목록": 15,
+      "BIPB02": 11
+    },
+    {
+      "구시군코드": "4811",
+      "투표소목록": 16,
+      "BIPB02": 11
+    },
+    {
+      "구시군코드": "4814",
+      "투표소목록": 86,
+      "BIPB02": 81
+    },
+    {
+      "구시군코드": "4822",
+      "투표소목록": 65,
+      "BIPB02": 49
+    },
+    {
+      "구시군코드": "4824",
+      "투표소목록": 51,
+      "BIPB02": 34
+    },
+    {
+      "구시군코드": "5201",
+      "투표소목록": 86,
+      "BIPB02": 74
+    },
+    {
+      "구시군코드": "5202",
+      "투표소목록": 90,
+      "BIPB02": 82
+    },
+    {
+      "구시군코드": "5203",
+      "투표소목록": 65,
+      "BIPB02": 57
+    },
+    {
+      "구시군코드": "5302",
+      "투표소목록": 61,
+      "BIPB02": 55
+    },
+    {
+      "구시군코드": "5303",
+      "투표소목록": 74,
+      "BIPB02": 68
+    },
+    {
+      "구시군코드": "5305",
+      "투표소목록": 82,
+      "BIPB02": 75
+    },
+    {
+      "구시군코드": "5307",
+      "투표소목록": 43,
+      "BIPB02": 36
+    },
+    {
+      "구시군코드": "5308",
+      "투표소목록": 30,
+      "BIPB02": 22
+    },
+    {
+      "구시군코드": "5309",
+      "투표소목록": 31,
+      "BIPB02": 24
+    },
+    {
+      "구시군코드": "5317",
+      "투표소목록": 22,
+      "BIPB02": 19
+    }
+  ],
+  "parse_errors": [
+    {
+      "구시군": "종로구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "중구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "용산구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "성동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "광진구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동대문구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "중랑구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "성북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "도봉구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "노원구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "은평구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서대문구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "마포구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "양천구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "구로구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "금천구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영등포구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동작구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "관악구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서초구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "송파구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "중구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영도구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부산진구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동래구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "해운대구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "기장군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "사하구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "금정구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "연제구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "수영구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "사상구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "중구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "수성구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "달서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "달성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "군위군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영종구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "제물포구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "미추홀구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "연수구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부평구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "계양구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "검단구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강화군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "옹진군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "광산구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "중구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "유성구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "대덕구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "중구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "울주군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "수원시장안구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "수원시권선구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "수원시팔달구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "수원시영통구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "성남시수정구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "성남시중원구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "성남시분당구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "의정부시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "안양시만안구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "안양시동안구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부천시원미구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부천시소사구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부천시오정구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "광명시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "평택시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "양주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동두천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "안산시상록구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "안산시단원구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고양시덕양구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고양시일산동구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고양시일산서구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "과천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "의왕시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "구리시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남양주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "오산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "화성시만세구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "화성시효행구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "화성시병점구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "화성시동탄구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "시흥시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "군포시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "하남시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "파주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "여주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "이천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "용인시처인구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "용인시수지구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "용인시기흥구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "안성시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "김포시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "광주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "포천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "연천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "양평군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "가평군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "춘천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "원주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강릉시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "동해시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "삼척시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "태백시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "정선군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "속초시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "양양군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "인제군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "홍천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "횡성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영월군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "평창군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "화천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "양구군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "철원군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청주시상당구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청주시서원구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청주시흥덕구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청주시청원구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "충주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "제천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "단양군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영동군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "보은군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "옥천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "음성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "진천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "괴산군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "증평군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "천안시서북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "천안시동남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "공주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "보령시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "아산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "태안군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "금산군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "논산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "계룡시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "당진시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부여군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "서천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "홍성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청양군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "예산군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "전주시완산구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "전주시덕진구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "군산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "익산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "정읍시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남원시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "김제시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "완주군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "진안군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "무주군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "장수군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "임실군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "순창군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고창군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "부안군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "목포시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "여수시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "순천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "나주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "광양시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "담양군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "장성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "곡성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "구례군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고흥군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "보성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "화순군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "장흥군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "강진군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "완도군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "해남군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "진도군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영암군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "무안군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영광군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "함평군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "신안군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "포항시북구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "포항시남구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "울릉군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "경주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "김천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "안동시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "구미시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "상주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "문경시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "예천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "경산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청도군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고령군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "성주군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "칠곡군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "의성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "청송군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영양군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "영덕군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "봉화군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "울진군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "창원시의창구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "창원시성산구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "창원시마산합포구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "창원시마산회원구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "창원시진해구",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "진주시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "통영시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "고성군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "사천시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "김해시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "밀양시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "거제시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "의령군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "함안군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "창녕군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "양산시",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "하동군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "남해군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "함양군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "산청군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "거창군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    },
+    {
+      "구시군": "합천군",
+      "선거코드": "6",
+      "row_index": 0,
+      "cell_count": 7,
+      "note": "예상치 못한 cell_count"
+    }
+  ],
+  "output_rows": 48930,
+  "source_rows": 49183,
+  "interpretation_limits": [
+    "BIPB02는 선거인명부 확정 기준일 기준이며 실제 투표용지 배부량과 동일하지 않음",
+    "투표구 순서(제1투, 제2투...)는 BIPB02 표 내 등장 순서 기반이며 투표소 번호와 일치한다고 단정할 수 없음",
+    "ps_name_key를 통한 투표소 목록 연결은 이름 동일성 가정이며 억지 매칭 아님 — 불일치 시 수작업 확인 필요",
+    "소계 행의 선거구 명칭은 BIPB02에 표시되지 않아 district_dong_mapping과 별도 교차 필요"
+  ]
+}
