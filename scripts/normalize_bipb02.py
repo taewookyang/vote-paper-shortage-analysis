@@ -165,6 +165,13 @@ def normalize(df_raw: pd.DataFrame):
                     if rtype == "투표구" and current_dong
                     else None
                 )
+                # 읍/면에 투표소가 1개뿐이면 선관위 투표소 목록이 "XXX투표소"로 표기
+                # → 대체 키를 추가로 저장해 매칭률 향상
+                ps_name_key_alt = (
+                    f"{current_dong}투표소"
+                    if rtype == "투표구" and current_dong and dong_precinct_counter == 1
+                    else None
+                )
 
                 parent = dict(
                     row_type=rtype, 읍면동명=dong_name,
@@ -172,7 +179,8 @@ def normalize(df_raw: pd.DataFrame):
                     인구수=인구수, 인구수_재외국민=인구_재외, 인구수_외국인=인구_외국,
                     선거인수비율=비율,
                     세대수=세대수, 세대수_재외국민=세대_재외, 세대수_외국인=세대_외국,
-                    투표구수=투표구수, join_key=join_key, ps_name_key=ps_name_key,
+                    투표구수=투표구수, join_key=join_key,
+                    ps_name_key=ps_name_key, ps_name_key_alt=ps_name_key_alt,
                 )
 
                 rows.append({
@@ -183,6 +191,7 @@ def normalize(df_raw: pd.DataFrame):
                     "확정선거인수_외국인": 선거인_외국,
                     "거소투표신고인수": 거소,
                     "거소투표신고인수_재외국민": 거소_재외,
+                    "ps_name_key_alt": ps_name_key_alt,
                 })
 
             elif cell_count == 3:
@@ -260,19 +269,30 @@ def validate(df_norm: pd.DataFrame, df_polling: pd.DataFrame):
 
     # 5. 투표소 목록과 매칭률 (이름 기반)
     if df_polling is not None and "psName" in df_polling.columns:
-        bipb02_keys = set(df_prec["ps_name_key"].dropna())
         polling_keys = set(df_polling["psName"].str.replace(" ", ""))
-        matched = bipb02_keys & polling_keys
-        match_rate = len(matched) / len(bipb02_keys) if bipb02_keys else 0
-        report["passed" if match_rate > 0.9 else "warnings"].append(
+        key_df = df_prec[["ps_name_key", "ps_name_key_alt"]].dropna(subset=["ps_name_key"]).drop_duplicates("ps_name_key")
+        matched_primary = key_df["ps_name_key"].isin(polling_keys).sum()
+        unmatched_df = key_df[~key_df["ps_name_key"].isin(polling_keys)]
+        alt_matched_df = unmatched_df[unmatched_df["ps_name_key_alt"].isin(polling_keys)]
+        total_matched = matched_primary + len(alt_matched_df)
+        total_keys = len(key_df)
+        match_rate = total_matched / total_keys if total_keys else 0
+
+        report["passed" if match_rate > 0.98 else "warnings"].append(
             f"투표소 목록 이름 매칭률: {match_rate:.2%} "
-            f"({len(matched)}/{len(bipb02_keys)})"
+            f"(primary {matched_primary} + alt {len(alt_matched_df)} = {total_matched}/{total_keys})"
         )
-        unmatched = list(bipb02_keys - polling_keys)[:20]
-        if unmatched:
-            report["warnings"].append(
-                f"미매칭 BIPB02 키 샘플(최대20): {unmatched}"
-            )
+        still_unmatched_keys = list(
+            unmatched_df[~unmatched_df["ps_name_key_alt"].isin(polling_keys)]["ps_name_key"]
+        )[:20]
+        if still_unmatched_keys:
+            report["warnings"].append(f"최종 미매칭 키 샘플(최대20): {still_unmatched_keys}")
+
+        report["match_type_breakdown"] = {
+            "primary_match": int(matched_primary),
+            "alt_match_읍면단독투표소": len(alt_matched_df),
+            "unmatched_remaining": len(still_unmatched_keys),
+        }
 
     # 6. 구시군별 투표구 수 대조
     mismatch_gugun = []
